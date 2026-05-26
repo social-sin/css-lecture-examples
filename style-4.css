@@ -1,0 +1,388 @@
+/* style.css */
+
+/* ================================= */
+/* RESET */
+/* ================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.7;
+  padding: 100px 30px 50px;
+}
+
+/* ================================= */
+/* FIXED HEADER */
+/* ================================= */
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: #1e293b;
+  color: white;
+
+  padding: 20px;
+
+  text-align: center;
+
+  z-index: 1000;
+}
+
+/* ================================= */
+/* HERO */
+/* ================================= */
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================================= */
+/* CARDS */
+/* ================================= */
+
+.card {
+  background-color: #1e293b;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 25px;
+}
+
+h3 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ================================= */
+/* DISPLAY: BLOCK */
+/* ================================= */
+
+.block-demo {
+  display: block;
+
+  background-color: #334155;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  border-left: 5px solid #38bdf8;
+}
+
+/* ================================= */
+/* DISPLAY: INLINE */
+/* ================================= */
+
+.inline-demo {
+  display: inline;
+
+  background-color: #7c3aed;
+  color: white;
+
+  padding: 10px;
+}
+
+/* ================================= */
+/* DISPLAY: INLINE-BLOCK */
+/* ================================= */
+
+.inline-block-demo {
+  display: inline-block;
+
+  width: 120px;
+  height: 120px;
+
+  background-color: #f97316;
+  color: white;
+
+  text-align: center;
+  line-height: 120px;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* ================================= */
+/* DISPLAY: NONE */
+/* ================================= */
+
+.hidden-box {
+  display: none;
+
+  background-color: crimson;
+  padding: 20px;
+}
+
+/* ================================= */
+/* DISPLAY: FLEX */
+/* ================================= */
+
+.flex-container {
+  display: flex;
+
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+.flex-item {
+  flex: 1;
+
+  background-color: #0ea5e9;
+  color: white;
+
+  padding: 40px;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* ================================= */
+/* DISPLAY: GRID */
+/* ================================= */
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+.grid-item {
+  background-color: #10b981;
+  color: white;
+
+  padding: 40px;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* ================================= */
+/* POSITION EXAMPLES */
+/* ================================= */
+
+.position-box {
+  width: 220px;
+
+  padding: 20px;
+
+  background-color: #334155;
+
+  border: 3px solid white;
+
+  margin-bottom: 25px;
+}
+
+/* STATIC */
+
+.static-box {
+  position: static;
+}
+
+/* RELATIVE */
+
+.relative-box {
+  position: relative;
+
+  top: 15px;
+  left: 20px;
+
+  background-color: #7c3aed;
+}
+
+/* ================================= */
+/* ABSOLUTE */
+/* ================================= */
+
+.absolute-parent {
+  position: relative;
+
+  height: 250px;
+
+  background-color: #334155;
+
+  padding: 20px;
+
+  margin-top: 20px;
+}
+
+.absolute-child {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  background-color: #ef4444;
+
+  padding: 20px;
+
+  color: white;
+}
+
+/* ================================= */
+/* STICKY */
+/* ================================= */
+
+.sticky-demo {
+  position: sticky;
+
+  top: 80px;
+
+  background-color: #f97316;
+
+  color: white;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+  z-index: 100;
+}
+
+.sticky-content {
+  height: 500px;
+
+  padding-top: 20px;
+}
+
+/* ================================= */
+/* Z INDEX */
+/* ================================= */
+
+.z-container {
+  position: relative;
+
+  height: 250px;
+
+  margin-top: 30px;
+}
+
+.z-box {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Behind */
+
+.z1 {
+  background-color: #3b82f6;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 1;
+}
+
+/* Front */
+
+.z2 {
+  background-color: #ef4444;
+
+  top: 70px;
+  left: 120px;
+
+  z-index: 5;
+}
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #475569;
+
+  padding: 15px;
+
+  text-align: left;
+}
+
+th {
+  background-color: #334155;
+
+  color: white;
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 100px 20px 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .flex-container,
+  .grid-container {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .inline-block-demo {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+}
