@@ -1,0 +1,476 @@
+/* style.css */
+
+/* ================================= */
+/* RESET */
+/* ================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================= */
+/* ROOT FONT SIZE */
+/* ================================= */
+
+html {
+  font-size: 16px;
+}
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* ================================= */
+/* HERO */
+/* ================================= */
+
+.hero {
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.8),
+      rgba(15, 23, 42, 0.8)
+    ),
+    url("https://picsum.photos/id/1003/1600/900");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  color: #38bdf8;
+
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+
+  color: white;
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+}
+
+/* ================================= */
+/* MAIN */
+/* ================================= */
+
+main {
+  padding: 4rem 2rem;
+}
+
+/* ================================= */
+/* CARDS */
+/* ================================= */
+
+.card {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #38bdf8;
+
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ================================= */
+/* COMPARISON GRID */
+/* ================================= */
+
+.comparison-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.unit-box {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+/* Fixed */
+
+.fixed-box {
+  width: 200px;
+
+  background-color: #ef4444;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  text-align: center;
+
+  margin-top: 1rem;
+}
+
+/* Fluid */
+
+.fluid-box {
+  width: 50%;
+
+  background-color: #0ea5e9;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  text-align: center;
+
+  margin-top: 1rem;
+}
+
+/* ================================= */
+/* TYPOGRAPHY DEMO */
+/* ================================= */
+
+.typography-demo {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.rem-example {
+  font-size: 1.5rem;
+
+  background-color: #0ea5e9;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.parent-text {
+  font-size: 20px;
+
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.em-example {
+  font-size: 1.5em;
+
+  margin-top: 1rem;
+
+  background-color: #8b5cf6;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+}
+
+/* ================================= */
+/* VIEWPORT UNITS */
+/* ================================= */
+
+.viewport-demo {
+  display: grid;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.vh-box {
+  height: 50vh;
+
+  background-color: #0ea5e9;
+
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+
+  color: white;
+}
+
+.vw-box {
+  width: 50vw;
+
+  background-color: #8b5cf6;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  color: white;
+}
+
+/* ================================= */
+/* RESPONSIVE TYPOGRAPHY */
+/* ================================= */
+
+.responsive-text-demo {
+  margin-top: 2rem;
+}
+
+.responsive-heading {
+  font-size: 3vw;
+
+  color: #facc15;
+}
+
+/* ================================= */
+/* FLUID GRID */
+/* ================================= */
+
+.fluid-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr 1fr;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.fluid-card {
+  background-color: #0ea5e9;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  color: white;
+}
+
+.large-card {
+  background-color: #8b5cf6;
+}
+
+/* ================================= */
+/* RESPONSIVE MEDIA */
+/* ================================= */
+
+.media-demo {
+  margin-top: 2rem;
+}
+
+img,
+video {
+  max-width: 100%;
+
+  height: auto;
+
+  border-radius: 1rem;
+
+  display: block;
+}
+
+/* ================================= */
+/* MEDIA QUERY LAYOUT */
+/* ================================= */
+
+.media-query-layout {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.mq-card {
+  flex: 1;
+
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+/* ================================= */
+/* FULL SCREEN */
+/* ================================= */
+
+.full-screen-demo {
+  margin-top: 2rem;
+}
+
+.full-screen-box {
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.7),
+      rgba(15, 23, 42, 0.7)
+    ),
+    url("https://picsum.photos/id/1016/1200/800");
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  color: white;
+}
+
+/* ================================= */
+/* CODE BLOCK */
+/* ================================= */
+
+pre {
+  background-color: #020617;
+
+  color: #93c5fd;
+
+  padding: 1.5rem;
+
+  border-radius: 0.75rem;
+
+  overflow-x: auto;
+
+  margin-top: 1.5rem;
+}
+
+/* ================================= */
+/* TIP */
+/* ================================= */
+
+.tip {
+  background-color: rgba(56, 189, 248, 0.15);
+
+  border-left: 4px solid #38bdf8;
+
+  padding: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 1.5rem;
+}
+
+th,
+td {
+  border: 1px solid #475569;
+
+  padding: 1rem;
+
+  text-align: left;
+}
+
+th {
+  background-color: #334155;
+
+  color: white;
+}
+
+/* ================================= */
+/* MEDIA QUERIES */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  .comparison-grid,
+  .typography-demo,
+  .fluid-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-query-layout {
+    flex-direction: column;
+  }
+
+  .responsive-heading {
+    font-size: 8vw;
+  }
+
+  .vw-box {
+    width: 100%;
+  }
+
+}
