@@ -1,0 +1,442 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Advanced Responsive Images</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-overlay">
+
+      <p class="eyebrow">
+        Responsive Web Media
+      </p>
+
+      <h1>
+        Advanced Responsive Images
+      </h1>
+
+      <p class="hero-text">
+        Learn how responsive image techniques improve
+        performance, quality, and adaptability across devices.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- STANDARD RESPONSIVE IMAGES -->
+    <section class="card">
+
+      <h2>1. Standard Responsive Image Setup</h2>
+
+      <p>
+        Base responsive image CSS prevents overflow
+        and preserves aspect ratio.
+      </p>
+
+      <div class="image-demo">
+
+        <img
+          src="https://picsum.photos/id/1015/1200/700"
+          alt="Landscape example"
+        >
+
+      </div>
+
+      <pre>
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+      </pre>
+
+    </section>
+
+    <!-- SRCSET -->
+    <section class="card">
+
+      <h2>2. Using srcset</h2>
+
+      <p>
+        The browser automatically chooses
+        the best image size for the device.
+      </p>
+
+      <div class="image-demo">
+
+        <img
+          src="https://picsum.photos/id/1025/800/500"
+
+          srcset="
+            https://picsum.photos/id/1025/400/250 400w,
+            https://picsum.photos/id/1025/800/500 800w,
+            https://picsum.photos/id/1025/1200/750 1200w
+          "
+
+          alt="Responsive dog example"
+        >
+
+      </div>
+
+      <pre>
+srcset="
+image-400.jpg 400w,
+image-800.jpg 800w,
+image-1200.jpg 1200w
+"
+      </pre>
+
+    </section>
+
+    <!-- SIZES -->
+    <section class="card">
+
+      <h2>3. Adding sizes</h2>
+
+      <p>
+        sizes tells the browser how much
+        screen space the image will occupy.
+      </p>
+
+      <div class="two-column">
+
+        <div class="text-column">
+
+          <h3>
+            Text Content
+          </h3>
+
+          <p>
+            On larger screens this layout becomes
+            two columns, so the image only occupies
+            about half the viewport width.
+          </p>
+
+        </div>
+
+        <div class="image-column">
+
+          <img
+            src="https://picsum.photos/id/1035/800/600"
+
+            srcset="
+              https://picsum.photos/id/1035/400/300 400w,
+              https://picsum.photos/id/1035/800/600 800w,
+              https://picsum.photos/id/1035/1200/900 1200w
+            "
+
+            sizes="
+              (max-width: 768px) 100vw,
+              50vw
+            "
+
+            alt="Responsive sculpture example"
+          >
+
+        </div>
+
+      </div>
+
+      <pre>
+sizes="
+(max-width: 768px) 100vw,
+50vw
+"
+      </pre>
+
+    </section>
+
+    <!-- PICTURE -->
+    <section class="card">
+
+      <h2>4. &lt;picture&gt; Element (Art Direction)</h2>
+
+      <p>
+        picture allows different images
+        for different screen sizes.
+      </p>
+
+      <div class="image-demo">
+
+        <picture>
+
+          <source
+            srcset="https://picsum.photos/id/1040/500/900"
+            media="(max-width: 768px)"
+          >
+
+          <source
+            srcset="https://picsum.photos/id/1040/1200/500"
+            media="(min-width: 769px)"
+          >
+
+          <img
+            src="https://picsum.photos/id/1040/900/600"
+            alt="Responsive art direction example"
+          >
+
+        </picture>
+
+      </div>
+
+      <pre>
+&lt;picture&gt;
+  &lt;source media="(max-width: 768px)"&gt;
+  &lt;source media="(min-width: 769px)"&gt;
+  &lt;img&gt;
+&lt;/picture&gt;
+      </pre>
+
+    </section>
+
+    <!-- FORMAT SWITCHING -->
+    <section class="card">
+
+      <h2>5. Format Switching</h2>
+
+      <p>
+        Browsers can load optimized image formats
+        like AVIF and WebP automatically.
+      </p>
+
+      <div class="image-demo">
+
+        <picture>
+
+          <source
+            srcset="https://picsum.photos/id/1050/1200/700.webp"
+            type="image/webp"
+          >
+
+          <img
+            src="https://picsum.photos/id/1050/1200/700"
+            alt="Modern art installation"
+          >
+
+        </picture>
+
+      </div>
+
+      <pre>
+&lt;source
+  srcset="image.webp"
+  type="image/webp"
+&gt;
+      </pre>
+
+    </section>
+
+    <!-- LAZY LOADING -->
+    <section class="card">
+
+      <h2>6. Lazy Loading</h2>
+
+      <p>
+        Images load only when approaching
+        the viewport for better performance.
+      </p>
+
+      <div class="gallery-grid">
+
+        <img
+          loading="lazy"
+          src="https://picsum.photos/id/1060/800/500"
+          alt="Gallery image one"
+        >
+
+        <img
+          loading="lazy"
+          src="https://picsum.photos/id/1065/800/500"
+          alt="Gallery image two"
+        >
+
+        <img
+          loading="lazy"
+          src="https://picsum.photos/id/1070/800/500"
+          alt="Gallery image three"
+        >
+
+        <img
+          loading="lazy"
+          src="https://picsum.photos/id/1080/800/500"
+          alt="Gallery image four"
+        >
+
+      </div>
+
+      <pre>
+loading="lazy"
+      </pre>
+
+    </section>
+
+    <!-- COMBINED TECHNIQUES -->
+    <section class="card">
+
+      <h2>7. Combining Techniques</h2>
+
+      <p>
+        Responsive resolution, adaptive sizing,
+        and lazy loading can work together.
+      </p>
+
+      <div class="image-demo">
+
+        <img
+          loading="lazy"
+
+          src="https://picsum.photos/id/1084/800/500"
+
+          srcset="
+            https://picsum.photos/id/1084/400/250 400w,
+            https://picsum.photos/id/1084/800/500 800w,
+            https://picsum.photos/id/1084/1200/750 1200w
+          "
+
+          sizes="
+            (max-width: 768px) 100vw,
+            50vw
+          "
+
+          alt="Large gallery installation"
+        >
+
+      </div>
+
+      <pre>
+srcset + sizes + loading="lazy"
+      </pre>
+
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="card">
+
+      <h2>8. Testing & Performance</h2>
+
+      <div class="tool-grid">
+
+        <div class="tool-card">
+
+          <h3>
+            DevTools
+          </h3>
+
+          <p>
+            Check loaded image sizes
+            in the Network tab.
+          </p>
+
+        </div>
+
+        <div class="tool-card">
+
+          <h3>
+            TinyPNG
+          </h3>
+
+          <p>
+            Compress PNG and JPEG files
+            before uploading.
+          </p>
+
+        </div>
+
+        <div class="tool-card">
+
+          <h3>
+            Squoosh
+          </h3>
+
+          <p>
+            Compare image formats
+            and compression quality.
+          </p>
+
+        </div>
+
+      </div>
+
+      <p class="tip">
+        Always optimize images before uploading them to the web.
+      </p>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Technique</th>
+            <th>Purpose</th>
+            <th>Benefit</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>srcset</td>
+            <td>Responsive resolution</td>
+            <td>Better performance</td>
+          </tr>
+
+          <tr>
+            <td>sizes</td>
+            <td>Layout context</td>
+            <td>Smarter image loading</td>
+          </tr>
+
+          <tr>
+            <td>picture</td>
+            <td>Art direction</td>
+            <td>Device-specific imagery</td>
+          </tr>
+
+          <tr>
+            <td>WebP / AVIF</td>
+            <td>Modern compression</td>
+            <td>Smaller file sizes</td>
+          </tr>
+
+          <tr>
+            <td>Lazy Loading</td>
+            <td>Deferred loading</td>
+            <td>Faster page speed</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
