@@ -1,0 +1,384 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Principles of Good Website Design</title>
+
+  <link rel="stylesheet" href="style-9.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Introduction to CSS
+      </p>
+
+      <h1>Principles of Good Website Design</h1>
+
+      <p class="hero-text">
+        CSS introduces hierarchy, readability,
+        structure, spacing, and user experience
+        to the semantic foundation created by HTML.
+      </p>
+
+      <a href="#principles" class="button">
+        Explore Principles
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main id="principles">
+
+    <!-- SEPARATION -->
+    <section class="card">
+
+      <h2>Separation of Structure and Style</h2>
+
+      <div class="two-column">
+
+        <div class="example-box html-box">
+          <h3>HTML</h3>
+
+          <p>
+            Defines meaning and structure.
+          </p>
+
+          <ul>
+            <li>Headings</li>
+            <li>Paragraphs</li>
+            <li>Lists</li>
+            <li>Semantic structure</li>
+          </ul>
+        </div>
+
+        <div class="example-box css-box">
+          <h3>CSS</h3>
+
+          <p>
+            Controls visual presentation.
+          </p>
+
+          <ul>
+            <li>Color</li>
+            <li>Spacing</li>
+            <li>Typography</li>
+            <li>Layout</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="tip">
+        Tip: HTML = Meaning, CSS = Presentation
+      </p>
+
+    </section>
+
+    <!-- VISUAL HIERARCHY -->
+    <section class="card">
+
+      <h2>Visual Hierarchy</h2>
+
+      <div class="hierarchy-demo">
+
+        <h1 class="large-heading">
+          Primary Heading
+        </h1>
+
+        <h2 class="medium-heading">
+          Secondary Heading
+        </h2>
+
+        <p class="small-text">
+          Smaller supporting content creates visual hierarchy.
+        </p>
+
+      </div>
+
+      <div class="principle-grid">
+
+        <div class="principle-item">
+          <strong>Size</strong>
+          <p>Larger elements attract attention first.</p>
+        </div>
+
+        <div class="principle-item">
+          <strong>Contrast</strong>
+          <p>Color and brightness create emphasis.</p>
+        </div>
+
+        <div class="principle-item">
+          <strong>Spacing</strong>
+          <p>Grouping improves organization.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="card">
+
+      <h2>Typography & Readability</h2>
+
+      <div class="reading-demo">
+
+        <p class="good-reading">
+          Good typography improves readability through spacing,
+          contrast, consistent sizing, and comfortable line-height.
+          Clear typography reduces reading fatigue and improves
+          comprehension.
+        </p>
+
+        <p class="bad-reading">
+          BAD TYPOGRAPHY can become difficult to read when spacing,
+          contrast, sizing, or alignment are inconsistent.
+        </p>
+
+      </div>
+
+      <pre>
+p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+      </pre>
+
+      <p class="tip">
+        Readability is more important than decoration.
+      </p>
+
+    </section>
+
+    <!-- LAYOUT -->
+    <section class="card">
+
+      <h2>Layout & Spatial Organization</h2>
+
+      <div class="layout-demo">
+
+        <div class="layout-sidebar">
+          Navigation
+        </div>
+
+        <div class="layout-main">
+
+          <div class="content-card">
+            Article Section
+          </div>
+
+          <div class="content-card">
+            Related Content
+          </div>
+
+        </div>
+
+      </div>
+
+      <p>
+        Spacing, alignment, and grouping
+        help users scan content quickly.
+      </p>
+
+    </section>
+
+    <!-- CONSISTENCY -->
+    <section class="card">
+
+      <h2>Consistency in Design</h2>
+
+      <div class="consistency-grid">
+
+        <div class="consistent-card">
+          Repeated spacing
+        </div>
+
+        <div class="consistent-card">
+          Repeated typography
+        </div>
+
+        <div class="consistent-card">
+          Repeated color system
+        </div>
+
+      </div>
+
+      <p>
+        Consistency creates predictability and trust.
+      </p>
+
+    </section>
+
+    <!-- COLOR -->
+    <section class="card">
+
+      <h2>Color & Contrast</h2>
+
+      <div class="color-demo">
+
+        <div class="high-contrast">
+          High Contrast
+        </div>
+
+        <div class="low-contrast">
+          Low Contrast
+        </div>
+
+      </div>
+
+      <p>
+        Strong contrast improves readability and accessibility.
+      </p>
+
+    </section>
+
+    <!-- SIMPLICITY -->
+    <section class="card">
+
+      <h2>Simplicity & Visual Clarity</h2>
+
+      <div class="clarity-layout">
+
+        <div class="messy-design">
+          <h3>Overdesigned</h3>
+
+          <p>
+            Too many colors, shadows, decorations,
+            and inconsistent spacing can overwhelm users.
+          </p>
+        </div>
+
+        <div class="clean-design">
+          <h3>Clear & Balanced</h3>
+
+          <p>
+            Simplicity supports communication
+            and improves usability.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- UX -->
+    <section class="card">
+
+      <h2>User Experience & Feedback</h2>
+
+      <p>
+        Interactive feedback helps users understand usability.
+      </p>
+
+      <div class="button-group">
+
+        <button class="primary-btn">
+          Hover Me
+        </button>
+
+        <button class="secondary-btn">
+          Secondary Action
+        </button>
+
+      </div>
+
+      <nav class="nav-links">
+
+        <a href="#">
+          Home
+        </a>
+
+        <a href="#">
+          About
+        </a>
+
+        <a href="#">
+          Contact
+        </a>
+
+      </nav>
+
+    </section>
+
+    <!-- SCALABILITY -->
+    <section class="card">
+
+      <h2>Scalability & Maintainability</h2>
+
+      <div class="scalable-grid">
+
+        <div class="system-card">
+          Reusable Components
+        </div>
+
+        <div class="system-card">
+          Predictable Spacing
+        </div>
+
+        <div class="system-card">
+          Shared Color Palette
+        </div>
+
+        <div class="system-card">
+          Design System Thinking
+        </div>
+
+      </div>
+
+      <p class="tip">
+        Good CSS scales through reusable patterns.
+      </p>
+
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="card">
+
+      <h2>Reflection Questions</h2>
+
+      <ul class="reflection-list">
+
+        <li>
+          Does your CSS improve hierarchy and readability?
+        </li>
+
+        <li>
+          Does styling support meaning rather than distract?
+        </li>
+
+        <li>
+          Is your layout visually organized?
+        </li>
+
+        <li>
+          Is your design consistent?
+        </li>
+
+        <li>
+          Are typography and spacing balanced?
+        </li>
+
+        <li>
+          Does your design feel intentional?
+        </li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
