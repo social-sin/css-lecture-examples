@@ -1,0 +1,271 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Display & Position Demo</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FIXED HEADER -->
+  <header class="fixed-header">
+    Fixed Header
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>CSS Display & Position</h1>
+
+    <p>
+      Learn how CSS controls layout behavior,
+      positioning, and stacking order.
+    </p>
+  </section>
+
+  <main>
+
+    <!-- DISPLAY -->
+    <section class="card">
+
+      <h2>Display Property</h2>
+
+      <p>
+        The display property controls how elements
+        behave inside the document flow.
+      </p>
+
+      <!-- BLOCK -->
+      <h3>display: block;</h3>
+
+      <div class="block-demo">
+        Block Element 1
+      </div>
+
+      <div class="block-demo">
+        Block Element 2
+      </div>
+
+      <!-- INLINE -->
+      <h3>display: inline;</h3>
+
+      <span class="inline-demo">
+        Inline Span 1
+      </span>
+
+      <span class="inline-demo">
+        Inline Span 2
+      </span>
+
+      <span class="inline-demo">
+        Inline Span 3
+      </span>
+
+      <!-- INLINE BLOCK -->
+      <h3>display: inline-block;</h3>
+
+      <div class="inline-block-demo">
+        Box 1
+      </div>
+
+      <div class="inline-block-demo">
+        Box 2
+      </div>
+
+      <div class="inline-block-demo">
+        Box 3
+      </div>
+
+      <!-- NONE -->
+      <h3>display: none;</h3>
+
+      <p>
+        The hidden box below is removed from layout flow.
+      </p>
+
+      <div class="hidden-box">
+        You should not see me.
+      </div>
+
+      <!-- FLEX -->
+      <h3>display: flex;</h3>
+
+      <div class="flex-container">
+
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+
+      </div>
+
+      <!-- GRID -->
+      <h3>display: grid;</h3>
+
+      <div class="grid-container">
+
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+
+      </div>
+
+    </section>
+
+    <!-- POSITION -->
+    <section class="card">
+
+      <h2>Position Property</h2>
+
+      <p>
+        The position property changes how elements
+        are placed on the page.
+      </p>
+
+      <!-- STATIC -->
+      <h3>position: static;</h3>
+
+      <div class="position-box static-box">
+        Static Position
+      </div>
+
+      <!-- RELATIVE -->
+      <h3>position: relative;</h3>
+
+      <div class="position-box relative-box">
+        Relative Position
+      </div>
+
+      <!-- ABSOLUTE -->
+      <h3>position: absolute;</h3>
+
+      <div class="absolute-parent">
+
+        Parent Container
+
+        <div class="absolute-child">
+          Absolute Child
+        </div>
+
+      </div>
+
+      <!-- FIXED -->
+      <h3>position: fixed;</h3>
+
+      <p>
+        Scroll the page to see the fixed header remain visible.
+      </p>
+
+      <!-- STICKY -->
+      <h3>position: sticky;</h3>
+
+      <div class="sticky-demo">
+        Sticky Navigation
+      </div>
+
+      <div class="sticky-content">
+        <p>
+          Scroll through this section to watch the sticky element
+          stay attached to the top.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <p>
+          Vestibulum commodo, lorem sed luctus suscipit,
+          ipsum lacus efficitur purus, non pulvinar erat purus id nisl.
+        </p>
+
+        <p>
+          Donec tincidunt tristique neque, sed volutpat lorem luctus sed.
+        </p>
+
+        <p>
+          Keep scrolling...
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Z INDEX -->
+    <section class="card">
+
+      <h2>z-index (Stacking Order)</h2>
+
+      <p>
+        Higher z-index values appear in front of lower values.
+      </p>
+
+      <div class="z-container">
+
+        <div class="z-box z1">
+          z-index: 1
+        </div>
+
+        <div class="z-box z2">
+          z-index: 5
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- QUICK REFERENCE -->
+    <section class="card">
+
+      <h2>Quick Reference</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>display</td>
+            <td>Controls layout behavior</td>
+            <td>display: grid;</td>
+          </tr>
+
+          <tr>
+            <td>position</td>
+            <td>Controls placement context</td>
+            <td>position: absolute;</td>
+          </tr>
+
+          <tr>
+            <td>top / left</td>
+            <td>Moves positioned elements</td>
+            <td>top: 10px;</td>
+          </tr>
+
+          <tr>
+            <td>z-index</td>
+            <td>Controls stacking order</td>
+            <td>z-index: 100;</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
