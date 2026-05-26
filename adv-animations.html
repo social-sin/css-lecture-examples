@@ -1,0 +1,469 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Advanced CSS Animations</title>
+
+  <link rel="stylesheet" href="style-16.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-overlay">
+
+      <p class="eyebrow">
+        Motion & Interaction Design
+      </p>
+
+      <h1>
+        Advanced CSS Animations
+      </h1>
+
+      <p class="hero-text">
+        Learn how transitions, keyframes,
+        transforms, timing functions,
+        and animation systems create
+        dynamic interactive interfaces.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- TRANSITIONS -->
+    <section class="card">
+
+      <h2>1. CSS Transitions</h2>
+
+      <p>
+        Transitions animate property changes
+        between two states.
+      </p>
+
+      <div class="demo-row">
+
+        <button class="transition-button">
+          Hover Me
+        </button>
+
+      </div>
+
+      <pre>
+transition:
+background-color 0.3s ease-in-out,
+transform 0.5s ease;
+      </pre>
+
+    </section>
+
+    <!-- KEYFRAMES -->
+    <section class="card">
+
+      <h2>2. Keyframe Animations</h2>
+
+      <p>
+        Keyframes define multiple stages
+        of an animation over time.
+      </p>
+
+      <div class="slide-demo">
+
+        <div class="slide-box">
+          Slide In
+        </div>
+
+      </div>
+
+      <pre>
+@keyframes slideIn {
+  0% {
+    transform:
+    translateX(-100%);
+  }
+}
+      </pre>
+
+    </section>
+
+    <!-- TIMING FUNCTIONS -->
+    <section class="card">
+
+      <h2>3. Timing Functions</h2>
+
+      <p>
+        Timing functions control
+        animation speed curves.
+      </p>
+
+      <div class="timing-grid">
+
+        <div class="timing-item linear">
+          linear
+        </div>
+
+        <div class="timing-item ease">
+          ease
+        </div>
+
+        <div class="timing-item ease-in">
+          ease-in
+        </div>
+
+        <div class="timing-item ease-out">
+          ease-out
+        </div>
+
+        <div class="timing-item ease-in-out">
+          ease-in-out
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ROTATE SCALE -->
+    <section class="card">
+
+      <h2>4. Transform + Animation</h2>
+
+      <p>
+        Combine rotate and scale
+        for richer motion.
+      </p>
+
+      <div class="rotate-demo">
+
+        <div class="circle">
+          Rotate
+        </div>
+
+      </div>
+
+      <pre>
+transform:
+rotate(360deg) scale(1);
+      </pre>
+
+    </section>
+
+    <!-- STAGGERED -->
+    <section class="card">
+
+      <h2>5. Staggered Animations</h2>
+
+      <p>
+        Delay animations sequentially
+        for smoother visual flow.
+      </p>
+
+      <div class="stagger-grid">
+
+        <div class="stagger-item">
+          1
+        </div>
+
+        <div class="stagger-item">
+          2
+        </div>
+
+        <div class="stagger-item">
+          3
+        </div>
+
+        <div class="stagger-item">
+          4
+        </div>
+
+      </div>
+
+      <pre>
+.item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+      </pre>
+
+    </section>
+
+    <!-- ALTERNATE -->
+    <section class="card">
+
+      <h2>6. Infinite & Alternate Animations</h2>
+
+      <p>
+        Alternate animations move
+        back and forth continuously.
+      </p>
+
+      <div class="alternate-demo">
+
+        <div class="bounce-ball">
+          Bounce
+        </div>
+
+      </div>
+
+      <pre>
+animation:
+bounce 1s infinite alternate;
+      </pre>
+
+    </section>
+
+    <!-- MULTIPLE -->
+    <section class="card">
+
+      <h2>7. Multiple Property Transitions</h2>
+
+      <p>
+        Animate multiple properties simultaneously.
+      </p>
+
+      <div class="demo-row">
+
+        <div class="multi-transition-card">
+          Hover Me
+        </div>
+
+      </div>
+
+      <pre>
+transition:
+transform 0.5s,
+opacity 0.3s;
+      </pre>
+
+    </section>
+
+    <!-- 3D -->
+    <section class="card">
+
+      <h2>8. Perspective & 3D Motion</h2>
+
+      <p>
+        perspective() adds depth
+        to transforms and rotations.
+      </p>
+
+      <div class="perspective-scene">
+
+        <div class="perspective-card">
+          3D
+        </div>
+
+      </div>
+
+      <pre>
+transform:
+perspective(800px)
+rotateY(25deg);
+      </pre>
+
+    </section>
+
+    <!-- CSS VARIABLES -->
+    <section class="card">
+
+      <h2>9. CSS Variables for Animation Systems</h2>
+
+      <p>
+        CSS variables create reusable
+        animation timing systems.
+      </p>
+
+      <div class="variable-demo">
+
+        <div class="variable-ball">
+          Variable
+        </div>
+
+      </div>
+
+      <pre>
+:root {
+  --bounce-duration: 1s;
+}
+      </pre>
+
+    </section>
+
+    <!-- RESPONSIVE -->
+    <section class="card">
+
+      <h2>10. Responsive Motion</h2>
+
+      <p>
+        Use viewport units for
+        motion that scales with screen size.
+      </p>
+
+      <div class="responsive-demo">
+
+        <div class="responsive-box">
+          translateX(10vw)
+        </div>
+
+      </div>
+
+      <pre>
+transform:
+translateX(10vw);
+      </pre>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+
+      <h2>11. Interactive Animation Gallery</h2>
+
+      <p>
+        Combine transitions, overlays,
+        transforms, and staggered timing.
+      </p>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card">
+
+          <img
+            src="https://picsum.photos/id/1015/800/500"
+            alt="Landscape one"
+          >
+
+          <div class="overlay">
+            Hover Interaction
+          </div>
+
+        </div>
+
+        <div class="gallery-card">
+
+          <img
+            src="https://picsum.photos/id/1025/800/500"
+            alt="Landscape two"
+          >
+
+          <div class="overlay">
+            Smooth Transitions
+          </div>
+
+        </div>
+
+        <div class="gallery-card">
+
+          <img
+            src="https://picsum.photos/id/1035/800/500"
+            alt="Landscape three"
+          >
+
+          <div class="overlay">
+            Transform Effects
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="card">
+
+      <h2>12. Performance Tips</h2>
+
+      <ul class="tips-list">
+
+        <li>
+          Prefer transform and opacity
+          for GPU acceleration
+        </li>
+
+        <li>
+          Avoid animating expensive properties
+          like width or box-shadow excessively
+        </li>
+
+        <li>
+          Use will-change sparingly
+        </li>
+
+        <li>
+          Combine transitions and keyframes carefully
+        </li>
+
+      </ul>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Concept</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>transition</td>
+            <td>State changes</td>
+            <td>Hover effects</td>
+          </tr>
+
+          <tr>
+            <td>@keyframes</td>
+            <td>Sequenced motion</td>
+            <td>slideIn</td>
+          </tr>
+
+          <tr>
+            <td>transform</td>
+            <td>Movement & scale</td>
+            <td>rotate(), scale()</td>
+          </tr>
+
+          <tr>
+            <td>timing-function</td>
+            <td>Speed curves</td>
+            <td>ease-in-out</td>
+          </tr>
+
+          <tr>
+            <td>perspective</td>
+            <td>3D depth</td>
+            <td>rotateY()</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
