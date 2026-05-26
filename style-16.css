@@ -1,0 +1,689 @@
+/* style.css */
+
+/* ================================= */
+/* VARIABLES */
+/* ================================= */
+
+:root {
+
+  --bg: #0f172a;
+  --card: #1e293b;
+
+  --primary: #38bdf8;
+  --secondary: #2ecc71;
+
+  --text: #e2e8f0;
+
+  --bounce-duration: 1s;
+}
+
+/* ================================= */
+/* RESET */
+/* ================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.7;
+}
+
+/* ================================= */
+/* HERO */
+/* ================================= */
+
+.hero {
+  min-height: 75vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  background:
+    linear-gradient(
+      rgba(15, 23, 42, 0.75),
+      rgba(15, 23, 42, 0.75)
+    ),
+    url("https://picsum.photos/id/1005/1600/900");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  max-width: 850px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  color: var(--primary);
+
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+
+  color: white;
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+}
+
+/* ================================= */
+/* MAIN */
+/* ================================= */
+
+main {
+  padding: 4rem 2rem;
+}
+
+/* ================================= */
+/* CARDS */
+/* ================================= */
+
+.card {
+  background-color: var(--card);
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--primary);
+
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ================================= */
+/* ROW */
+/* ================================= */
+
+.demo-row {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+/* ================================= */
+/* TRANSITION */
+/* ================================= */
+
+.transition-button {
+  background-color: #3498db;
+
+  color: white;
+
+  border: none;
+
+  padding: 1rem 2rem;
+
+  border-radius: 0.75rem;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.5s ease;
+}
+
+.transition-button:hover {
+  background-color: #2ecc71;
+
+  transform: scale(1.1);
+}
+
+/* ================================= */
+/* SLIDE IN */
+/* ================================= */
+
+.slide-demo {
+  overflow: hidden;
+
+  margin-top: 2rem;
+}
+
+.slide-box {
+  width: 220px;
+
+  padding: 2rem;
+
+  background-color: var(--primary);
+
+  border-radius: 1rem;
+
+  animation:
+    slideIn 1.2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(20%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+/* ================================= */
+/* TIMING FUNCTIONS */
+/* ================================= */
+
+.timing-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.timing-item {
+  padding: 1rem;
+
+  background-color: #334155;
+
+  border-radius: 0.75rem;
+
+  text-align: center;
+
+  animation:
+    moveRight 2s infinite alternate;
+}
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.ease {
+  animation-timing-function: ease;
+}
+
+.ease-in {
+  animation-timing-function: ease-in;
+}
+
+.ease-out {
+  animation-timing-function: ease-out;
+}
+
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes moveRight {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(60px);
+  }
+
+}
+
+/* ================================= */
+/* ROTATE SCALE */
+/* ================================= */
+
+.rotate-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+
+  background-color: #8b5cf6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation:
+    rotateScale 3s infinite linear;
+}
+
+@keyframes rotateScale {
+
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.4);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+
+}
+
+/* ================================= */
+/* STAGGER */
+/* ================================= */
+
+.stagger-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.stagger-item {
+  background-color: var(--primary);
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation:
+    fadeUp 0.5s forwards;
+}
+
+.stagger-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stagger-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ================================= */
+/* BOUNCE */
+/* ================================= */
+
+.alternate-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.bounce-ball {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  background-color: #f97316;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation:
+    bounce var(--bounce-duration)
+    infinite alternate;
+}
+
+@keyframes bounce {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-80px);
+  }
+
+}
+
+/* ================================= */
+/* MULTI TRANSITION */
+/* ================================= */
+
+.multi-transition-card {
+  width: 240px;
+
+  padding: 3rem;
+
+  background-color: #334155;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  transition:
+    transform 0.5s,
+    opacity 0.3s;
+}
+
+.multi-transition-card:hover {
+  transform: scale(1.08);
+
+  opacity: 0.7;
+}
+
+/* ================================= */
+/* 3D */
+/* ================================= */
+
+.perspective-scene {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.perspective-card {
+  width: 220px;
+  height: 280px;
+
+  background-color: #2ecc71;
+
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+
+  transform:
+    perspective(800px)
+    rotateY(25deg);
+
+  transition:
+    transform 0.6s ease;
+}
+
+.perspective-card:hover {
+  transform:
+    perspective(800px)
+    rotateY(-25deg)
+    rotateX(10deg);
+}
+
+/* ================================= */
+/* VARIABLES */
+/* ================================= */
+
+.variable-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.variable-ball {
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+
+  background-color: var(--secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation:
+    bounce var(--bounce-duration)
+    infinite ease-in-out;
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+.responsive-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.responsive-box {
+  width: 200px;
+  height: 120px;
+
+  background-color: #38bdf8;
+
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation:
+    responsiveMove 3s infinite alternate;
+}
+
+@keyframes responsiveMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(10vw);
+  }
+
+}
+
+/* ================================= */
+/* GALLERY */
+/* ================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.gallery-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+}
+
+.gallery-card img {
+  width: 100%;
+
+  height: 320px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background-color:
+    rgba(15, 23, 42, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ================================= */
+/* LIST */
+/* ================================= */
+
+.tips-list {
+  margin-left: 1.5rem;
+}
+
+.tips-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* ================================= */
+/* CODE */
+/* ================================= */
+
+pre {
+  background-color: #020617;
+
+  color: #93c5fd;
+
+  padding: 1.5rem;
+
+  border-radius: 0.75rem;
+
+  overflow-x: auto;
+
+  margin-top: 1.5rem;
+}
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 1.5rem;
+}
+
+th,
+td {
+  border: 1px solid #475569;
+
+  padding: 1rem;
+
+  text-align: left;
+}
+
+th {
+  background-color: #334155;
+
+  color: white;
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  .timing-grid,
+  .stagger-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-row {
+    flex-direction: column;
+  }
+
+}
