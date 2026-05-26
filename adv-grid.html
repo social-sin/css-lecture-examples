@@ -1,0 +1,346 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced CSS Grid</title>
+
+  <link rel="stylesheet" href="style-8.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <h1>Advanced CSS Grid</h1>
+
+    <p>
+      Build powerful, semantic, and responsive
+      layouts using advanced CSS Grid features.
+    </p>
+
+  </header>
+
+  <main>
+
+    <!-- GRID TEMPLATE AREAS -->
+    <section class="card">
+
+      <h2>1. grid-template-areas + grid-area</h2>
+
+      <p>
+        Named grid areas create readable,
+        visual layout structures.
+      </p>
+
+      <div class="area-layout">
+
+        <header class="grid-header">
+          Header
+        </header>
+
+        <aside class="grid-sidebar">
+          Sidebar
+        </aside>
+
+        <main class="grid-main">
+          Main Content
+        </main>
+
+        <footer class="grid-footer">
+          Footer
+        </footer>
+
+      </div>
+
+      <pre>
+grid-template-areas:
+  "header header"
+  "sidebar main"
+  "footer footer";
+      </pre>
+
+      <p class="tip">
+        Each string represents one grid row.
+      </p>
+
+    </section>
+
+    <!-- FRACTIONAL UNITS -->
+    <section class="card">
+
+      <h2>2. Fractional Units (fr)</h2>
+
+      <p>
+        The <code>fr</code> unit divides
+        available space proportionally.
+      </p>
+
+      <div class="fr-grid">
+
+        <div class="grid-box">1fr</div>
+
+        <div class="grid-box large-box">
+          2fr
+        </div>
+
+        <div class="grid-box">1fr</div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+1fr 2fr 1fr;
+      </pre>
+
+    </section>
+
+    <!-- MINMAX -->
+    <section class="card">
+
+      <h2>3. minmax()</h2>
+
+      <p>
+        Flexible track sizing that adapts
+        between minimum and maximum values.
+      </p>
+
+      <div class="minmax-grid">
+
+        <div class="grid-box">Card 1</div>
+        <div class="grid-box">Card 2</div>
+        <div class="grid-box">Card 3</div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+repeat(3, minmax(200px, 1fr));
+      </pre>
+
+    </section>
+
+    <!-- AUTO FILL -->
+    <section class="card">
+
+      <h2>4. auto-fill</h2>
+
+      <p>
+        Creates as many columns as fit,
+        even if some tracks remain empty.
+      </p>
+
+      <div class="autofill-grid">
+
+        <div class="grid-box">1</div>
+        <div class="grid-box">2</div>
+        <div class="grid-box">3</div>
+        <div class="grid-box">4</div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+repeat(auto-fill, minmax(180px, 1fr));
+      </pre>
+
+    </section>
+
+    <!-- AUTO FIT -->
+    <section class="card">
+
+      <h2>5. auto-fit</h2>
+
+      <p>
+        Empty columns collapse automatically,
+        creating more responsive layouts.
+      </p>
+
+      <div class="autofit-grid">
+
+        <div class="grid-box">A</div>
+        <div class="grid-box">B</div>
+        <div class="grid-box">C</div>
+        <div class="grid-box">D</div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+repeat(auto-fit, minmax(180px, 1fr));
+      </pre>
+
+    </section>
+
+    <!-- RESPONSIVE GRID -->
+    <section class="card">
+
+      <h2>6. Responsive Grid Pattern</h2>
+
+      <p>
+        A powerful responsive layout pattern —
+        no media queries required.
+      </p>
+
+      <div class="responsive-grid">
+
+        <div class="product-card">
+          <h3>Card 1</h3>
+          <p>Responsive content block.</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Card 2</h3>
+          <p>Automatically resizes and wraps.</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Card 3</h3>
+          <p>Uses auto-fit + minmax().</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Card 4</h3>
+          <p>No media queries needed.</p>
+        </div>
+
+        <div class="product-card">
+          <h3>Card 5</h3>
+          <p>Grid stays readable on mobile.</p>
+        </div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+repeat(auto-fit, minmax(200px, 1fr));
+      </pre>
+
+    </section>
+
+    <!-- EMPTY SPACES -->
+    <section class="card">
+
+      <h2>7. Empty Grid Spaces (.)</h2>
+
+      <p>
+        Use a period (<code>.</code>)
+        to create empty grid cells.
+      </p>
+
+      <div class="empty-grid">
+
+        <div class="empty-header">
+          Header
+        </div>
+
+        <div class="empty-sidebar">
+          Sidebar
+        </div>
+
+        <div class="empty-main">
+          Main
+        </div>
+
+      </div>
+
+      <pre>
+grid-template-areas:
+"header header"
+"sidebar .";
+      </pre>
+
+    </section>
+
+    <!-- DEBUGGING -->
+    <section class="card">
+
+      <h2>Debugging Tip</h2>
+
+      <p>
+        Add outlines to visualize layout boundaries.
+      </p>
+
+      <div class="debug-demo">
+
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+
+      </div>
+
+      <pre>
+* {
+  outline: 1px dashed lightgray;
+}
+      </pre>
+
+      <p class="tip">
+        Firefox DevTools includes an excellent Grid Inspector.
+      </p>
+
+    </section>
+
+    <!-- QUICK REFERENCE -->
+    <section class="card">
+
+      <h2>Quick Reference</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Feature</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>grid-template-areas</td>
+            <td>Named layouts</td>
+            <td>"header header"</td>
+          </tr>
+
+          <tr>
+            <td>fr</td>
+            <td>Fractional sizing</td>
+            <td>1fr 2fr 1fr</td>
+          </tr>
+
+          <tr>
+            <td>minmax()</td>
+            <td>Flexible sizing</td>
+            <td>minmax(200px, 1fr)</td>
+          </tr>
+
+          <tr>
+            <td>auto-fit</td>
+            <td>Responsive layouts</td>
+            <td>repeat(auto-fit, ...)</td>
+          </tr>
+
+          <tr>
+            <td>gap</td>
+            <td>Spacing between cells</td>
+            <td>gap: 1rem;</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
