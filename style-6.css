@@ -1,0 +1,345 @@
+/* style.css */
+
+/* ================================= */
+/* RESET */
+/* ================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.7;
+  padding: 40px 30px;
+}
+
+/* ================================= */
+/* HERO */
+/* ================================= */
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================================= */
+/* CARDS */
+/* ================================= */
+
+.card {
+  background-color: #1e293b;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 25px;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ================================= */
+/* DEMO CONTAINERS */
+/* ================================= */
+
+.demo-container {
+  background-color: #334155;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  min-height: 180px;
+
+  border: 2px dashed #64748b;
+}
+
+/* ================================= */
+/* FLEX ITEMS */
+/* ================================= */
+
+.item {
+  background-color: #0ea5e9;
+  color: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-weight: bold;
+}
+
+/* ================================= */
+/* BASIC FLEX */
+/* ================================= */
+
+.basic-flex {
+  display: flex;
+  gap: 20px;
+}
+
+/* ================================= */
+/* FLEX DIRECTION */
+/* ================================= */
+
+.row-demo {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.column-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================================= */
+/* JUSTIFY CONTENT */
+/* ================================= */
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ================================= */
+/* ALIGN ITEMS */
+/* ================================= */
+
+.align-demo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 300px;
+}
+
+.small {
+  height: 60px;
+}
+
+.medium {
+  height: 120px;
+}
+
+.tall {
+  height: 200px;
+}
+
+/* ================================= */
+/* FLEX WRAP */
+/* ================================= */
+
+.wrap-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.wrap-demo .item {
+  width: 180px;
+}
+
+/* ================================= */
+/* FLEX GROW */
+/* ================================= */
+
+.grow-demo {
+  display: flex;
+  gap: 20px;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+/* ================================= */
+/* FLEX SHRINK */
+/* ================================= */
+
+.shrink-demo {
+  display: flex;
+  gap: 20px;
+}
+
+.shrink-demo .item {
+  width: 300px;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+  background-color: #ef4444;
+}
+
+/* ================================= */
+/* FLEX BASIS */
+/* ================================= */
+
+.basis-demo {
+  display: flex;
+  gap: 20px;
+}
+
+.basis-100 {
+  flex-basis: 100px;
+}
+
+.basis-200 {
+  flex-basis: 200px;
+}
+
+.basis-auto {
+  flex-basis: auto;
+}
+
+/* ================================= */
+/* ORDER */
+/* ================================= */
+
+.order-demo {
+  display: flex;
+  gap: 20px;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+/* ================================= */
+/* ALIGN SELF */
+/* ================================= */
+
+.self-demo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  height: 250px;
+}
+
+.self-end {
+  align-self: flex-end;
+  background-color: #f97316;
+}
+
+/* ================================= */
+/* CODE BLOCKS */
+/* ================================= */
+
+pre {
+  background-color: #020617;
+  color: #93c5fd;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  overflow-x: auto;
+
+  margin-top: 20px;
+}
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #475569;
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #334155;
+  color: white;
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .basic-flex,
+  .row-demo,
+  .justify-between,
+  .justify-center,
+  .align-demo,
+  .grow-demo,
+  .shrink-demo,
+  .basis-demo,
+  .order-demo,
+  .self-demo {
+    flex-direction: column;
+  }
+
+}
