@@ -1,0 +1,422 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Advanced Link Styling & Interactive Patterns</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-overlay">
+
+      <p class="eyebrow">
+        Interactive CSS Patterns
+      </p>
+
+      <h1>
+        Advanced Link Styling & Interactive Patterns
+      </h1>
+
+      <p class="hero-text">
+        Learn how to create animated, interactive,
+        and accessible links using transitions,
+        pseudo-elements, and hover effects.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- BASIC LINK -->
+    <section class="card">
+
+      <h2>Basic Styled Links</h2>
+
+      <p>
+        Links should remain semantic while gaining
+        visual clarity and interactivity.
+      </p>
+
+      <div class="demo-row">
+
+        <a href="#" class="basic-link">
+          Standard Interactive Link
+        </a>
+
+      </div>
+
+      <pre>
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+      </pre>
+
+    </section>
+
+    <!-- SLIDING UNDERLINE -->
+    <section class="card">
+
+      <h2>Sliding Underline Effect</h2>
+
+      <p>
+        Use pseudo-elements and transitions
+        to animate underlines smoothly.
+      </p>
+
+      <div class="demo-row">
+
+        <a href="#" class="slide-link">
+          Hover Me
+        </a>
+
+      </div>
+
+      <pre>
+a::after {
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+      </pre>
+
+    </section>
+
+    <!-- CENTER UNDERLINE -->
+    <section class="card">
+
+      <h2>Underline Growing from Center</h2>
+
+      <div class="demo-row">
+
+        <a href="#" class="center-link">
+          Center Animation
+        </a>
+
+      </div>
+
+      <pre>
+left: 50%;
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+      </pre>
+
+    </section>
+
+    <!-- BUTTON LINKS -->
+    <section class="card">
+
+      <h2>Button-Style Links</h2>
+
+      <p>
+        Links can visually behave like buttons
+        while remaining semantic anchor tags.
+      </p>
+
+      <div class="button-group">
+
+        <a href="#" class="button-link">
+          Learn More
+        </a>
+
+        <a href="#" class="button-link icon-button">
+          Explore
+          <span class="icon">→</span>
+        </a>
+
+      </div>
+
+      <pre>
+a.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+}
+      </pre>
+
+    </section>
+
+    <!-- FOCUS STATES -->
+    <section class="card">
+
+      <h2>Accessible Focus States</h2>
+
+      <p>
+        Keyboard users should clearly see
+        which element is focused.
+      </p>
+
+      <div class="demo-row">
+
+        <a href="#" class="focus-link">
+          Press TAB to Focus
+        </a>
+
+      </div>
+
+      <pre>
+a:focus-visible {
+  outline: 2px solid #2ecc71;
+}
+      </pre>
+
+    </section>
+
+    <!-- EXTERNAL LINKS -->
+    <section class="card">
+
+      <h2>External Link Indicators</h2>
+
+      <p>
+        Indicate when a link opens in a new tab.
+      </p>
+
+      <div class="demo-row">
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="external-link"
+        >
+          External Resource
+        </a>
+
+      </div>
+
+      <pre>
+a[target="_blank"]::after {
+  content: " ↗";
+}
+      </pre>
+
+    </section>
+
+    <!-- COLOR TRANSITIONS -->
+    <section class="card">
+
+      <h2>Color + Background Transitions</h2>
+
+      <div class="demo-row">
+
+        <a href="#" class="color-transition-link">
+          Interactive Hover Transition
+        </a>
+
+      </div>
+
+      <pre>
+transition:
+color 0.3s ease,
+background-color 0.3s ease;
+      </pre>
+
+    </section>
+
+    <!-- GLOW EFFECT -->
+    <section class="card">
+
+      <h2>Glow Hover Effect</h2>
+
+      <div class="demo-row">
+
+        <a href="#" class="glow-link">
+          Neon Hover Glow
+        </a>
+
+      </div>
+
+      <pre>
+text-shadow:
+0 0 10px rgba(...);
+      </pre>
+
+    </section>
+
+    <!-- COMBINED EFFECT -->
+    <section class="card">
+
+      <h2>Combined Interactive Pattern</h2>
+
+      <p>
+        Combine underline animation,
+        color changes, and transforms.
+      </p>
+
+      <div class="demo-row">
+
+        <a href="#" class="combined-link">
+          Combined Animation
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- MOBILE TAP TARGETS -->
+    <section class="card">
+
+      <h2>Responsive Clickable Areas</h2>
+
+      <p>
+        Larger padding improves usability
+        on touch devices.
+      </p>
+
+      <nav class="mobile-nav">
+
+        <a href="#">
+          Home
+        </a>
+
+        <a href="#">
+          Portfolio
+        </a>
+
+        <a href="#">
+          Contact
+        </a>
+
+      </nav>
+
+      <pre>
+padding: 1rem;
+display: inline-block;
+      </pre>
+
+    </section>
+
+    <!-- CSS VARIABLES -->
+    <section class="card">
+
+      <h2>Using CSS Variables</h2>
+
+      <p>
+        CSS variables improve consistency
+        and maintainability.
+      </p>
+
+      <div class="demo-row">
+
+        <a href="#" class="variable-link">
+          Variable-Based Styling
+        </a>
+
+      </div>
+
+      <pre>
+:root {
+  --link-color: #3498db;
+  --link-hover: #2ecc71;
+}
+      </pre>
+
+    </section>
+
+    <!-- PRACTICAL CARD -->
+    <section class="card">
+
+      <h2>Practical CTA Example</h2>
+
+      <div class="cta-layout">
+
+        <div class="cta-card">
+
+          <h3>
+            Explore Interactive Design
+          </h3>
+
+          <p>
+            Interactive link styling improves
+            hierarchy, usability, and engagement.
+          </p>
+
+          <a href="#" class="cta-button">
+            Start Exploring
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Technique</th>
+            <th>Purpose</th>
+            <th>Benefit</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>::after</td>
+            <td>Animated underline</td>
+            <td>Elegant hover feedback</td>
+          </tr>
+
+          <tr>
+            <td>Transitions</td>
+            <td>Smooth animations</td>
+            <td>Improved UX</td>
+          </tr>
+
+          <tr>
+            <td>:focus-visible</td>
+            <td>Accessibility</td>
+            <td>Keyboard navigation</td>
+          </tr>
+
+          <tr>
+            <td>Button Links</td>
+            <td>Call-to-actions</td>
+            <td>Improved interaction</td>
+          </tr>
+
+          <tr>
+            <td>CSS Variables</td>
+            <td>Consistency</td>
+            <td>Maintainability</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
