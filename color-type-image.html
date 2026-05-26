@@ -1,0 +1,278 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Color, Type, and Images</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="overlay">
+
+      <h1>CSS Color, Type, and Images</h1>
+
+      <p>
+        Learn how CSS controls color systems,
+        typography styling, and background images.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- COLORS -->
+    <section class="card">
+
+      <h2>Colors</h2>
+
+      <p>
+        CSS supports multiple color formats.
+      </p>
+
+      <div class="color-grid">
+
+        <div class="color-box hex-box">
+          <h3>Hexadecimal</h3>
+
+          <p>
+            color: #ff6600;
+          </p>
+        </div>
+
+        <div class="color-box rgb-box">
+          <h3>RGB</h3>
+
+          <p>
+            color: rgb(255, 102, 0);
+          </p>
+        </div>
+
+        <div class="color-box rgba-box">
+          <h3>RGBA</h3>
+
+          <p>
+            rgba(255, 102, 0, 0.8);
+          </p>
+        </div>
+
+        <div class="color-box hsl-box">
+          <h3>HSL</h3>
+
+          <p>
+            hsl(24, 100%, 50%);
+          </p>
+        </div>
+
+        <div class="color-box hsla-box">
+          <h3>HSLA</h3>
+
+          <p>
+            hsla(24, 100%, 50%, 0.7);
+          </p>
+        </div>
+
+      </div>
+
+      <p class="tip">
+        Pro Tip:
+        Use rgba() or hsla() for transparent overlays.
+      </p>
+
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="card">
+
+      <h2>Typography</h2>
+
+      <p>
+        Typography controls readability,
+        hierarchy, and visual tone.
+      </p>
+
+      <div class="type-demo">
+
+        <h3>Typography Example</h3>
+
+        <p class="italic-text">
+          This paragraph uses italic styling,
+          custom line-height, and typography controls.
+        </p>
+
+        <p class="bold-text">
+          This paragraph demonstrates font-weight styling.
+        </p>
+
+        <p class="small-text">
+          Smaller text improves hierarchy and structure.
+        </p>
+
+      </div>
+
+      <pre>
+font-family: "Helvetica", Arial, sans-serif;
+font-size: 16px;
+font-weight: 400;
+font-style: italic;
+line-height: 1.5;
+      </pre>
+
+      <div class="font-table-wrapper">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>font-family</td>
+              <td>Sets typeface</td>
+              <td>"Roboto", sans-serif</td>
+            </tr>
+
+            <tr>
+              <td>font-size</td>
+              <td>Controls text size</td>
+              <td>1.2rem</td>
+            </tr>
+
+            <tr>
+              <td>font-weight</td>
+              <td>Controls thickness</td>
+              <td>700</td>
+            </tr>
+
+            <tr>
+              <td>font-style</td>
+              <td>Italic or normal</td>
+              <td>italic</td>
+            </tr>
+
+            <tr>
+              <td>line-height</td>
+              <td>Space between lines</td>
+              <td>1.5</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <!-- BACKGROUND IMAGES -->
+    <section class="card">
+
+      <h2>Background Images</h2>
+
+      <p>
+        Background images can be positioned,
+        scaled, and layered with overlays.
+      </p>
+
+      <!-- COVER -->
+      <div class="bg-demo cover-demo">
+
+        <div class="bg-overlay">
+          background-size: cover;
+        </div>
+
+      </div>
+
+      <!-- CONTAIN -->
+      <div class="bg-demo contain-demo">
+
+        <div class="bg-overlay">
+          background-size: contain;
+        </div>
+
+      </div>
+
+      <!-- FIXED -->
+      <div class="bg-demo fixed-demo">
+
+        <div class="bg-overlay">
+          background-attachment: fixed;
+        </div>
+
+      </div>
+
+      <pre>
+background-image: url("photo.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+      </pre>
+
+      <p class="tip">
+        Shorthand:
+        background: url("photo.jpg") no-repeat center/cover;
+      </p>
+
+    </section>
+
+    <!-- QUICK SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Common Properties</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Colors</td>
+            <td>hex, rgb(), hsl()</td>
+            <td>Create visual identity</td>
+          </tr>
+
+          <tr>
+            <td>Typography</td>
+            <td>font-size, line-height</td>
+            <td>Improve readability</td>
+          </tr>
+
+          <tr>
+            <td>Images</td>
+            <td>background-size, position</td>
+            <td>Control image scaling</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
