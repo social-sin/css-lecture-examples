@@ -1,0 +1,473 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Responsive Images, Typography & Spacing</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-overlay">
+
+      <p class="eyebrow">
+        Responsive Web Design
+      </p>
+
+      <h1>
+        Responsive Images, Typography & Spacing
+      </h1>
+
+      <p class="hero-text">
+        Learn how media, text, and layout spacing
+        adapt gracefully across different screen sizes.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- RESPONSIVE MEDIA -->
+    <section class="card">
+
+      <h2>Responsive Images & Media</h2>
+
+      <p>
+        Images and videos should scale fluidly
+        inside their containers.
+      </p>
+
+      <div class="media-demo">
+
+        <img
+          src="https://picsum.photos/id/1015/1200/700"
+          alt="Responsive landscape example"
+        >
+
+      </div>
+
+      <pre>
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+      </pre>
+
+    </section>
+
+    <!-- OBJECT FIT -->
+    <section class="card">
+
+      <h2>object-fit: cover</h2>
+
+      <p>
+        object-fit helps media fill containers
+        without distorting aspect ratio.
+      </p>
+
+      <div class="cover-grid">
+
+        <div class="cover-card">
+
+          <img
+            src="https://picsum.photos/id/1025/1200/800"
+            alt="Dog portrait example"
+          >
+
+        </div>
+
+        <div class="cover-card">
+
+          <img
+            src="https://picsum.photos/id/1035/1200/800"
+            alt="Mountain example"
+          >
+
+        </div>
+
+      </div>
+
+      <pre>
+img {
+  object-fit: cover;
+}
+      </pre>
+
+    </section>
+
+    <!-- RESPONSIVE TYPOGRAPHY -->
+    <section class="card">
+
+      <h2>Responsive Typography</h2>
+
+      <p>
+        Typography can scale dynamically
+        using viewport units and relative sizing.
+      </p>
+
+      <div class="typography-demo">
+
+        <h1 class="fluid-heading">
+          Fluid Heading
+        </h1>
+
+        <p class="body-copy">
+          This paragraph uses rem units and line-height
+          to maintain readability across devices.
+        </p>
+
+      </div>
+
+      <pre>
+h1 {
+  font-size: 3vw;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+      </pre>
+
+    </section>
+
+    <!-- CLAMP -->
+    <section class="card">
+
+      <h2>Fluid Typography with clamp()</h2>
+
+      <p>
+        clamp() scales text responsively
+        while keeping readable limits.
+      </p>
+
+      <div class="clamp-demo">
+
+        <h1 class="clamp-heading">
+          Resize the Browser Window
+        </h1>
+
+      </div>
+
+      <pre>
+font-size:
+clamp(1.5rem, 4vw, 3rem);
+      </pre>
+
+    </section>
+
+    <!-- SPACING -->
+    <section class="card">
+
+      <h2>Responsive Spacing</h2>
+
+      <p>
+        Use rem, %, and gap for scalable spacing systems.
+      </p>
+
+      <div class="spacing-layout">
+
+        <div class="spacing-card">
+          Card One
+        </div>
+
+        <div class="spacing-card">
+          Card Two
+        </div>
+
+        <div class="spacing-card">
+          Card Three
+        </div>
+
+      </div>
+
+      <pre>
+.container {
+  padding: 2rem;
+  gap: 1rem;
+}
+      </pre>
+
+    </section>
+
+    <!-- FLEXIBLE GRID -->
+    <section class="card">
+
+      <h2>Responsive Grid Layout</h2>
+
+      <p>
+        Grid layouts can automatically
+        reflow across screen sizes.
+      </p>
+
+      <div class="responsive-grid">
+
+        <article class="article-card">
+
+          <img
+            src="https://picsum.photos/id/1040/900/600"
+            alt="Gallery image one"
+          >
+
+          <div class="article-content">
+
+            <h3>
+              Flexible Grid Item
+            </h3>
+
+            <p>
+              Grid layouts adapt automatically
+              with auto-fit and minmax().
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="article-card">
+
+          <img
+            src="https://picsum.photos/id/1050/900/600"
+            alt="Gallery image two"
+          >
+
+          <div class="article-content">
+
+            <h3>
+              Scalable Layout
+            </h3>
+
+            <p>
+              Images, typography, and spacing
+              scale together responsively.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="article-card">
+
+          <img
+            src="https://picsum.photos/id/1060/900/600"
+            alt="Gallery image three"
+          >
+
+          <div class="article-content">
+
+            <h3>
+              Mobile Friendly
+            </h3>
+
+            <p>
+              Cards wrap automatically
+              as the viewport shrinks.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+repeat(auto-fit, minmax(250px, 1fr));
+      </pre>
+
+    </section>
+
+    <!-- MEDIA QUERY -->
+    <section class="card">
+
+      <h2>Media Queries</h2>
+
+      <p>
+        Media queries apply styles
+        at specific screen widths.
+      </p>
+
+      <div class="media-query-demo">
+
+        <div class="mq-box">
+          Resize the browser window
+        </div>
+
+      </div>
+
+      <pre>
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5vw;
+  }
+}
+      </pre>
+
+    </section>
+
+    <!-- SVG -->
+    <section class="card">
+
+      <h2>SVG Graphics</h2>
+
+      <p>
+        SVGs scale infinitely without losing quality.
+      </p>
+
+      <div class="svg-demo">
+
+        <svg
+          viewBox="0 0 100 100"
+          class="responsive-svg"
+        >
+
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+          ></circle>
+
+        </svg>
+
+      </div>
+
+      <pre>
+svg {
+  width: 100%;
+  height: auto;
+}
+      </pre>
+
+    </section>
+
+    <!-- COMBINING TECHNIQUES -->
+    <section class="card">
+
+      <h2>Combining Techniques</h2>
+
+      <p>
+        Fully responsive sections combine:
+      </p>
+
+      <ul class="feature-list">
+
+        <li>Fluid images</li>
+
+        <li>Scalable typography</li>
+
+        <li>Flexible grid layouts</li>
+
+        <li>Responsive spacing systems</li>
+
+        <li>Media queries when needed</li>
+
+      </ul>
+
+      <div class="combo-section">
+
+        <div class="combo-image">
+
+          <img
+            src="https://picsum.photos/id/1070/1200/800"
+            alt="Responsive gallery installation"
+          >
+
+        </div>
+
+        <div class="combo-text">
+
+          <h2 class="combo-heading">
+            Responsive Design System
+          </h2>
+
+          <p>
+            This layout combines grid,
+            fluid typography, responsive spacing,
+            and scalable media together.
+          </p>
+
+          <button>
+            Explore Layout
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Concept</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>max-width</td>
+            <td>Responsive media</td>
+            <td>max-width: 100%;</td>
+          </tr>
+
+          <tr>
+            <td>rem</td>
+            <td>Scalable spacing</td>
+            <td>padding: 2rem;</td>
+          </tr>
+
+          <tr>
+            <td>clamp()</td>
+            <td>Fluid typography</td>
+            <td>clamp(1.5rem, 4vw, 3rem)</td>
+          </tr>
+
+          <tr>
+            <td>gap</td>
+            <td>Consistent spacing</td>
+            <td>gap: 1rem;</td>
+          </tr>
+
+          <tr>
+            <td>auto-fit</td>
+            <td>Responsive grid</td>
+            <td>repeat(auto-fit, ...)</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
