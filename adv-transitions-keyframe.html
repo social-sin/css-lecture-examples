@@ -1,0 +1,408 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Advanced CSS Transitions & Keyframe Patterns</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-overlay">
+
+      <p class="eyebrow">
+        Advanced CSS Animation
+      </p>
+
+      <h1>
+        Advanced CSS Transitions & Keyframe Patterns
+      </h1>
+
+      <p class="hero-text">
+        Create dynamic interfaces using staggered animations,
+        3D transforms, interactive hover effects,
+        and advanced keyframe combinations.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- STAGGERED -->
+    <section class="card">
+
+      <h2>1. Staggered Animations</h2>
+
+      <p>
+        Animate elements sequentially
+        using animation-delay and nth-child.
+      </p>
+
+      <div class="stagger-grid">
+
+        <div class="stagger-item">
+          Item 1
+        </div>
+
+        <div class="stagger-item">
+          Item 2
+        </div>
+
+        <div class="stagger-item">
+          Item 3
+        </div>
+
+        <div class="stagger-item">
+          Item 4
+        </div>
+
+      </div>
+
+      <pre>
+.item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+      </pre>
+
+    </section>
+
+    <!-- 3D CARD -->
+    <section class="card">
+
+      <h2>2. 3D Transformations</h2>
+
+      <p>
+        Use perspective and rotateY()
+        to create 3D interactive effects.
+      </p>
+
+      <div class="flip-scene">
+
+        <div class="flip-card">
+
+          <div class="flip-front">
+            FRONT
+          </div>
+
+          <div class="flip-back">
+            BACK
+          </div>
+
+        </div>
+
+      </div>
+
+      <pre>
+transform-style: preserve-3d;
+perspective: 1000px;
+      </pre>
+
+    </section>
+
+    <!-- SCALE SHADOW -->
+    <section class="card">
+
+      <h2>3. Scale + Shadow Hover Effects</h2>
+
+      <p>
+        Combine transform and box-shadow
+        for interactive depth.
+      </p>
+
+      <div class="button-row">
+
+        <button class="scale-button">
+          Hover Me
+        </button>
+
+      </div>
+
+      <pre>
+transform: scale(1.1);
+box-shadow: 0 10px 20px rgba(...);
+      </pre>
+
+    </section>
+
+    <!-- GRADIENT -->
+    <section class="card">
+
+      <h2>4. Animated Gradient Backgrounds</h2>
+
+      <p>
+        Animate gradients using
+        background-position transitions.
+      </p>
+
+      <div class="button-row">
+
+        <button class="gradient-button">
+          Animated Gradient
+        </button>
+
+      </div>
+
+      <pre>
+background-size: 200% 200%;
+background-position: right center;
+      </pre>
+
+    </section>
+
+    <!-- BOUNCE -->
+    <section class="card">
+
+      <h2>5. Combined Keyframe Effects</h2>
+
+      <p>
+        Multiple transforms and opacity
+        changes create richer motion.
+      </p>
+
+      <div class="bounce-demo">
+
+        <div class="bounce-box">
+          Bounce
+        </div>
+
+      </div>
+
+      <pre>
+@keyframes bounceFade {
+  0% { opacity: 0; }
+  50% { transform: translateY(-20px); }
+}
+      </pre>
+
+    </section>
+
+    <!-- MULTIPLE ANIMATIONS -->
+    <section class="card">
+
+      <h2>6. Multiple Animations Together</h2>
+
+      <p>
+        Combine animations using commas.
+      </p>
+
+      <div class="multi-demo">
+
+        <div class="multi-box">
+          Rotate + Pulse
+        </div>
+
+      </div>
+
+      <pre>
+animation:
+pulse 1s ease,
+rotate 4s linear infinite;
+      </pre>
+
+    </section>
+
+    <!-- HOVER + KEYFRAME -->
+    <section class="card">
+
+      <h2>7. Hover Triggered Keyframes</h2>
+
+      <p>
+        Hover interactions can trigger
+        short animation sequences.
+      </p>
+
+      <div class="button-row">
+
+        <button class="pulse-button">
+          Hover to Pulse
+        </button>
+
+      </div>
+
+      <pre>
+.button:hover {
+  animation: pulse 0.6s forwards;
+}
+      </pre>
+
+    </section>
+
+    <!-- CSS VARIABLES -->
+    <section class="card">
+
+      <h2>8. CSS Variables for Animation Systems</h2>
+
+      <p>
+        CSS variables improve consistency
+        and reusability.
+      </p>
+
+      <div class="variable-demo">
+
+        <div class="variable-box">
+          Variable Animation
+        </div>
+
+      </div>
+
+      <pre>
+:root {
+  --anim-duration: 0.8s;
+}
+      </pre>
+
+    </section>
+
+    <!-- RESPONSIVE -->
+    <section class="card">
+
+      <h2>9. Responsive Motion</h2>
+
+      <p>
+        Viewport units create movement
+        that scales with screen size.
+      </p>
+
+      <div class="responsive-demo">
+
+        <div class="responsive-box">
+          translateX(10vw)
+        </div>
+
+      </div>
+
+      <pre>
+transform:
+translateX(10vw);
+      </pre>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+
+      <h2>10. Interactive Gallery Pattern</h2>
+
+      <p>
+        Combine hover transforms,
+        transitions, and staggered effects.
+      </p>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card">
+
+          <img
+            src="https://picsum.photos/id/1015/800/500"
+            alt="Landscape one"
+          >
+
+          <div class="gallery-overlay">
+            Image One
+          </div>
+
+        </div>
+
+        <div class="gallery-card">
+
+          <img
+            src="https://picsum.photos/id/1025/800/500"
+            alt="Landscape two"
+          >
+
+          <div class="gallery-overlay">
+            Image Two
+          </div>
+
+        </div>
+
+        <div class="gallery-card">
+
+          <img
+            src="https://picsum.photos/id/1035/800/500"
+            alt="Landscape three"
+          >
+
+          <div class="gallery-overlay">
+            Image Three
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Technique</th>
+            <th>Purpose</th>
+            <th>Benefit</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>nth-child</td>
+            <td>Staggered motion</td>
+            <td>Sequential animation</td>
+          </tr>
+
+          <tr>
+            <td>perspective</td>
+            <td>3D depth</td>
+            <td>Interactive realism</td>
+          </tr>
+
+          <tr>
+            <td>transform</td>
+            <td>GPU acceleration</td>
+            <td>Smoother animation</td>
+          </tr>
+
+          <tr>
+            <td>Keyframes</td>
+            <td>Complex motion</td>
+            <td>Custom animation systems</td>
+          </tr>
+
+          <tr>
+            <td>CSS Variables</td>
+            <td>Reusable timing</td>
+            <td>Scalable systems</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
