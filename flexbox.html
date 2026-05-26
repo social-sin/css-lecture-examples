@@ -1,0 +1,364 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Flexbox Demo</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <h1>CSS Flexbox</h1>
+
+    <p>
+      Flexbox is a 1D layout system used to align,
+      distribute, and control spacing between elements.
+    </p>
+
+  </header>
+
+  <main>
+
+    <!-- FLEX CONTAINER -->
+    <section class="card">
+
+      <h2>Flex Container</h2>
+
+      <p>
+        Apply <code>display: flex;</code>
+        to turn a parent into a flex container.
+      </p>
+
+      <div class="demo-container basic-flex">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+      </div>
+
+      <pre>
+.container {
+  display: flex;
+}
+      </pre>
+
+    </section>
+
+    <!-- FLEX DIRECTION -->
+    <section class="card">
+
+      <h2>flex-direction</h2>
+
+      <h3>Row (Default)</h3>
+
+      <div class="demo-container row-demo">
+
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+
+      </div>
+
+      <h3>Column</h3>
+
+      <div class="demo-container column-demo">
+
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+
+      </div>
+
+      <pre>
+flex-direction: row;
+flex-direction: column;
+      </pre>
+
+    </section>
+
+    <!-- JUSTIFY CONTENT -->
+    <section class="card">
+
+      <h2>justify-content</h2>
+
+      <h3>space-between</h3>
+
+      <div class="demo-container justify-between">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+      </div>
+
+      <h3>center</h3>
+
+      <div class="demo-container justify-center">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+      </div>
+
+      <pre>
+justify-content: space-between;
+justify-content: center;
+      </pre>
+
+    </section>
+
+    <!-- ALIGN ITEMS -->
+    <section class="card">
+
+      <h2>align-items</h2>
+
+      <div class="demo-container align-demo">
+
+        <div class="item small">Small</div>
+
+        <div class="item medium">Medium</div>
+
+        <div class="item tall">Tall</div>
+
+      </div>
+
+      <pre>
+align-items: center;
+      </pre>
+
+    </section>
+
+    <!-- FLEX WRAP -->
+    <section class="card">
+
+      <h2>flex-wrap</h2>
+
+      <div class="demo-container wrap-demo">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+
+      </div>
+
+      <pre>
+flex-wrap: wrap;
+      </pre>
+
+    </section>
+
+    <!-- FLEX GROW -->
+    <section class="card">
+
+      <h2>flex-grow</h2>
+
+      <div class="demo-container grow-demo">
+
+        <div class="item grow-1">
+          grow: 1
+        </div>
+
+        <div class="item grow-2">
+          grow: 2
+        </div>
+
+        <div class="item grow-1">
+          grow: 1
+        </div>
+
+      </div>
+
+      <pre>
+.item {
+  flex-grow: 2;
+}
+      </pre>
+
+    </section>
+
+    <!-- FLEX SHRINK -->
+    <section class="card">
+
+      <h2>flex-shrink</h2>
+
+      <div class="demo-container shrink-demo">
+
+        <div class="item shrink-0">
+          shrink: 0
+        </div>
+
+        <div class="item">
+          shrink: 1
+        </div>
+
+        <div class="item">
+          shrink: 1
+        </div>
+
+      </div>
+
+      <pre>
+flex-shrink: 0;
+      </pre>
+
+    </section>
+
+    <!-- FLEX BASIS -->
+    <section class="card">
+
+      <h2>flex-basis</h2>
+
+      <div class="demo-container basis-demo">
+
+        <div class="item basis-100">
+          100px
+        </div>
+
+        <div class="item basis-200">
+          200px
+        </div>
+
+        <div class="item basis-auto">
+          auto
+        </div>
+
+      </div>
+
+      <pre>
+flex-basis: 200px;
+      </pre>
+
+    </section>
+
+    <!-- ORDER -->
+    <section class="card">
+
+      <h2>order</h2>
+
+      <div class="demo-container order-demo">
+
+        <div class="item order-3">
+          Order 3
+        </div>
+
+        <div class="item order-1">
+          Order 1
+        </div>
+
+        <div class="item order-2">
+          Order 2
+        </div>
+
+      </div>
+
+      <pre>
+.item {
+  order: 2;
+}
+      </pre>
+
+    </section>
+
+    <!-- ALIGN SELF -->
+    <section class="card">
+
+      <h2>align-self</h2>
+
+      <div class="demo-container self-demo">
+
+        <div class="item">
+          Normal
+        </div>
+
+        <div class="item self-end">
+          align-self: flex-end
+        </div>
+
+        <div class="item">
+          Normal
+        </div>
+
+      </div>
+
+      <pre>
+align-self: flex-end;
+      </pre>
+
+    </section>
+
+    <!-- QUICK REFERENCE -->
+    <section class="card">
+
+      <h2>Quick Reference</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>display</td>
+            <td>Creates flex container</td>
+            <td>display: flex;</td>
+          </tr>
+
+          <tr>
+            <td>justify-content</td>
+            <td>Main axis alignment</td>
+            <td>justify-content: center;</td>
+          </tr>
+
+          <tr>
+            <td>align-items</td>
+            <td>Cross axis alignment</td>
+            <td>align-items: center;</td>
+          </tr>
+
+          <tr>
+            <td>flex-wrap</td>
+            <td>Allows wrapping</td>
+            <td>flex-wrap: wrap;</td>
+          </tr>
+
+          <tr>
+            <td>flex-grow</td>
+            <td>Controls expansion</td>
+            <td>flex-grow: 2;</td>
+          </tr>
+
+          <tr>
+            <td>order</td>
+            <td>Changes visual order</td>
+            <td>order: 3;</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
