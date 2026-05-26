@@ -1,0 +1,211 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Cheatsheet Demo</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <h1>CSS Selectors Cheatsheet</h1>
+    <p>
+      This page demonstrates basic selectors, combinators,
+      and link pseudo-classes.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- ================================= -->
+    <!-- BASIC SELECTORS -->
+    <!-- ================================= -->
+
+    <section class="demo-section">
+      <h2>1. Basic Selectors</h2>
+
+      <div class="card">
+        <h3>Universal Selector (*)</h3>
+
+        <p>
+          The universal selector targets every element on the page.
+        </p>
+
+        <p>
+          In this example, the universal selector applies:
+        </p>
+
+        <ul>
+          <li>box-sizing</li>
+          <li>font-family</li>
+          <li>margin reset</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Element Selector</h3>
+
+        <p>
+          All paragraph elements are styled using the
+          <code>p</code> selector.
+        </p>
+
+        <p>
+          Every paragraph shares the same text color and spacing.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Class Selector (.class)</h3>
+
+        <p class="highlight">
+          This paragraph has the class "highlight".
+        </p>
+
+        <p>
+          Only elements with the class receive the highlighted style.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ID Selector (#id)</h3>
+
+        <p>
+          The page header uses the ID selector:
+          <code>#header</code>
+        </p>
+
+        <p>
+          IDs should be unique per page.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================= -->
+    <!-- GROUPING & COMBINATORS -->
+    <!-- ================================= -->
+
+    <section class="demo-section">
+      <h2>2. Grouping &amp; Combinators</h2>
+
+      <div class="card">
+        <h3>Grouping Selector (A, B)</h3>
+
+        <h4>Heading Four</h4>
+
+        <p>
+          Both <code>h3</code> and <code>h4</code>
+          are grouped together in CSS.
+        </p>
+      </div>
+
+      <div class="card article-demo">
+        <h3>Descendant Selector (A B)</h3>
+
+        <article>
+          <p>
+            This paragraph is INSIDE the article.
+          </p>
+
+          <div>
+            <p>
+              This nested paragraph is also inside the article.
+            </p>
+          </div>
+        </article>
+
+        <p>
+          This paragraph is OUTSIDE the article.
+        </p>
+      </div>
+
+      <div class="card child-demo">
+        <h3>Child Selector (A &gt; B)</h3>
+
+        <ul>
+          <li>Direct child item</li>
+          <li>Another direct child item</li>
+
+          <li>
+            Parent item
+            <ul>
+              <li>Nested child item</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card adjacent-demo">
+        <h3>Adjacent Sibling Selector (A + B)</h3>
+
+        <h4>Heading</h4>
+
+        <p>
+          This paragraph comes immediately after the heading.
+        </p>
+
+        <p>
+          This paragraph does NOT.
+        </p>
+      </div>
+
+      <div class="card general-demo">
+        <h3>General Sibling Selector (A ~ B)</h3>
+
+        <h4>Another Heading</h4>
+
+        <p>
+          This paragraph is a sibling after the heading.
+        </p>
+
+        <div>
+          Random div between elements.
+        </div>
+
+        <p>
+          This paragraph is ALSO selected.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================= -->
+    <!-- LINK PSEUDO CLASSES -->
+    <!-- ================================= -->
+
+    <section class="demo-section">
+      <h2>3. Link Pseudo-Classes</h2>
+
+      <div class="card">
+        <p>
+          Hover over the links and click them to test the states.
+        </p>
+
+        <nav class="link-demo">
+          <a href="https://example.com" target="_blank">
+            Example Link 1
+          </a>
+
+          <a href="https://openai.com" target="_blank">
+            Example Link 2
+          </a>
+
+          <a href="https://developer.mozilla.org" target="_blank">
+            MDN Docs
+          </a>
+        </nav>
+
+        <p class="note">
+          Remember the LVHA order:
+          :link → :visited → :hover → :active
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
