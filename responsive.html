@@ -1,0 +1,403 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- RESPONSIVE META TAG -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Responsive Sites & CSS Units/Values</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Responsive Web Design
+      </p>
+
+      <h1>
+        Responsive Sites & CSS Units/Values
+      </h1>
+
+      <p class="hero-text">
+        Learn how CSS units, viewport sizing,
+        relative values, and media queries create
+        layouts that adapt across devices.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- CSS UNITS -->
+    <section class="card">
+
+      <h2>CSS Units & Values</h2>
+
+      <p>
+        CSS units control sizing, spacing,
+        typography, and layout behavior.
+      </p>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Unit</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>px</td>
+            <td>Fixed pixel size</td>
+            <td>width: 200px;</td>
+          </tr>
+
+          <tr>
+            <td>%</td>
+            <td>Relative to parent</td>
+            <td>width: 50%;</td>
+          </tr>
+
+          <tr>
+            <td>em</td>
+            <td>Relative to parent font size</td>
+            <td>padding: 2em;</td>
+          </tr>
+
+          <tr>
+            <td>rem</td>
+            <td>Relative to root font size</td>
+            <td>font-size: 1.2rem;</td>
+          </tr>
+
+          <tr>
+            <td>vh</td>
+            <td>Viewport height</td>
+            <td>height: 100vh;</td>
+          </tr>
+
+          <tr>
+            <td>vw</td>
+            <td>Viewport width</td>
+            <td>width: 100vw;</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+    <!-- ABSOLUTE VS RELATIVE -->
+    <section class="card">
+
+      <h2>Absolute vs Relative Units</h2>
+
+      <div class="comparison-grid">
+
+        <div class="unit-box absolute-box">
+
+          <h3>Absolute Unit (px)</h3>
+
+          <div class="fixed-box">
+            200px Wide
+          </div>
+
+        </div>
+
+        <div class="unit-box relative-box">
+
+          <h3>Relative Unit (%)</h3>
+
+          <div class="fluid-box">
+            50% Width
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="tip">
+        Relative units adapt better across devices.
+      </p>
+
+    </section>
+
+    <!-- REM & EM -->
+    <section class="card">
+
+      <h2>em vs rem</h2>
+
+      <p>
+        rem references the root font size,
+        while em references the parent element.
+      </p>
+
+      <div class="typography-demo">
+
+        <div class="rem-example">
+          1.5rem Text
+        </div>
+
+        <div class="parent-text">
+
+          Parent Font Size
+
+          <div class="em-example">
+            1.5em Text
+          </div>
+
+        </div>
+
+      </div>
+
+      <pre>
+html {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1rem;
+}
+      </pre>
+
+    </section>
+
+    <!-- VIEWPORT UNITS -->
+    <section class="card">
+
+      <h2>Viewport Units (vh / vw)</h2>
+
+      <div class="viewport-demo">
+
+        <div class="vh-box">
+          50vh Height
+        </div>
+
+        <div class="vw-box">
+          50vw Width
+        </div>
+
+      </div>
+
+      <pre>
+height: 100vh;
+width: 100vw;
+      </pre>
+
+    </section>
+
+    <!-- RESPONSIVE TYPOGRAPHY -->
+    <section class="card">
+
+      <h2>Responsive Typography</h2>
+
+      <p>
+        Typography can scale dynamically
+        using viewport units.
+      </p>
+
+      <div class="responsive-text-demo">
+
+        <h1 class="responsive-heading">
+          Resize the Browser Window
+        </h1>
+
+      </div>
+
+      <pre>
+font-size: 3vw;
+      </pre>
+
+    </section>
+
+    <!-- FLUID LAYOUT -->
+    <section class="card">
+
+      <h2>Fluid Layouts</h2>
+
+      <div class="fluid-grid">
+
+        <div class="fluid-card">
+          1fr
+        </div>
+
+        <div class="fluid-card large-card">
+          2fr
+        </div>
+
+        <div class="fluid-card">
+          1fr
+        </div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+1fr 2fr 1fr;
+      </pre>
+
+    </section>
+
+    <!-- RESPONSIVE MEDIA -->
+    <section class="card">
+
+      <h2>Responsive Media</h2>
+
+      <p>
+        Images and videos should scale
+        within their containers.
+      </p>
+
+      <div class="media-demo">
+
+        <img
+          src="https://picsum.photos/id/1015/1200/700"
+          alt="Responsive Example"
+        >
+
+      </div>
+
+      <pre>
+img {
+  max-width: 100%;
+  height: auto;
+}
+      </pre>
+
+    </section>
+
+    <!-- MEDIA QUERIES -->
+    <section class="card">
+
+      <h2>Media Queries</h2>
+
+      <p>
+        Media queries apply styles
+        at different screen sizes.
+      </p>
+
+      <div class="media-query-layout">
+
+        <div class="mq-card">
+          Card 1
+        </div>
+
+        <div class="mq-card">
+          Card 2
+        </div>
+
+        <div class="mq-card">
+          Card 3
+        </div>
+
+      </div>
+
+      <pre>
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+      </pre>
+
+    </section>
+
+    <!-- FULL VIEWPORT HERO -->
+    <section class="card">
+
+      <h2>Full Viewport Sections</h2>
+
+      <div class="full-screen-demo">
+
+        <div class="full-screen-box">
+
+          <h3>
+            height: 100vh
+          </h3>
+
+          <p>
+            Full-screen hero sections
+            adapt to the viewport height.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>Quick Summary</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Concept</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>rem</td>
+            <td>Consistent typography</td>
+            <td>font-size: 1rem;</td>
+          </tr>
+
+          <tr>
+            <td>vh / vw</td>
+            <td>Viewport scaling</td>
+            <td>height: 100vh;</td>
+          </tr>
+
+          <tr>
+            <td>Media Queries</td>
+            <td>Responsive layouts</td>
+            <td>@media (...)</td>
+          </tr>
+
+          <tr>
+            <td>Fluid Layouts</td>
+            <td>Flexible sizing</td>
+            <td>1fr 2fr 1fr</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
