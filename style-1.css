@@ -1,0 +1,175 @@
+/* style.css */
+
+/* ================================= */
+/* UNIVERSAL SELECTOR */
+/* ================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+  padding: 30px;
+}
+
+/* ================================= */
+/* ID SELECTOR */
+/* ================================= */
+
+#header {
+  background-color: #222;
+  color: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+/* ================================= */
+/* GROUPING SELECTOR */
+/* ================================= */
+
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Additional grouping example */
+h3,
+h4 {
+  color: darkblue;
+  margin-bottom: 10px;
+}
+
+/* ================================= */
+/* ELEMENT SELECTOR */
+/* ================================= */
+
+p {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* ================================= */
+/* CLASS SELECTOR */
+/* ================================= */
+
+.highlight {
+  background-color: yellow;
+  padding: 10px;
+  border-left: 5px solid orange;
+}
+
+/* ================================= */
+/* GENERAL LAYOUT */
+/* ================================= */
+
+.demo-section {
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* ================================= */
+/* DESCENDANT SELECTOR */
+/* article p */
+/* ================================= */
+
+article p {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+/* ================================= */
+/* CHILD SELECTOR */
+/* ul > li */
+/* ================================= */
+
+.child-demo ul > li {
+  color: darkred;
+  margin-left: 20px;
+}
+
+/* ================================= */
+/* ADJACENT SIBLING */
+/* h4 + p */
+/* ================================= */
+
+.adjacent-demo h4 + p {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+/* ================================= */
+/* GENERAL SIBLING */
+/* h4 ~ p */
+/* ================================= */
+
+.general-demo h4 ~ p {
+  color: purple;
+  font-style: italic;
+}
+
+/* ================================= */
+/* LINK PSEUDO CLASSES */
+/* LVHA ORDER */
+/* ================================= */
+
+/* Unvisited link */
+.link-demo a:link {
+  color: blue;
+}
+
+/* Visited link */
+.link-demo a:visited {
+  color: purple;
+}
+
+/* Hover state */
+.link-demo a:hover {
+  color: red;
+}
+
+/* Active state */
+.link-demo a:active {
+  color: green;
+}
+
+/* ================================= */
+/* LINK STYLING */
+/* ================================= */
+
+.link-demo a {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================================= */
+/* NOTE */
+/* ================================= */
+
+.note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  background-color: #fff8cc;
+  padding: 10px;
+  border-left: 4px solid gold;
+}
