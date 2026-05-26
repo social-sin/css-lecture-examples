@@ -1,9 +1,16 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced HTML Examples</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Advanced CSS Examples</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,325 +22,381 @@
   </a>
 
   <header>
-    <h1>Advanced HTML Examples</h1>
+
+    <h1>
+      Advanced CSS Examples
+    </h1>
 
     <nav>
+
       <ul>
-        <li><a href="#lists">Lists</a></li>
-        <li><a href="#images-videos">Images & Videos</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#semantics">Semantic HTML</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="#deprecated">Deprecated Tags</a></li>
+
+        <li>
+          <a href="#selectors">
+            Selectors
+          </a>
+        </li>
+
+        <li>
+          <a href="#layout">
+            Layout
+          </a>
+        </li>
+
+        <li>
+          <a href="#responsive">
+            Responsive Design
+          </a>
+        </li>
+
+        <li>
+          <a href="#interaction">
+            Interaction & Animation
+          </a>
+        </li>
+
       </ul>
+
     </nav>
+
   </header>
 
   <main id="maincontent">
+
     <!-- ========================================= -->
-    <!-- LISTS -->
+    <!-- FOUNDATIONS -->
     <!-- ========================================= -->
 
-    <section id="lists">
-      <h2>Advanced HTML Lists</h2>
+    <section id="selectors">
+
+      <h2>
+        CSS Foundations
+      </h2>
 
       <div class="example-grid">
 
         <article class="example-card">
-          <h3>Ordered List</h3>
 
-          <ol>
-            <li>Open VS Code</li>
-            <li>Create index.html</li>
-            <li>Write semantic HTML</li>
-          </ol>
+          <h3>
+            CSS Selectors Cheatsheet
+          </h3>
+
+          <p>
+            Basic selectors, combinators,
+            and pseudo-classes.
+          </p>
+
+          <a href="selectors.html">
+            Open selectors.html
+          </a>
+
         </article>
 
         <article class="example-card">
-          <h3>Unordered List</h3>
 
-          <ul>
-            <li>Apples</li>
-            <li>Oranges</li>
-            <li>Bananas</li>
-          </ul>
+          <h3>
+            Basic CSS Styles
+          </h3>
+
+          <p>
+            Typography, links, images,
+            spacing, and visual hierarchy.
+          </p>
+
+          <a href="basic-styles.html">
+            Open basic-styles.html
+          </a>
+
         </article>
 
         <article class="example-card">
-          <h3>Descriptive List</h3>
 
-          <dl>
-            <dt>HTML</dt>
-            <dd> Hypertext Markup Language</dd>
-            <dt>CSS</dt>
-            <dd>Cascading Style Sheets</dd>
-          </dl>
+          <h3>
+            CSS Box Model
+          </h3>
+
+          <p>
+            Content, padding, borders,
+            margins, and box sizing.
+          </p>
+
+          <a href="box-model.html">
+            Open box-model.html
+          </a>
+
         </article>
-        
-        <article class="example-card">
-          <h3>Nested List</h3>
 
-          <ul>
-            <li>
-              Fruits
-              <ul>
-                <li>Apples</li>
-                <li>Oranges</li>
-              </ul>
-            </li>
-            <li>
-              Vegetables
-              <ul>
-                <li>Carrots</li>
-                <li>Broccoli</li>
-              </ul>
-            </li>
-          </ul>
+        <article class="example-card">
+
+          <h3>
+            CSS Display & Position
+          </h3>
+
+          <p>
+            Display types, positioning,
+            stacking, and layout flow.
+          </p>
+
+          <a href="display-position.html">
+            Open display-position.html
+          </a>
+
+        </article>
+
+        <article class="example-card">
+
+          <h3>
+            CSS Color, Type & Images
+          </h3>
+
+          <p>
+            Typography systems,
+            color formats, and backgrounds.
+          </p>
+
+          <a href="color-type-image.html">
+            Open color-type-image.html
+          </a>
+
         </article>
 
       </div>
+
     </section>
 
     <!-- ========================================= -->
-    <!-- IMAGES & VIDEOS -->
+    <!-- LAYOUT -->
     <!-- ========================================= -->
 
-    <section id="images-videos">
-      <h2>Advanced HTML Images & Videos</h2>
+    <section id="layout">
 
-      <figure>
-        <img
-          src="https://picsum.photos/800/400"
-          alt="Mountain landscape"
-          width="800"
-          height="400"
-        >
-
-        <figcaption>
-          Semantic image example using figure and figcaption.
-        </figcaption>
-      </figure>
-
-      <video width="800" height="360" controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-
-    <!-- ========================================= -->
-    <!-- LINKS -->
-    <!-- ========================================= -->
-
-<section id="links">
-  <h2>Advanced HTML Links</h2>
-
-  <p>
-    Visit
-    <a href="https://developer.mozilla.org/" target="_blank">
-      MDN Web Docs
-    </a>
-  </p>
-
-  <p>
-    <a href="mailto:hello@example.com">
-      Send an Email
-    </a>
-  </p>
-
-  <p>
-    <a href="tel:+15555555555">
-      Call Example Number
-    </a>
-  </p>
-</section>
-    
-    <!-- ========================================= -->
-    <!-- SEMANTIC HTML -->
-    <!-- ========================================= -->
-
-    <section id="semantics">
-      <h2>Advanced HTML Semantics</h2>
-
-      <article>
-        <h3>Figures with Captions</h3>
-        <figure>
-        <img
-          src="https://picsum.photos/800/400"
-          alt="Mountain landscape"
-          width="800"
-          height="400"
-        >
-
-        <figcaption>
-          Semantic image example using figure and figcaption.
-        </figcaption>
-      </figure>
-        
-      </article>
-      <article>
-        <h3>Highlighted Text & Time</h3>
-
-        <p>
-          <mark>Important:</mark> Midterm project submissions close Friday.
-        </p>
-
-        <p>
-          Class starts on
-          <time datetime="2026-09-14T09:00">
-            September 14, 2026 at 9:00 AM
-          </time>
-        </p>
-      </article>
-    </section>
-    
-    <!-- ========================================= -->
-    <!-- FORMS -->
-    <!-- ========================================= -->
-
-    <section id="forms">
-      <h2>Advanced HTML Forms & Input Semantics</h2>
-
-      <form action="/submit" method="post">
-
-        <fieldset>
-          <legend>Personal Information</legend>
-
-          <label for="fullname">Full Name:</label>
-          <input type="text" id="fullname" name="fullname" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="bio">Short Bio:</label>
-          <textarea id="bio" name="bio" rows="4"></textarea>
-          
-          <button type="submit">
-            Submit Form
-          </button>
-        </fieldset>
-
-        <fieldset>
-          <legend>Preferred Class Format</legend>
-
-          <input type="radio" id="online" name="format" value="online">
-          <label for="online">Online</label>
-
-          <br>
-
-          <input type="radio" id="inperson" name="format" value="inperson">
-          <label for="inperson">In Person</label>
-        </fieldset>
-
-        <button type="submit">
-          Submit Form
-        </button>
-
-      </form>
-    </section>
-
-    <!-- ========================================= -->
-    <!-- DEPRECATED TAGS -->
-    <!-- ========================================= -->
-
-    <section id="deprecated">
-      <h2>Deprecated HTML Tags</h2>
+      <h2>
+        CSS Layout Systems
+      </h2>
 
       <div class="example-grid">
 
         <article class="example-card">
-          <h3>&lt;center&gt;</h3>
 
-          <center>
-            Deprecated center tag example
-          </center>
-          <p>Modern alternative for &lt;center&gt; is using text-align: center in CSS</p>
+          <h3>
+            CSS Flexbox
+          </h3>
+
+          <p>
+            One-dimensional layouts,
+            alignment, and spacing systems.
+          </p>
+
+          <a href="flexbox.html">
+            Open flexbox.html
+          </a>
+
         </article>
 
         <article class="example-card">
-          <h3>&lt;font&gt;</h3>
 
-          <font color="red" size="5">
-            Deprecated font tag example
-          </font>
-          <p>Modern alternative for &lt;font&gt; is declaring font-family, font-size, and color properties in CSS</p>
+          <h3>
+            CSS Grid
+          </h3>
+
+          <p>
+            Two-dimensional layouts
+            using rows and columns.
+          </p>
+
+          <a href="grid.html">
+            Open grid.html
+          </a>
+
         </article>
 
         <article class="example-card">
-          <h3>&lt;strike&gt;</h3>
 
-          <strike>
-            Deprecated strike tag example
-          </strike>
-          <p>Modern alternatives for &lt;strike&gt; is using text-decoration: line-through; in CSS</p>
+          <h3>
+            Advanced CSS Grid
+          </h3>
+
+          <p>
+            Named areas, minmax(),
+            auto-fit, and responsive grids.
+          </p>
+
+          <a href="adv-grid.html">
+            Open adv-grid.html
+          </a>
+
         </article>
 
         <article class="example-card">
-          <h3>Another modern alternative to &lt;strike&gt; is using &lt;del&gt; & &lt;ins&gt; in HTML</h3>
 
-          <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
-          <p>The &lt;del&gt; tag defines text that has been deleted from a document. Browsers will usually strike a line through deleted text.</p>
-          <p>The &lt;ins&gt; tag defines a text that has been inserted into a document. Browsers will usually underline inserted text.</p>
+          <h3>
+            Principles of Good Website Design
+          </h3>
+
+          <p>
+            Visual hierarchy, readability,
+            consistency, and user experience.
+          </p>
+
+          <a href="good-design.html">
+            Open good-design.html
+          </a>
+
         </article>
 
         <article class="example-card">
-          <h3>&lt;big&gt;</h3>
 
-          <p>&lt;big&gt; is obsolete and is no longer supported in HTML5</p>
-          <p> Modern alternatives for &lt;big&gt; is declaring the font-size property in CSS and using &lt;h1&gt; thru &lt;h6&gt; in HTML (combine semantic headers for structure with CSS styling for visual hierarchy)</p>
-        </article>
+          <h3>
+            8-Point Grid & Gestalt Principles
+          </h3>
 
-        <article class="example-card">
-          <h3>&lt;dir&gt;</h3>
+          <p>
+            Structure, alignment,
+            perception, and visual systems.
+          </p>
 
-          <dir>
-            <li>Project_Folder</li>
-            <li>Scripts</li>
-            <li>Styles</li>
-          </dir>
-          <p> Modern alternative for &lt;dir&gt; is combining semantic &lt;ul&gt; or &lt;ol&gt; for structure with CSS styling</p>
-        </article>
+          <a href="principles.html">
+            Open principles.html
+          </a>
 
-        <article class="example-card">
-          <h3>&lt;frame&gt; & &lt;frameset&gt;</h3>
-
-          <p>&lt;frame&gt; & &lt;frameset&gt; are obsolete and are no longer supported in HTML5</p>
-          <p>Modern alternatives for &lt;frame&gt; & &lt;frameset&gt; is using &lt;iframe&gt; for embedded content, or better yet, CSS Flexbox or Grid layouts</p>
-        </article>
-
-        <article class="example-card">
-          <h3>Another modern alternative to &lt;frame&gt; & &lt;frameset&gt; is using &lt;iframe&gt; in HTML</h3>
-
-          <iframe src="https://www.social-sin.com/" width="300" height="300" title="Iframe Example"></iframe>
-        </article>
-
-        <article class="example-card">
-          <h3>&lt;marquee&gt;</h3>
-
-          <marquee>
-            Deprecated scrolling text example
-          </marquee>
-          <p>Modern alternative for &lt;marquee&gt; is CSS animations</p>
-        </article>
-
-        <article class="example-card">
-          <h3>&lt;u&gt;</h3>
-
-          <p>This is some <u>mispeled</u> text.</p>
-          <p>The &lt;u&gt; tag was deprecated in HTML 4.01, but it was officially restored in HTML5.</p>
-          <p>While it originally existed just to apply a visual underline (which CSS handles much better), HTML5 gave it a <b>specific semantic meaning</b></p>
-          <p>The &lt;u&gt; tag now signifies an <b>unarticulated non-textual annotation</b>, telling the browser (and accessibility tools) that the text is distinct from normal text, without implying emphasis or importance.</p>
-          <ul>
-            <li>
-              Approved use cases:
-              <ul>
-                <li>Highlighting misspelled words</li>
-                <li>Styling proper names in Chinese text</li>
-              </ul>
-            </li>
-          </ul>
         </article>
 
       </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- RESPONSIVE -->
+    <!-- ========================================= -->
+
+    <section id="responsive">
+
+      <h2>
+        Responsive Design
+      </h2>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+
+          <h3>
+            Responsive Sites & CSS Units
+          </h3>
+
+          <p>
+            Relative units, viewport sizing,
+            media queries, and fluid layouts.
+          </p>
+
+          <a href="responsive.html">
+            Open responsive.html
+          </a>
+
+        </article>
+
+        <article class="example-card">
+
+          <h3>
+            Advanced Responsive Images
+          </h3>
+
+          <p>
+            srcset, sizes, picture,
+            lazy loading, and image formats.
+          </p>
+
+          <a href="adv-responsive-img.html">
+            Open adv-responsive-img.html
+          </a>
+
+        </article>
+
+        <article class="example-card">
+
+          <h3>
+            Responsive Images, Typography & Spacing
+          </h3>
+
+          <p>
+            Fluid typography,
+            responsive media, and scalable spacing.
+          </p>
+
+          <a href="responsive-type-spacing.html">
+            Open responsive-type-spacing.html
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- INTERACTION -->
+    <!-- ========================================= -->
+
+    <section id="interaction">
+
+      <h2>
+        Interaction & Animation
+      </h2>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+
+          <h3>
+            Advanced Link Styling
+          </h3>
+
+          <p>
+            Interactive hover states,
+            animated links, and accessibility.
+          </p>
+
+          <a href="adv-link.html">
+            Open adv-link.html
+          </a>
+
+        </article>
+
+        <article class="example-card">
+
+          <h3>
+            Advanced Transitions & Keyframes
+          </h3>
+
+          <p>
+            Staggered motion,
+            3D effects, and animation patterns.
+          </p>
+
+          <a href="adv-transitions-keyframe.html">
+            Open adv-transitions-keyframe.html
+          </a>
+
+        </article>
+
+        <article class="example-card">
+
+          <h3>
+            Advanced CSS Animations
+          </h3>
+
+          <p>
+            Keyframes, transforms,
+            timing functions, and motion systems.
+          </p>
+
+          <a href="adv-animations.html">
+            Open adv-animations.html
+          </a>
+
+        </article>
+
+      </div>
+
     </section>
 
   </main>
