@@ -104,6 +104,94 @@ p {
 }
 
 /* ================================= */
+/* TYPOGRAPHY SPACING */
+/* ================================= */
+
+.type-grid {
+  display: flex;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+}
+
+.type-card {
+  flex: 1 1 300px;
+
+  background-color: rgba(255, 255, 255, 0.04);
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ================================= */
+/* LINE HEIGHT */
+/* ================================= */
+
+.tight-lines {
+  line-height: 1.2;
+
+  background-color: rgba(255, 255, 255, 0.04);
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 20px;
+}
+
+.loose-lines {
+  line-height: 2;
+
+  background-color: rgba(242, 95, 76, 0.1);
+
+  padding: 15px;
+
+  border-radius: 8px;
+}
+
+/* ================================= */
+/* LETTER SPACING */
+/* ================================= */
+
+.normal-spacing {
+  letter-spacing: 0;
+}
+
+.wide-spacing {
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-top: 15px;
+}
+
+.tight-spacing {
+  letter-spacing: -1px;
+
+  margin-top: 15px;
+}
+
+/* ================================= */
+/* WORD SPACING */
+/* ================================= */
+
+.normal-word-spacing {
+  word-spacing: 0;
+}
+
+.wide-word-spacing {
+  word-spacing: 10px;
+
+  margin-top: 15px;
+}
+
+/* ================================= */
 /* HIGHLIGHT CLASS */
 /* ================================= */
 
