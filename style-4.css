@@ -361,6 +361,215 @@ th {
 }
 
 /* ================================= */
+/* POSITION COMPARISON */
+/* ================================= */
+
+.position-comparison {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.compare-card {
+  background-color: #334155;
+
+  padding: 25px;
+
+  border-radius: 14px;
+}
+
+.compare-card h4 {
+  color: #38bdf8;
+
+  margin-bottom: 20px;
+}
+
+.compare-stage {
+  position: relative;
+
+  height: 220px;
+
+  background-color: #0f172a;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  margin-bottom: 20px;
+}
+
+/* Shared Box */
+
+.compare-box {
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-weight: bold;
+
+  border-radius: 12px;
+}
+
+/* ================================= */
+/* RELATIVE */
+/* ================================= */
+
+.relative-compare {
+  position: relative;
+
+  top: 30px;
+  left: 30px;
+
+  background-color: #7c3aed;
+}
+
+/* ================================= */
+/* ABSOLUTE */
+/* ================================= */
+
+.absolute-stage {
+  position: relative;
+}
+
+.absolute-compare {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  background-color: #ef4444;
+}
+
+/* ================================= */
+/* FIXED */
+/* ================================= */
+
+.fixed-compare {
+  position: fixed;
+
+  bottom: 20px;
+  right: 20px;
+
+  background-color: #0ea5e9;
+
+  z-index: 999;
+}
+
+/* ================================= */
+/* STICKY */
+/* ================================= */
+
+.sticky-stage {
+  height: 220px;
+
+  overflow-y: auto;
+
+  background-color: #0f172a;
+
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+}
+
+.sticky-compare {
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+
+  height: auto;
+
+  padding: 15px;
+
+  background-color: #f97316;
+
+  border-radius: 0;
+}
+
+.sticky-scroll {
+  padding: 20px;
+}
+
+/* ================================= */
+/* OVERFLOW */
+/* ================================= */
+
+.overflow-section {
+  margin-top: 50px;
+}
+
+.overflow-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.overflow-card {
+  background-color: #334155;
+
+  padding: 25px;
+
+  border-radius: 14px;
+}
+
+.overflow-box {
+  width: 100%;
+
+  height: 140px;
+
+  background-color: #0f172a;
+
+  color: white;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+  border: 2px solid #38bdf8;
+}
+
+/* visible */
+
+.overflow-visible {
+  overflow: visible;
+}
+
+/* hidden */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* scroll */
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* auto */
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* ================================= */
 /* RESPONSIVE */
 /* ================================= */
 
