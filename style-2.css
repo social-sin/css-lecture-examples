@@ -134,7 +134,7 @@ p {
 /* ================================= */
 
 .tight-lines {
-  line-height: 1.2;
+  line-height: 0.9;
 
   background-color: rgba(255, 255, 255, 0.04);
 
@@ -146,7 +146,7 @@ p {
 }
 
 .loose-lines {
-  line-height: 2;
+  line-height: 3;
 
   background-color: rgba(242, 95, 76, 0.1);
 
@@ -161,20 +161,26 @@ p {
 
 .normal-spacing {
   letter-spacing: 0;
+
+  font-size: 1.4rem;
 }
 
 .wide-spacing {
-  letter-spacing: 4px;
+  letter-spacing: 12px;
 
   text-transform: uppercase;
 
-  margin-top: 15px;
+  font-size: 1.4rem;
+
+  margin-top: 20px;
 }
 
 .tight-spacing {
-  letter-spacing: -1px;
+  letter-spacing: -3px;
 
-  margin-top: 15px;
+  font-size: 1.4rem;
+
+  margin-top: 20px;
 }
 
 /* ================================= */
@@ -183,12 +189,16 @@ p {
 
 .normal-word-spacing {
   word-spacing: 0;
+
+  font-size: 1.3rem;
 }
 
 .wide-word-spacing {
-  word-spacing: 10px;
+  word-spacing: 30px;
 
-  margin-top: 15px;
+  font-size: 1.3rem;
+
+  margin-top: 20px;
 }
 
 /* ================================= */
