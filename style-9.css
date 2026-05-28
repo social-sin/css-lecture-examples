@@ -155,6 +155,8 @@ main {
   padding: 60px 30px;
 }
 
+/* ================================= */ /* CONTENT SPACING */ /* ================================= */ .card > * + * { margin-top: 1.25rem; }
+
 /* ========================================= */
 /* CARDS */
 /* ========================================= */
@@ -178,9 +180,7 @@ main {
     background-color 0.3s ease;
 }
 
-.card:hover {
-  transform:
-    translateY(-6px);
+.card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 
   border-color:
     rgba(56, 189, 248, 0.35);
@@ -203,10 +203,7 @@ main {
   margin-top: 20px;
 }
 
-.example-box {
-  padding: 30px;
-  border-radius: 14px;
-}
+.example-box { padding: 30px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); min-height: 260px; }
 
 .html-box {
   background-color: #334155;
@@ -247,13 +244,7 @@ main {
   gap: 20px;
 }
 
-.principle-item {
-  background-color: #334155;
-
-  padding: 25px;
-
-  border-radius: 12px;
-}
+.principle-item { background-color: #334155; padding: 25px; border-radius: 12px; border-left: 4px solid #38bdf8; }
 
 /* ================================= */
 /* TYPOGRAPHY */
@@ -325,6 +316,8 @@ main {
 
   border-radius: 12px;
 }
+
+/* ================================= */ /* WHITESPACE / NEGATIVE SPACE */ /* ================================= */ .space-comparison { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem; } .tight-space, .balanced-space { border-radius: 1rem; min-height: 260px; } /* ================================= */ /* CRAMPED EXAMPLE */ /* ================================= */ .tight-space { background-color: #3f0d0d; border: 3px dashed crimson; padding: 0.5rem; } .tight-space h3, .tight-space p, .tight-space button { margin-bottom: 0.25rem; } .tight-space button { background-color: yellow; border: none; padding: 0.25rem 0.5rem; font-weight: bold; } /* ================================= */ /* BALANCED EXAMPLE */ /* ================================= */ .balanced-space { background-color: #1e293b; border: 1px solid rgba(255,255,255,0.08); padding: 2rem; display: flex; flex-direction: column; justify-content: center; } .balanced-space h3 { margin-bottom: 1rem; } .balanced-space p { margin-bottom: 1.5rem; } .balanced-space button { align-self: flex-start; background-color: #38bdf8; color: #0f172a; border: none; border-radius: 0.75rem; padding: 0.85rem 1.25rem; font-weight: 700; cursor: pointer; }
 
 /* ================================= */
 /* BAD VS GOOD DESIGN */
@@ -538,7 +531,7 @@ main {
   margin-top: 20px;
 }
 
-.consistent-card {
+.consistent-card { position: relative;
   background-color: #0ea5e9;
 
   color: white;
@@ -549,6 +542,8 @@ main {
 
   text-align: center;
 }
+
+.consistent-card::after { content: "Reusable Pattern"; position: absolute; bottom: 10px; right: 10px; font-size: 0.65rem; background-color: rgba(15,23,42,0.35); padding: 0.25rem 0.5rem; border-radius: 999px; }
 
 /* ================================= */
 /* COLOR & CONTRAST */
@@ -562,28 +557,9 @@ main {
   margin-top: 25px;
 }
 
-.high-contrast,
-.low-contrast {
-  flex: 1;
+.high-contrast, .low-contrast { position: relative; }
 
-  padding: 40px;
-
-  border-radius: 12px;
-
-  text-align: center;
-
-  font-weight: bold;
-}
-
-.high-contrast {
-  background-color: white;
-  color: black;
-}
-
-.low-contrast {
-  background-color: #94a3b8;
-  color: #a7a9be;
-}
+.high-contrast::after, .low-contrast::after { position: absolute; bottom: 10px; right: 10px; font-size: 0.7rem; padding: 0.3rem 0.6rem; border-radius: 999px; } .high-contrast::after { content: "Readable"; background-color: black; color: white; } .low-contrast::after { content: "Poor Contrast"; background-color: white; color: black; }
 
 /* ================================= */
 /* SIMPLICITY */
@@ -643,8 +619,7 @@ main {
   margin-bottom: 30px;
 }
 
-.primary-btn,
-.secondary-btn {
+.primary-btn, .secondary-btn { position: relative;
   padding: 14px 24px;
 
   border: none;
@@ -668,6 +643,8 @@ main {
   transform: translateY(-3px);
 }
 
+.primary-btn:active, .secondary-btn:active { transform: translateY(1px); }
+
 .secondary-btn {
   background-color: transparent;
 
@@ -681,10 +658,7 @@ main {
   color: #0f172a;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
+.nav-links { flex-wrap: wrap; }
 
 .nav-links a {
   color: #38bdf8;
@@ -808,17 +782,10 @@ pre {
     padding: 1.5rem;
   }
 
-  .two-column,
-  .principle-grid,
-  .layout-demo,
-  .consistency-grid,
-  .clarity-layout,
-  .scalable-grid,
-  .comparison-layout,
-  .organized-layout {
-    grid-template-columns: 1fr;
-  }
+.two-column, .principle-grid, .layout-demo, .consistency-grid, .clarity-layout, .scalable-grid, .comparison-layout, .organized-layout, .space-comparison { grid-template-columns: 1fr; }
 
+  .tight-space, .balanced-space { min-height: auto; }
+  
   .organized-header {
     grid-column: auto;
   }
