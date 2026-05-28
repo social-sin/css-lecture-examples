@@ -263,6 +263,621 @@ th {
 }
 
 /* ========================================= */
+/* STAGGERED ANIMATIONS */
+/* ========================================= */
+
+.stagger-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.stagger-item {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  opacity: 0;
+
+  animation:
+    fadeUp 0.8s ease forwards;
+}
+
+.stagger-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stagger-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* ========================================= */
+/* 3D FLIP CARD */
+/* ========================================= */
+
+.flip-scene {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+
+  perspective: 1000px;
+}
+
+.flip-card {
+  position: relative;
+
+  width: 260px;
+  height: 320px;
+
+  transform-style: preserve-3d;
+
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+
+  backface-visibility: hidden;
+
+  font-size: 2rem;
+
+  font-weight: bold;
+}
+
+.flip-front {
+  background-color: #38bdf8;
+
+  color: #0f172a;
+}
+
+.flip-back {
+  background-color: #8b5cf6;
+
+  color: white;
+
+  transform: rotateY(180deg);
+}
+
+/* ========================================= */
+/* BUTTON ROW */
+/* ========================================= */
+
+.button-row {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+/* ========================================= */
+/* SCALE + SHADOW */
+/* ========================================= */
+
+.scale-button {
+  padding: 1rem 2rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background-color: var(--accent);
+
+  color: #0f172a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.scale-button:hover {
+  transform: scale(1.1);
+
+  box-shadow:
+    0 10px 25px rgba(56,189,248,0.35);
+}
+
+/* ========================================= */
+/* GRADIENT BUTTON */
+/* ========================================= */
+
+.gradient-button {
+  padding: 1rem 2rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #8b5cf6,
+      #f97316
+    );
+
+  background-size: 200% 200%;
+
+  transition:
+    background-position 0.6s ease,
+    transform 0.3s ease;
+}
+
+.gradient-button:hover {
+  background-position: right center;
+
+  transform: translateY(-4px);
+}
+
+/* ========================================= */
+/* BOUNCE */
+/* ========================================= */
+
+.bounce-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.bounce-box {
+  background-color: var(--secondary);
+
+  color: #0f172a;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  font-weight: bold;
+
+  animation:
+    bounceFade 2s ease infinite;
+}
+
+/* ========================================= */
+/* MULTI ANIMATION */
+/* ========================================= */
+
+.multi-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.multi-box {
+  background-color: var(--purple);
+
+  padding: 2rem;
+
+  border-radius: 50%;
+
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  animation:
+    pulse 2s ease infinite,
+    rotate 6s linear infinite;
+}
+
+/* ========================================= */
+/* TRANSFORM ORIGIN */
+/* ========================================= */
+
+.origin-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.origin-card {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.origin-demo {
+  position: relative;
+
+  width: 220px;
+  height: 220px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.origin-box {
+  width: 120px;
+  height: 120px;
+
+  background-color: var(--accent);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #0f172a;
+
+  font-weight: bold;
+
+  animation:
+    rotateDemo 3s linear infinite;
+}
+
+.center-origin .origin-box {
+  transform-origin: center;
+}
+
+.top-left-origin .origin-box {
+  transform-origin: top left;
+}
+
+.pivot-dot {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background-color: red;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.top-left-dot {
+  top: 0;
+  left: 0;
+
+  transform: none;
+}
+
+/* ========================================= */
+/* FILL MODE */
+/* ========================================= */
+
+.fillmode-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.fillmode-card {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+.fill-box {
+  margin-top: 1rem;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  background-color: var(--orange);
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.default-fill {
+  animation:
+    slideRight 2s ease;
+}
+
+.forwards-fill {
+  animation:
+    slideRight 2s ease forwards;
+}
+
+/* ========================================= */
+/* PULSE BUTTON */
+/* ========================================= */
+
+.pulse-button {
+  padding: 1rem 2rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background-color: var(--secondary);
+
+  color: #0f172a;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.pulse-button:hover {
+  animation:
+    pulse 0.6s ease;
+}
+
+/* ========================================= */
+/* VARIABLE ANIMATION */
+/* ========================================= */
+
+.variable-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.variable-box {
+  background-color: var(--accent);
+
+  color: #0f172a;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  font-weight: bold;
+
+  animation:
+    float var(--anim-duration) ease infinite alternate;
+}
+
+/* ========================================= */
+/* RESPONSIVE MOTION */
+/* ========================================= */
+
+.responsive-demo {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.responsive-box {
+  background-color: var(--purple);
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  font-weight: bold;
+
+  animation:
+    responsiveMove 3s ease-in-out infinite alternate;
+}
+
+/* ========================================= */
+/* GALLERY */
+/* ========================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.gallery-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+}
+
+.gallery-card img {
+  width: 100%;
+
+  height: 320px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* ========================================= */
+/* KEYFRAMES */
+/* ========================================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes bounceFade {
+
+  0% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes rotateDemo {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(25deg);
+  }
+
+}
+
+@keyframes slideRight {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(120px);
+  }
+
+}
+
+@keyframes float {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-20px);
+  }
+
+}
+
+@keyframes responsiveMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(10vw);
+  }
+
+}
+
+/* ========================================= */
 /* ACCESSIBILITY */
 /* ========================================= */
 
