@@ -1,159 +1,279 @@
-/* style.css */
-
-/* ================================= */
+/* ========================================= */
 /* RESET */
-/* ================================= */
+/* ========================================= */
 
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* BODY */
-/* ================================= */
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: #e2e8f0;
-  line-height: 1.7;
-  padding: 40px 30px;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ================================= */
-/* HERO */
-/* ================================= */
+/* ========================================= */
+/* VARIABLES */
+/* ========================================= */
 
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
+:root {
+
+  --bg: #0f172a;
+
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+
+  --border:
+    rgba(255, 255, 255, 0.08);
+
+  --max-width: 1200px;
+}
+
+/* ========================================= */
+/* BASE */
+/* ========================================= */
+
+body {
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  line-height: 1.7;
+}
+
+/* ========================================= */
+/* TYPOGRAPHY */
+/* ========================================= */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+  font-size:
+    clamp(2.75rem, 6vw, 5rem);
+
+  margin-bottom: 1.5rem;
+
   color: white;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ================================= */
-/* CARDS */
-/* ================================= */
-
-.card {
-  background-color: #1e293b;
-  padding: 35px;
-  border-radius: 16px;
-  margin-bottom: 40px;
-}
-
 h2 {
-  color: #38bdf8;
-  margin-bottom: 25px;
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
 }
 
 h3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #facc15;
+  margin-top: 2rem;
+
+  margin-bottom: 1rem;
+
+  color: var(--accent);
 }
 
-p {
-  margin-bottom: 15px;
+p,
+td {
+  color: var(--muted);
 }
 
-/* ================================= */
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding:
+    5rem 0
+    4rem;
+}
+
+.hero p {
+  max-width: 750px;
+
+  font-size: 1.1rem;
+}
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding-bottom: 5rem;
+}
+
+/* ========================================= */
+/* CARDS */
+/* ========================================= */
+
+.card {
+  background-color:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background-color:
+    var(--surface-light);
+}
+
+/* ========================================= */
+/* CONTENT SPACING */
+/* ========================================= */
+
+.card p,
+.card pre,
+.card table {
+  margin-top: 1rem;
+}
+
+/* ========================================= */
 /* DEMO CONTAINERS */
-/* ================================= */
+/* ========================================= */
 
 .demo-container {
   background-color: #334155;
 
-  padding: 20px;
+  border:
+    2px dashed #475569;
 
-  border-radius: 12px;
+  border-radius: 1rem;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 1.5rem;
+
+  margin:
+    1.5rem 0;
 
   min-height: 180px;
-
-  border: 2px dashed #64748b;
 }
 
-/* ================================= */
+/* ========================================= */
 /* FLEX ITEMS */
-/* ================================= */
+/* ========================================= */
 
 .item {
   background-color: #0ea5e9;
+
   color: white;
 
-  padding: 20px;
+  padding: 1.25rem;
 
-  border-radius: 10px;
+  border-radius: 0.75rem;
 
   text-align: center;
 
-  font-weight: bold;
+  font-weight: 700;
+
+  min-width: 70px;
 }
 
-/* ================================= */
+/* ========================================= */
 /* BASIC FLEX */
-/* ================================= */
+/* ========================================= */
 
 .basic-flex {
   display: flex;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* FLEX DIRECTION */
-/* ================================= */
+/* ========================================= */
 
 .row-demo {
   display: flex;
+
   flex-direction: row;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
 .column-demo {
   display: flex;
+
   flex-direction: column;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* JUSTIFY CONTENT */
-/* ================================= */
+/* ========================================= */
 
 .justify-between {
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 }
 
 .justify-center {
   display: flex;
+
   justify-content: center;
+
   align-items: center;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* ALIGN ITEMS */
-/* ================================= */
+/* ========================================= */
 
 .align-demo {
   display: flex;
+
   align-items: center;
-  gap: 20px;
+
+  gap: 1.25rem;
+
   height: 300px;
 }
 
@@ -169,23 +289,25 @@ p {
   height: 200px;
 }
 
-/* ================================= */
+/* ========================================= */
 /* FLEX WRAP */
-/* ================================= */
+/* ========================================= */
 
 .wrap-demo {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
 .wrap-demo .item {
   width: 180px;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GAP */
-/* ================================= */
+/* ========================================= */
 
 .no-gap-demo {
   display: flex;
@@ -197,20 +319,20 @@ p {
   gap: 20px;
 }
 
-/* ================================= */
+/* ========================================= */
 /* EQUAL HEIGHT CARDS */
-/* ================================= */
+/* ========================================= */
 
 .equal-height-layout {
   display: flex;
 
-  gap: 20px;
+  gap: 1.5rem;
 
   align-items: stretch;
 
-  margin-top: 25px;
-
   flex-wrap: wrap;
+
+  margin-top: 2rem;
 }
 
 .equal-card {
@@ -222,11 +344,12 @@ p {
 
   background-color: #334155;
 
-  padding: 25px;
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
 
-  border-radius: 14px;
+  border-radius: 1rem;
 
-  border: 2px solid #475569;
+  padding: 1.5rem;
 }
 
 .equal-card h3 {
@@ -238,30 +361,43 @@ p {
 }
 
 .equal-card button {
-  margin-top: 20px;
+  margin-top: 1.5rem;
 
-  background-color: #38bdf8;
+  background-color: var(--accent);
 
   color: #0f172a;
 
   border: none;
 
-  padding: 12px 18px;
+  border-radius: 0.75rem;
 
-  border-radius: 8px;
+  padding:
+    0.85rem 1.25rem;
 
-  font-weight: bold;
+  font-weight: 700;
 
   cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* ================================= */
+.equal-card button:hover {
+  background-color: var(--accent-hover);
+
+  transform:
+    translateY(-2px);
+}
+
+/* ========================================= */
 /* FLEX GROW */
-/* ================================= */
+/* ========================================= */
 
 .grow-demo {
   display: flex;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
 .grow-1 {
@@ -272,13 +408,14 @@ p {
   flex-grow: 2;
 }
 
-/* ================================= */
+/* ========================================= */
 /* FLEX SHRINK */
-/* ================================= */
+/* ========================================= */
 
 .shrink-demo {
   display: flex;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
 .shrink-demo .item {
@@ -287,16 +424,18 @@ p {
 
 .shrink-0 {
   flex-shrink: 0;
+
   background-color: #ef4444;
 }
 
-/* ================================= */
+/* ========================================= */
 /* FLEX BASIS */
-/* ================================= */
+/* ========================================= */
 
 .basis-demo {
   display: flex;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
 .basis-100 {
@@ -311,13 +450,14 @@ p {
   flex-basis: auto;
 }
 
-/* ================================= */
+/* ========================================= */
 /* ORDER */
-/* ================================= */
+/* ========================================= */
 
 .order-demo {
   display: flex;
-  gap: 20px;
+
+  gap: 1.25rem;
 }
 
 .order-1 {
@@ -332,73 +472,96 @@ p {
   order: 3;
 }
 
-/* ================================= */
+/* ========================================= */
 /* ALIGN SELF */
-/* ================================= */
+/* ========================================= */
 
 .self-demo {
   display: flex;
+
   align-items: flex-start;
-  gap: 20px;
+
+  gap: 1.25rem;
+
   height: 250px;
 }
 
 .self-end {
   align-self: flex-end;
+
   background-color: #f97316;
 }
 
-/* ================================= */
+/* ========================================= */
 /* CODE BLOCKS */
-/* ================================= */
+/* ========================================= */
 
 pre {
-  background-color: #020617;
-  color: #93c5fd;
-
-  padding: 20px;
-
-  border-radius: 10px;
-
   overflow-x: auto;
 
-  margin-top: 20px;
+  background-color: #020617;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  color: #cbd5e1;
 }
 
-/* ================================= */
+/* ========================================= */
 /* TABLE */
-/* ================================= */
+/* ========================================= */
 
 table {
   width: 100%;
+
   border-collapse: collapse;
-  margin-top: 20px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
 }
 
 th,
 td {
-  border: 1px solid #475569;
-  padding: 15px;
+  padding: 1rem;
+
+  border:
+    1px solid var(--border);
+
   text-align: left;
 }
 
 th {
-  background-color: #334155;
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
   color: white;
 }
 
-/* ================================= */
+/* ========================================= */
 /* RESPONSIVE */
-/* ================================= */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-  body {
-    padding: 20px;
+  .hero {
+    padding:
+      4rem 0
+      3rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  main {
+    padding-bottom: 4rem;
+  }
+
+  .card {
+    padding: 1.5rem;
   }
 
   .basic-flex,
