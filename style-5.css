@@ -1,310 +1,391 @@
-/* style.css */
-
-/* ================================= */
+/* ========================================= */
 /* RESET */
-/* ================================= */
+/* ========================================= */
 
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* BODY */
-/* ================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================= */
+/* VARIABLES */
+/* ========================================= */
+
+:root {
+
+  --bg: #0f172a;
+
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+
+  --border:
+    rgba(255, 255, 255, 0.08);
+
+  --max-width: 1200px;
+}
+
+/* ========================================= */
+/* BASE */
+/* ========================================= */
 
 body {
-  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
   line-height: 1.7;
-  background-color: #0f172a;
-  color: #e2e8f0;
 }
 
-/* ================================= */
-/* HERO */
-/* ================================= */
+/* ========================================= */
+/* TYPOGRAPHY */
+/* ========================================= */
 
-.hero {
-  height: 70vh;
-
-  background-image:
-    linear-gradient(rgba(15, 23, 42, 0.7),
-    rgba(15, 23, 42, 0.7)),
-    url("https://picsum.photos/id/1018/1600/900");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  padding: 20px;
-}
-
-.overlay {
-  max-width: 800px;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size:
+    clamp(2.75rem, 6vw, 5rem);
+
+  margin-bottom: 1.5rem;
+
   color: white;
 }
 
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* ================================= */
-/* MAIN */
-/* ================================= */
-
-main {
-  padding: 50px 30px;
-}
-
-/* ================================= */
-/* CARDS */
-/* ================================= */
-
-.card {
-  background-color: #1e293b;
-
-  padding: 35px;
-
-  border-radius: 18px;
-
-  margin-bottom: 40px;
-}
-
 h2 {
-  color: #38bdf8;
-  margin-bottom: 20px;
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
 }
 
 h3 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+
+  color: var(--accent);
 }
 
-p {
-  margin-bottom: 15px;
+p,
+td {
+  color: var(--muted);
 }
 
-/* ================================= */
-/* COLORS */
-/* ================================= */
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding:
+    5rem 0
+    4rem;
+}
+
+.hero p {
+  max-width: 750px;
+
+  font-size: 1.1rem;
+}
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding-bottom: 5rem;
+}
+
+/* ========================================= */
+/* CARDS */
+/* ========================================= */
+
+.card {
+  background-color:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background-color:
+    var(--surface-light);
+}
+
+/* ========================================= */
+/* CONTENT SPACING */
+/* ========================================= */
+
+.card p,
+.card pre,
+.card table {
+  margin-top: 1rem;
+}
+
+/* ========================================= */
+/* COLOR GRID */
+/* ========================================= */
 
 .color-grid {
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
 
-  gap: 20px;
+  gap: 1.5rem;
 
-  margin-top: 25px;
+  margin-top: 2rem;
 }
 
 .color-box {
-  padding: 30px;
-  border-radius: 14px;
+  min-height: 180px;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
   color: white;
-  min-height: 160px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  transition:
+    transform 0.3s ease;
 }
 
-/* Hex */
+.color-box:hover {
+  transform:
+    translateY(-4px);
+}
+
+/* ========================================= */
+/* COLOR FORMATS */
+/* ========================================= */
 
 .hex-box {
   background-color: #ff6600;
 }
 
-/* RGB */
-
 .rgb-box {
-  background-color: rgb(255, 102, 0);
+  background-color:
+    rgb(255, 102, 0);
 }
-
-/* RGBA */
 
 .rgba-box {
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color:
+    rgba(255, 102, 0, 0.8);
 }
-
-/* HSL */
 
 .hsl-box {
-  background-color: hsl(24, 100%, 50%);
+  background-color:
+    hsl(24, 100%, 50%);
 }
-
-/* HSLA */
 
 .hsla-box {
-  background-color: hsla(24, 100%, 50%, 0.7);
+  background-color:
+    hsla(24, 100%, 50%, 0.7);
 }
 
-/* ================================= */
+/* ========================================= */
+/* TIP BOXES */
+/* ========================================= */
+
+.tip,
+.contrast-tip {
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
+  border-left:
+    4px solid var(--accent);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+/* ========================================= */
 /* TYPOGRAPHY */
-/* ================================= */
+/* ========================================= */
 
 .type-demo {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin:
+    2rem 0;
 }
 
 .italic-text {
-  font-family: "Helvetica", Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+  font-family:
+    Helvetica,
+    Arial,
+    sans-serif;
+
   font-style: italic;
-  line-height: 1.8;
-  color: #cbd5e1;
+
+  line-height: 1.9;
 }
 
 .bold-text {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+
   font-weight: 700;
+
   color: #facc15;
 }
 
 .small-text {
   font-size: 0.9rem;
-  color: #94a3b8;
 }
 
-/* ================================= */
-/* CODE BLOCK */
-/* ================================= */
+/* ========================================= */
+/* CODE BLOCKS */
+/* ========================================= */
 
 pre {
-  background-color: #020617;
-
-  color: #93c5fd;
-
-  padding: 20px;
-
-  border-radius: 10px;
-
   overflow-x: auto;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: #020617;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  color: #cbd5e1;
 }
 
-/* ================================= */
-/* BACKGROUND IMAGES */
-/* ================================= */
+/* ========================================= */
+/* BACKGROUND IMAGE DEMOS */
+/* ========================================= */
 
 .bg-demo {
-  height: 250px;
+  height: 260px;
 
-  border-radius: 16px;
+  border-radius: 1rem;
 
   overflow: hidden;
 
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin:
+    2rem 0;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
 
-  font-size: 1.4rem;
-  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  position: relative;
 }
 
-/* Cover */
+/* COVER */
 
 .cover-demo {
-  background-image: url("https://picsum.photos/id/1025/1200/800");
+  background-image:
+    url("https://picsum.photos/id/1025/1200/800");
 
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
-/* Contain */
+/* CONTAIN */
 
 .contain-demo {
-  background-image: url("https://picsum.photos/id/1043/1200/800");
+  background-image:
+    url("https://picsum.photos/id/1043/1200/800");
 
-  background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
 
   background-color: #111827;
 }
 
-/* Fixed */
+/* FIXED */
 
 .fixed-demo {
-  background-image: url("https://picsum.photos/id/1039/1200/800");
+  background-image:
+    url("https://picsum.photos/id/1039/1200/800");
 
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+
   background-attachment: fixed;
 }
 
-/* Overlay */
+/* ========================================= */
+/* BACKGROUND OVERLAY */
+/* ========================================= */
 
 .bg-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-
-  padding: 20px 30px;
-
-  border-radius: 12px;
+  background-color:
+    rgba(0, 0, 0, 0.55);
 
   color: white;
+
+  padding:
+    1rem 1.5rem;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  backdrop-filter: blur(6px);
 }
 
-/* ================================= */
-/* TIP BOX */
-/* ================================= */
-
-.tip {
-  background-color: rgba(56, 189, 248, 0.15);
-
-  border-left: 4px solid #38bdf8;
-
-  padding: 15px;
-
-  margin-top: 20px;
-}
-
-/* ================================= */
-/* TABLE */
-/* ================================= */
-
-table {
-  width: 100%;
-
-  border-collapse: collapse;
-
-  margin-top: 20px;
-}
-
-th,
-td {
-  border: 1px solid #475569;
-
-  padding: 15px;
-
-  text-align: left;
-}
-
-th {
-  background-color: #334155;
-
-  color: white;
-}
-
-/* ================================= */
+/* ========================================= */
 /* FILTER EFFECTS */
-/* ================================= */
+/* ========================================= */
 
 .filter-grid {
   display: grid;
@@ -312,17 +393,17 @@ th {
   grid-template-columns:
     repeat(auto-fit, minmax(280px, 1fr));
 
-  gap: 30px;
+  gap: 1.5rem;
 
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .filter-card {
   background-color: #334155;
 
-  padding: 25px;
+  border-radius: 1rem;
 
-  border-radius: 14px;
+  padding: 1.5rem;
 }
 
 .filter-image {
@@ -332,10 +413,10 @@ th {
 
   object-fit: cover;
 
-  border-radius: 12px;
+  border-radius: 0.75rem;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin:
+    1.5rem 0;
 }
 
 /* Blur */
@@ -356,38 +437,38 @@ th {
   filter: brightness(160%);
 }
 
-/* ================================= */
-/* COLOR CONTRAST */
-/* ================================= */
+/* ========================================= */
+/* CONTRAST SECTION */
+/* ========================================= */
 
 .contrast-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(300px, 1fr));
+    repeat(auto-fit, minmax(280px, 1fr));
 
-  gap: 30px;
+  gap: 1.5rem;
 
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .contrast-card {
-  padding: 30px;
-
-  border-radius: 14px;
-
   min-height: 220px;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
 }
 
-/* Good Contrast */
+/* GOOD */
 
 .good-contrast {
-  background-color: #0f172a;
+  background-color: #020617;
 
   color: white;
 }
 
-/* Bad Contrast */
+/* BAD */
 
 .bad-contrast {
   background-color: #94a3b8;
@@ -395,34 +476,65 @@ th {
   color: #cbd5e1;
 }
 
-.contrast-tip {
-  background-color: rgba(250, 204, 21, 0.12);
+/* ========================================= */
+/* TABLE */
+/* ========================================= */
 
-  border-left: 4px solid #facc15;
-
-  padding: 20px;
-
-  margin-top: 30px;
-
-  border-radius: 10px;
+.font-table-wrapper {
+  overflow-x: auto;
 }
 
-/* ================================= */
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+th,
+td {
+  padding: 1rem;
+
+  border:
+    1px solid var(--border);
+
+  text-align: left;
+}
+
+th {
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
+  color: white;
+}
+
+/* ========================================= */
 /* RESPONSIVE */
-/* ================================= */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-  h1 {
-    font-size: 2.5rem;
+  .hero {
+    padding:
+      4rem 0
+      3rem;
   }
 
   main {
-    padding: 30px 20px;
+    padding-bottom: 4rem;
+  }
+
+  .card {
+    padding: 1.5rem;
   }
 
   .bg-demo {
-    height: 200px;
+    height: 220px;
   }
 
 }
