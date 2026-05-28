@@ -168,17 +168,6 @@ main {
 /* COLOR GRID */
 /* ========================================= */
 
-.color-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-
-  gap: 1.5rem;
-
-  margin-top: 2rem;
-}
-
 .color-box {
   min-height: 200px;
 
@@ -186,7 +175,8 @@ main {
 
   border-radius: 1rem;
 
-  color: white;
+  /* changed */
+  color: #fff7ed;
 
   display: flex;
 
@@ -198,15 +188,28 @@ main {
     transform var(--transition);
 }
 
-.color-box:hover {
-  transform:
-    translateY(-4px);
+/* improve heading readability */
+
+.color-box h3 {
+  color: #ffffff;
+
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.25);
+}
+
+/* improve smaller text readability */
+
+.color-box p {
+  color: rgba(255,255,255,0.92);
 }
 
 .format-label {
   font-size: 0.85rem;
 
-  opacity: 0.85;
+  /* changed */
+  opacity: 1;
+
+  color: rgba(255,255,255,0.82);
 
   margin-bottom: 1rem;
 }
@@ -288,7 +291,15 @@ main {
 .bad-contrast {
   background-color: #94a3b8;
 
-  color: #a8b4c7;
+  /* slightly more readable */
+  color: #bcc7d8;
+}
+
+.good-contrast p,
+.good-contrast h3,
+.bad-contrast p,
+.bad-contrast h3 {
+  color: inherit;
 }
 
 /* ========================================= */
