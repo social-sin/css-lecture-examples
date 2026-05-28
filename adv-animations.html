@@ -108,29 +108,94 @@ transform 0.5s ease;
         animation speed curves.
       </p>
 
-      <div class="timing-grid">
+<div class="timing-stack">
 
-        <div class="timing-item linear">
-          linear
-        </div>
+  <!-- LINEAR -->
+  <div class="timing-row">
 
-        <div class="timing-item ease">
-          ease
-        </div>
+    <p class="timing-label">
+      linear
+    </p>
 
-        <div class="timing-item ease-in">
-          ease-in
-        </div>
+    <div class="timing-track">
 
-        <div class="timing-item ease-out">
-          ease-out
-        </div>
-
-        <div class="timing-item ease-in-out">
-          ease-in-out
-        </div>
-
+      <div class="timing-item linear">
+        linear
       </div>
+
+    </div>
+
+  </div>
+
+  <!-- EASE -->
+  <div class="timing-row">
+
+    <p class="timing-label">
+      ease
+    </p>
+
+    <div class="timing-track">
+
+      <div class="timing-item ease">
+        ease
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EASE IN -->
+  <div class="timing-row">
+
+    <p class="timing-label">
+      ease-in
+    </p>
+
+    <div class="timing-track">
+
+      <div class="timing-item ease-in">
+        ease-in
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EASE OUT -->
+  <div class="timing-row">
+
+    <p class="timing-label">
+      ease-out
+    </p>
+
+    <div class="timing-track">
+
+      <div class="timing-item ease-out">
+        ease-out
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EASE IN OUT -->
+  <div class="timing-row">
+
+    <p class="timing-label">
+      ease-in-out
+    </p>
+
+    <div class="timing-track">
+
+      <div class="timing-item ease-in-out">
+        ease-in-out
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     </section>
 
@@ -323,6 +388,48 @@ translateX(10vw);
       </pre>
 
     </section>
+
+    <!-- REDUCED MOTION -->
+<section class="card">
+
+  <h2>11. prefers-reduced-motion</h2>
+
+  <p>
+    Some users experience motion sensitivity,
+    dizziness, or vestibular disorders.
+  </p>
+
+  <p>
+    The prefers-reduced-motion media query
+    reduces or disables animations
+    for accessibility.
+  </p>
+
+  <div class="reduced-motion-demo">
+
+    <div class="motion-box">
+      Motion Enabled
+    </div>
+
+  </div>
+
+  <pre>
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+  </pre>
+
+  <p>
+    Modern interfaces should respect
+    user accessibility preferences.
+  </p>
+
+</section>
 
     <!-- GALLERY -->
     <section class="card">
