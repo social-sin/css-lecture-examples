@@ -295,6 +295,176 @@ p {
 }
 
 /* ================================= */
+/* CURSOR STYLES */
+/* ================================= */
+
+.cursor-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.cursor-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  transition:
+    transform var(--transition),
+    background-color var(--transition);
+}
+
+.cursor-card:hover {
+  transform: translateY(-4px);
+
+  background-color: #475569;
+}
+
+/* Different cursor examples */
+
+.pointer-demo {
+  cursor: pointer;
+}
+
+.text-demo {
+  cursor: text;
+}
+
+.grab-demo {
+  cursor: grab;
+}
+
+.notallowed-demo {
+  cursor: not-allowed;
+}
+
+/* ================================= */
+/* REDUCED MOTION */
+/* ================================= */
+
+.motion-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.motion-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+.motion-link,
+.reduced-motion-link {
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 0.75rem;
+
+  background-color: var(--link-color);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+/* Full animation */
+
+.motion-link {
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.motion-link:hover {
+  background-color: var(--link-hover);
+
+  transform:
+    translateY(-10px)
+    rotate(-4deg)
+    scale(1.15);
+
+  letter-spacing: 2px;
+}
+
+/* Minimal motion */
+
+.reduced-motion-link {
+  transition:
+    background-color 0.2s ease;
+}
+
+.reduced-motion-link:hover {
+  background-color: var(--link-hover);
+}
+
+/* Accessibility tip */
+
+.motion-tip {
+  background-color:
+    rgba(46, 204, 113, 0.12);
+
+  border-left:
+    4px solid var(--link-hover);
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  margin-top: 1.5rem;
+}
+
+/* ================================= */
+/* ACCESSIBILITY */
+/* ================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+
+  .motion-link:hover,
+  .combined-link:hover,
+  .button-link:hover,
+  .cta-button:hover {
+    transform: none;
+
+    letter-spacing: normal;
+  }
+
+}
+
+/* ================================= */
 /* EXTERNAL LINKS */
 /* ================================= */
 
