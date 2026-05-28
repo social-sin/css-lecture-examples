@@ -325,38 +325,30 @@ main {
 
   border-radius: 0.75rem;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 140px;
-
   position: relative;
+
+  min-height: 180px;
 }
 
-/* Inner content box */
-.pad-demo::before {
-  content: "CONTENT";
+/* Actual content box */
 
-  background-color: rgba(255,255,255,0.12);
+.inner-content {
+  background-color:
+    rgba(255,255,255,0.12);
 
   border:
     2px dashed rgba(255,255,255,0.3);
 
-  color: white;
+  border-radius: 0.5rem;
 
-  font-size: 0.8rem;
+  color: white;
 
   font-weight: 700;
 
-  padding: 0.5rem 0.75rem;
-
-  border-radius: 0.5rem;
+  text-align: center;
 }
 
-/* Different padding values */
+/* Padding variations */
 
 .pad-1 {
   padding: 20px;
@@ -370,15 +362,18 @@ main {
   padding: 10px 15px 20px 5px;
 }
 
-/* Label positioning */
+/* Floating labels */
 
 .pad-demo .demo-tag {
   position: absolute;
 
-  top: 12px;
+  top: 10px;
 
-  left: 12px;
+  left: 10px;
+
+  z-index: 2;
 }
+
 /* ========================================= */
 /* BORDER DEMOS */
 /* ========================================= */
