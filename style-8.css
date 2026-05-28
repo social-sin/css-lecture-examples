@@ -232,6 +232,182 @@ p {
 }
 
 /* ================================= */
+/* MASONRY STYLE */
+/* ================================= */
+
+.masonry-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: 120px;
+
+  gap: 20px;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.masonry-item {
+  background-color: #334155;
+
+  color: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tall-card {
+  grid-row: span 2;
+
+  background-color: #8b5cf6;
+}
+
+.wide-card {
+  grid-column: span 2;
+
+  background-color: #ef4444;
+}
+
+/* ================================= */
+/* DASHBOARD LAYOUT */
+/* ================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 240px 1fr 1fr;
+
+  grid-template-rows: 80px 180px 180px;
+
+  gap: 20px;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.dashboard-grid > * {
+  border-radius: 12px;
+
+  padding: 20px;
+
+  font-weight: bold;
+}
+
+.dashboard-header {
+  grid-column: 2 / 4;
+
+  background-color: #0ea5e9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-sidebar {
+  grid-row: 1 / 4;
+
+  background-color: #1d4ed8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-stat {
+  background-color: #334155;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.large-stat {
+  grid-column: span 2;
+
+  background-color: #10b981;
+}
+
+/* ================================= */
+/* MAGAZINE LAYOUT */
+/* ================================= */
+
+.magazine-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: 180px;
+
+  gap: 20px;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.magazine-grid article {
+  border-radius: 12px;
+
+  padding: 20px;
+
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.mag-feature {
+  grid-column: span 2;
+  grid-row: span 2;
+
+  background-color: #f97316;
+}
+
+.mag-card {
+  background-color: #334155;
+}
+
+.mag-wide {
+  grid-column: span 3;
+
+  background-color: #8b5cf6;
+}
+
+/* ================================= */
+/* RESPONSIVE ADDITIONS */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .masonry-grid,
+  .dashboard-grid,
+  .magazine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar,
+  .dashboard-header,
+  .large-stat,
+  .mag-feature,
+  .mag-wide,
+  .wide-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+}
+
+/* ================================= */
 /* EMPTY GRID AREAS */
 /* ================================= */
 
