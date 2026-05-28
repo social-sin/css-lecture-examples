@@ -232,6 +232,81 @@ font-size: 3vw;
 
     </section>
 
+    <!-- CLAMP() TYPOGRAPHY -->
+<section class="card">
+
+  <h2>Modern Responsive Typography with clamp()</h2>
+
+  <p>
+    Modern responsive typography often uses
+    <code>clamp()</code> to create scalable text
+    with minimum and maximum size limits.
+  </p>
+
+  <div class="clamp-demo">
+
+    <h1 class="clamp-heading">
+      Responsive clamp() Heading
+    </h1>
+
+    <p class="clamp-text">
+      Resize the browser window to see how the text
+      smoothly scales between a minimum and maximum size.
+    </p>
+
+  </div>
+
+  <div class="clamp-comparison">
+
+    <div class="comparison-card old-method">
+
+      <h3>Viewport Units Only</h3>
+
+      <p class="vw-only-text">
+        font-size: 3vw;
+      </p>
+
+      <p>
+        Can become too small on mobile
+        or too large on huge screens.
+      </p>
+
+    </div>
+
+    <div class="comparison-card modern-method">
+
+      <h3>clamp()</h3>
+
+      <p class="clamp-method-text">
+        clamp(2rem, 5vw, 5rem)
+      </p>
+
+      <p>
+        Sets a minimum, preferred,
+        and maximum responsive size.
+      </p>
+
+    </div>
+
+  </div>
+
+  <pre>
+font-size: clamp(2rem, 5vw, 5rem);
+
+/*
+Minimum Size: 2rem
+Preferred Scaling: 5vw
+Maximum Size: 5rem
+*/
+  </pre>
+
+  <p class="tip">
+    clamp() is now one of the most common
+    techniques for responsive typography.
+  </p>
+
+</section>
+
     <!-- FLUID LAYOUT -->
     <section class="card">
 
@@ -390,6 +465,12 @@ img {
             <td>Flexible sizing</td>
             <td>1fr 2fr 1fr</td>
           </tr>
+
+          <tr>
+  <td>clamp()</td>
+  <td>Fluid responsive sizing</td>
+  <td>clamp(2rem, 5vw, 5rem)</td>
+</tr>
 
         </tbody>
 
