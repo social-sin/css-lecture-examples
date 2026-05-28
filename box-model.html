@@ -4,7 +4,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>CSS Box Model Demo</title>
 
@@ -15,12 +19,16 @@
 
   <!-- HERO -->
   <header class="hero">
-    <h1>CSS Box Model</h1>
+
+    <h1>
+      CSS Box Model
+    </h1>
 
     <p>
       Every HTML element is a rectangular box made up of:
       content, padding, border, and margin.
     </p>
+
   </header>
 
   <main>
@@ -28,23 +36,25 @@
     <!-- BOX MODEL VISUAL -->
     <section class="section-card">
 
-      <h2>Structure Overview</h2>
+      <h2>
+        Structure Overview
+      </h2>
 
       <div class="margin-box">
 
-        <span class="label margin-label">
+        <span class="label">
           Margin
         </span>
 
         <div class="border-box">
 
-          <span class="label border-label">
+          <span class="label">
             Border
           </span>
 
           <div class="padding-box">
 
-            <span class="label padding-label">
+            <span class="label">
               Padding
             </span>
 
@@ -63,7 +73,9 @@
     <!-- CONTENT -->
     <section class="section-card">
 
-      <h2>1. Content</h2>
+      <h2>
+        1. Content
+      </h2>
 
       <div class="example-box content-example">
         This is the content area.
@@ -73,25 +85,27 @@
         Width and height apply to the content area by default.
       </p>
 
-      <pre>
+<pre>
 width: 300px;
 height: 150px;
-      </pre>
+</pre>
 
     </section>
 
     <!-- PADDING -->
     <section class="section-card">
 
-      <h2>2. Padding</h2>
+      <h2>
+        2. Padding
+      </h2>
 
       <div class="example-box padding-example">
         Notice the extra space INSIDE the border.
       </div>
 
-      <pre>
+<pre>
 padding: 20px;
-      </pre>
+</pre>
 
       <div class="padding-grid">
 
@@ -114,7 +128,9 @@ padding: 20px;
     <!-- BORDER -->
     <section class="section-card">
 
-      <h2>3. Border</h2>
+      <h2>
+        3. Border
+      </h2>
 
       <div class="border-grid">
 
@@ -132,16 +148,18 @@ padding: 20px;
 
       </div>
 
-      <pre>
+<pre>
 border: 2px solid black;
-      </pre>
+</pre>
 
     </section>
 
     <!-- MARGIN -->
     <section class="section-card">
 
-      <h2>4. Margin</h2>
+      <h2>
+        4. Margin
+      </h2>
 
       <div class="margin-demo">
         First Box
@@ -155,87 +173,105 @@ border: 2px solid black;
         Margin creates space OUTSIDE the border.
       </p>
 
-      <pre>
+<pre>
 margin: 20px;
-      </pre>
+</pre>
 
     </section>
 
     <!-- BOX SIZING -->
     <section class="section-card">
 
-      <h2>Box Sizing</h2>
+      <h2>
+        Box Sizing
+      </h2>
 
       <div class="sizing-layout">
 
         <div class="size-card content-sizing">
-          <h3>content-box</h3>
+
+          <h3>
+            content-box
+          </h3>
 
           <p>
             Padding and border increase the total size.
           </p>
+
         </div>
 
         <div class="size-card border-sizing">
-          <h3>border-box</h3>
+
+          <h3>
+            border-box
+          </h3>
 
           <p>
             Width stays fixed and predictable.
           </p>
+
         </div>
 
       </div>
 
-      <pre>
+<pre>
 box-sizing: border-box;
-      </pre>
+</pre>
 
     </section>
 
     <!-- QUICK REFERENCE -->
     <section class="section-card">
 
-      <h2>Quick Reference</h2>
+      <h2>
+        Quick Reference
+      </h2>
 
-      <table>
+      <div class="table-wrapper">
 
-        <thead>
-          <tr>
-            <th>Property</th>
-            <th>Defines</th>
-            <th>Example</th>
-          </tr>
-        </thead>
+        <table>
 
-        <tbody>
+          <thead>
 
-          <tr>
-            <td>padding</td>
-            <td>Space inside border</td>
-            <td>padding: 10px 20px;</td>
-          </tr>
+            <tr>
+              <th>Property</th>
+              <th>Defines</th>
+              <th>Example</th>
+            </tr>
 
-          <tr>
-            <td>border</td>
-            <td>Edge around the box</td>
-            <td>border: 2px solid black;</td>
-          </tr>
+          </thead>
 
-          <tr>
-            <td>margin</td>
-            <td>Space outside border</td>
-            <td>margin: 0 auto;</td>
-          </tr>
+          <tbody>
 
-          <tr>
-            <td>box-sizing</td>
-            <td>Size calculation method</td>
-            <td>box-sizing: border-box;</td>
-          </tr>
+            <tr>
+              <td>padding</td>
+              <td>Space inside border</td>
+              <td>padding: 10px 20px;</td>
+            </tr>
 
-        </tbody>
+            <tr>
+              <td>border</td>
+              <td>Edge around the box</td>
+              <td>border: 2px solid black;</td>
+            </tr>
 
-      </table>
+            <tr>
+              <td>margin</td>
+              <td>Space outside border</td>
+              <td>margin: 0 auto;</td>
+            </tr>
+
+            <tr>
+              <td>box-sizing</td>
+              <td>Size calculation method</td>
+              <td>box-sizing: border-box;</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
 
     </section>
 
