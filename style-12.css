@@ -178,6 +178,108 @@ img {
 }
 
 /* ================================= */
+/* PERFORMANCE COMPARISON */
+/* ================================= */
+
+.performance-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 32px;
+
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.performance-card {
+  background-color: #334155;
+
+  padding: 24px;
+
+  border-radius: 16px;
+}
+
+.performance-card img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bad-performance {
+  border: 3px solid #ef4444;
+}
+
+.good-performance {
+  border: 3px solid #10b981;
+}
+
+/* ================================= */
+/* STATS */
+/* ================================= */
+
+.stats-list {
+  margin-top: 20px;
+
+  margin-left: 20px;
+}
+
+.stats-list li {
+  margin-bottom: 12px;
+}
+
+/* ================================= */
+/* LOADING BARS */
+/* ================================= */
+
+.loading-bar {
+  background-color: #0f172a;
+
+  height: 40px;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  margin-top: 24px;
+}
+
+.loading-fill {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+/* Slow Example */
+
+.slow-bar .loading-fill {
+  width: 90%;
+
+  background-color: #ef4444;
+}
+
+/* Fast Example */
+
+.fast-bar .loading-fill {
+  width: 35%;
+
+  background-color: #10b981;
+}
+
+/* ================================= */
+/* FORMAT TABLE */
+/* ================================= */
+
+.format-comparison {
+  margin-top: 40px;
+}
+
+/* ================================= */
 /* TOOL GRID */
 /* ================================= */
 
@@ -278,4 +380,8 @@ th {
     grid-template-columns: 1fr;
   }
 
+  .performance-grid {
+  grid-template-columns: 1fr;
+}
+  
 }
