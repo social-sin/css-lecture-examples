@@ -260,6 +260,276 @@ th {
 }
 
 /* ========================================= */
+/* IMAGE DEMO WRAPPERS */
+/* ========================================= */
+
+.image-demo {
+  margin-top: 2rem;
+}
+
+.image-demo img,
+.image-demo picture img {
+  width: 100%;
+
+  border-radius: 1rem;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+/* ========================================= */
+/* TWO COLUMN LAYOUT */
+/* ========================================= */
+
+.two-column {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 2rem;
+
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+.text-column,
+.image-column {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+/* ========================================= */
+/* SRCSET VISUAL LABEL */
+/* ========================================= */
+
+.image-demo {
+  position: relative;
+}
+
+.image-demo::after {
+  content: "Responsive Image";
+
+  position: absolute;
+
+  top: 1rem;
+  right: 1rem;
+
+  background-color:
+    rgba(15,23,42,0.85);
+
+  color: white;
+
+  padding:
+    0.5rem 0.75rem;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.03em;
+}
+
+/* ========================================= */
+/* GALLERY GRID */
+/* ========================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* ========================================= */
+/* PERFORMANCE GRID */
+/* ========================================= */
+
+.performance-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.performance-card {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.bad-performance {
+  border-left:
+    5px solid #ef4444;
+}
+
+.good-performance {
+  border-left:
+    5px solid #10b981;
+}
+
+.performance-card img {
+  margin:
+    1.5rem 0;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+}
+
+/* ========================================= */
+/* STATS LIST */
+/* ========================================= */
+
+.stats-list {
+  margin-top: 1rem;
+
+  padding-left: 1.25rem;
+}
+
+.stats-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* ========================================= */
+/* LOADING BARS */
+/* ========================================= */
+
+.loading-bar {
+  margin-top: 2rem;
+
+  background-color: #0f172a;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  height: 40px;
+}
+
+.loading-fill {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 1rem;
+
+  font-weight: 700;
+
+  color: white;
+}
+
+.slow-bar .loading-fill {
+  width: 85%;
+
+  background-color: #ef4444;
+}
+
+.fast-bar .loading-fill {
+  width: 35%;
+
+  background-color: #10b981;
+}
+
+/* ========================================= */
+/* FORMAT COMPARISON */
+/* ========================================= */
+
+.format-comparison {
+  margin-top: 3rem;
+}
+
+/* ========================================= */
+/* TOOL GRID */
+/* ========================================= */
+
+.tool-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.tool-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tool-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(56,189,248,0.35);
+}
+
+/* ========================================= */
+/* PICTURE DEMO */
+/* ========================================= */
+
+picture {
+  display: block;
+}
+
+/* ========================================= */
+/* PERFORMANCE HIGHLIGHT */
+/* ========================================= */
+
+.bad-performance h3 {
+  color: #f87171;
+}
+
+.good-performance h3 {
+  color: #4ade80;
+}
+
+/* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
 
@@ -284,6 +554,14 @@ th {
   .tool-grid,
   .performance-grid {
     grid-template-columns: 1fr;
+  }
+
+  .loading-fill {
+    font-size: 0.85rem;
+  }
+
+  .image-demo::after {
+    font-size: 0.65rem;
   }
 
 }
