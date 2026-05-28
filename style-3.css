@@ -325,19 +325,17 @@ main {
 
   border-radius: 0.75rem;
 
-  position: relative;
-
-  min-height: 180px;
+  height: 220px;
 }
 
-/* Actual content box */
+/* Content area */
 
 .inner-content {
   background-color:
-    rgba(255,255,255,0.12);
+    rgba(255,255,255,0.15);
 
   border:
-    2px dashed rgba(255,255,255,0.3);
+    2px dashed rgba(255,255,255,0.35);
 
   border-radius: 0.5rem;
 
@@ -345,10 +343,12 @@ main {
 
   font-weight: 700;
 
+  padding: 1rem;
+
   text-align: center;
 }
 
-/* Padding variations */
+/* Different padding values */
 
 .pad-1 {
   padding: 20px;
@@ -360,18 +360,6 @@ main {
 
 .pad-3 {
   padding: 10px 15px 20px 5px;
-}
-
-/* Floating labels */
-
-.pad-demo .demo-tag {
-  position: absolute;
-
-  top: 10px;
-
-  left: 10px;
-
-  z-index: 2;
 }
 
 /* ========================================= */
