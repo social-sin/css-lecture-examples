@@ -483,12 +483,36 @@ pre {
   padding: 1rem;
 }
 
-.image-card img {
-  width: 100%;
+/* LABEL */
 
-  height: 300px;
+.demo-label {
+  display: inline-block;
 
-  object-fit: cover;
+  margin-bottom: 1rem;
+
+  padding:
+    0.4rem 0.75rem;
+
+  border-radius: 999px;
+
+  background-color:
+    rgba(56,189,248,0.12);
+
+  color: #7dd3fc;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+}
+
+/* ========================================= */
+/* MAX WIDTH + HEIGHT AUTO */
+/* ========================================= */
+
+.portrait-demo {
+  max-width: 100%;
+
+  height: auto;
 
   display: block;
 
@@ -496,18 +520,34 @@ pre {
 
   margin:
     1rem 0;
-
-  transition:
-    transform var(--transition),
-    opacity var(--transition);
 }
 
-.image-card img:hover {
-  transform: scale(1.02);
+/* ========================================= */
+/* OBJECT FIT */
+/* ========================================= */
 
-  opacity: 0.9;
+.crop-frame {
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin:
+    1rem 0;
 }
 
+.landscape-demo {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
 /* ========================================= */
 /* TABLE */
 /* ========================================= */
