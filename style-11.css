@@ -245,6 +245,353 @@ th {
 }
 
 /* ========================================= */
+/* ABSOLUTE VS RELATIVE */
+/* ========================================= */
+
+.comparison-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.unit-box {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.fixed-box {
+  width: 200px;
+
+  background-color: #ef4444;
+
+  padding: 1rem;
+
+  border-radius: 0.75rem;
+
+  text-align: center;
+
+  color: white;
+
+  margin-top: 1rem;
+}
+
+.fluid-box {
+  width: 50%;
+
+  background-color: #10b981;
+
+  padding: 1rem;
+
+  border-radius: 0.75rem;
+
+  text-align: center;
+
+  color: white;
+
+  margin-top: 1rem;
+}
+
+/* ========================================= */
+/* REM VS EM */
+/* ========================================= */
+
+.typography-demo {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.rem-example,
+.parent-text {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.rem-example {
+  font-size: 1.5rem;
+}
+
+.parent-text {
+  font-size: 2rem;
+}
+
+.em-example {
+  font-size: 1.5em;
+
+  margin-top: 1rem;
+
+  color: #facc15;
+}
+
+/* ========================================= */
+/* VIEWPORT UNITS */
+/* ========================================= */
+
+.viewport-demo {
+  display: grid;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.vh-box {
+  height: 50vh;
+
+  background-color: #8b5cf6;
+
+  border-radius: 1rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+.vw-box {
+  width: 50vw;
+
+  background-color: #0ea5e9;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+/* ========================================= */
+/* RESPONSIVE TYPOGRAPHY */
+/* ========================================= */
+
+.responsive-text-demo {
+  background-color: #334155;
+
+  border-radius: 1rem;
+
+  padding: 3rem;
+
+  margin-top: 2rem;
+
+  text-align: center;
+}
+
+.responsive-heading {
+  font-size: 3vw;
+
+  color: white;
+}
+
+/* ========================================= */
+/* CLAMP() */
+/* ========================================= */
+
+.clamp-demo {
+  background-color: #334155;
+
+  padding: 3rem;
+
+  border-radius: 1rem;
+
+  margin-top: 2rem;
+}
+
+.clamp-heading {
+  font-size: clamp(2rem, 5vw, 5rem);
+
+  color: white;
+}
+
+.clamp-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.clamp-comparison {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.comparison-card {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.vw-only-text {
+  font-size: 3vw;
+
+  color: #f97316;
+}
+
+.clamp-method-text {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+
+  color: #10b981;
+}
+
+/* ========================================= */
+/* FLUID GRID */
+/* ========================================= */
+
+.fluid-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 2fr 1fr;
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.fluid-card {
+  background-color: #0ea5e9;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  font-weight: 700;
+}
+
+.large-card {
+  background-color: #8b5cf6;
+}
+
+/* ========================================= */
+/* RESPONSIVE MEDIA */
+/* ========================================= */
+
+.media-demo {
+  margin-top: 2rem;
+}
+
+.media-demo img {
+  width: 100%;
+
+  max-width: 100%;
+
+  height: auto;
+
+  border-radius: 1rem;
+
+  display: block;
+}
+
+/* ========================================= */
+/* MEDIA QUERY DEMO */
+/* ========================================= */
+
+.media-query-layout {
+  display: flex;
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.mq-card {
+  flex: 1;
+
+  background-color: #334155;
+
+  padding: 3rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  font-weight: 700;
+}
+
+/* ========================================= */
+/* FULL VIEWPORT */
+/* ========================================= */
+
+.full-screen-demo {
+  margin-top: 2rem;
+}
+
+.full-screen-box {
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #8b5cf6
+    );
+
+  border-radius: 1rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.resize-note {
+  display: inline-block;
+
+  background-color:
+    rgba(250, 204, 21, 0.12);
+
+  border:
+    1px solid #facc15;
+
+  color: #facc15;
+
+  padding:
+    0.5rem 0.75rem;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  margin-top: 1rem;
+}
+
+/* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
 
@@ -282,5 +629,13 @@ th {
   .vw-box {
     width: 100%;
   }
+
+  .media-query-layout {
+  flex-direction: column;
+}
+
+.mq-card {
+  background-color: #0ea5e9;
+}
 
 }
