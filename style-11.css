@@ -511,6 +511,8 @@ th {
   display: block;
 }
 
+/* ========================================= */ /* OVERFLOW */ /* ========================================= */ .overflow-demo { display: grid; gap: 2rem; margin-top: 2rem; } .overflow-bad { width: 900px; background-color: #ef4444; padding: 2rem; border-radius: 1rem; color: white; font-weight: 700; } .overflow-good { max-width: 100%; background-color: #10b981; padding: 2rem; border-radius: 1rem; color: white; font-weight: 700; }
+
 /* ========================================= */
 /* MEDIA QUERY DEMO */
 /* ========================================= */
@@ -570,72 +572,10 @@ th {
   padding: 2rem;
 }
 
-.resize-note {
-  display: inline-block;
-
-  background-color:
-    rgba(250, 204, 21, 0.12);
-
-  border:
-    1px solid #facc15;
-
-  color: #facc15;
-
-  padding:
-    0.5rem 0.75rem;
-
-  border-radius: 999px;
-
-  font-size: 0.9rem;
-
-  margin-top: 1rem;
-}
+/* ========================================= */ /* LABELS */ /* ========================================= */ .resize-note { display: inline-block; background-color: rgba(250, 204, 21, 0.12); border: 1px solid #facc15; color: #facc15; padding: 0.5rem 0.75rem; border-radius: 999px; font-size: 0.9rem; margin-top: 1rem; } .breakpoint-label { margin-top: 1rem; color: #facc15; font-weight: 700; }
 
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
 
-@media (max-width: 768px) {
-
-  .hero {
-    padding:
-      4rem 0
-      3rem;
-  }
-
-  main {
-    padding-bottom: 4rem;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
-
-  .comparison-grid,
-  .typography-demo,
-  .fluid-grid,
-  .clamp-comparison {
-    grid-template-columns: 1fr;
-  }
-
-  .media-query-layout {
-    flex-direction: column;
-  }
-
-  .responsive-heading {
-    font-size: 8vw;
-  }
-
-  .vw-box {
-    width: 100%;
-  }
-
-  .media-query-layout {
-  flex-direction: column;
-}
-
-.mq-card {
-  background-color: #0ea5e9;
-}
-
-}
+@media (max-width: 768px) { .hero { padding: 4rem 0 3rem; } main { padding-bottom: 4rem; } .card { padding: 1.5rem; } .comparison-grid, .typography-demo, .text-comparison, .fluid-grid, .clamp-comparison { grid-template-columns: 1fr; } .media-query-layout { flex-direction: column; } .mq-card { background-color: #0ea5e9; } .responsive-heading { font-size: 8vw; } .vw-box { width: 100%; } .overflow-bad { width: 100%; } }
