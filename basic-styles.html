@@ -246,55 +246,76 @@ word-spacing: 20px;
     </section>
 
     <!-- IMAGES -->
-    <section class="card">
+<section class="card">
 
-      <h2>
-        Images
-      </h2>
+  <h2>
+    Images
+  </h2>
 
-      <p>
-        Images can be styled responsively using CSS.
+  <p>
+    Images can be styled responsively using CSS.
+  </p>
+
+  <div class="image-grid">
+
+    <!-- MAX WIDTH + HEIGHT AUTO -->
+
+    <div class="image-card">
+
+      <h3>
+        Responsive Portrait
+      </h3>
+
+      <p class="demo-label">
+        max-width: 100%;
+        height: auto;
       </p>
 
-      <div class="image-grid">
+      <img
+        class="portrait-demo"
+        src="https://picsum.photos/id/1025/900/1200"
+        alt="Dog Example"
+      >
 
-        <div class="image-card">
+      <p>
+        The image scales proportionally while
+        maintaining its original aspect ratio.
+      </p>
 
-          <h3>
-            Responsive Landscape
-          </h3>
+    </div>
 
-          <img
-            src="https://picsum.photos/id/1015/900/600"
-            alt="Landscape Example"
-          >
+    <!-- OBJECT FIT -->
 
-          <p>
-            Uses responsive image styling with object-fit.
-          </p>
+    <div class="image-card">
 
-        </div>
+      <h3>
+        Responsive Landscape
+      </h3>
 
-        <div class="image-card">
+      <p class="demo-label">
+        object-fit: cover;
+      </p>
 
-          <h3>
-            Responsive Portrait
-          </h3>
+      <div class="crop-frame">
 
-          <img
-            src="https://picsum.photos/id/1025/900/600"
-            alt="Dog Example"
-          >
-
-          <p>
-            Uses max-width and height auto behavior.
-          </p>
-
-        </div>
+        <img
+          class="landscape-demo"
+          src="https://picsum.photos/id/1015/1200/800"
+          alt="Landscape Example"
+        >
 
       </div>
 
-    </section>
+      <p>
+        The image fills the container and crops
+        overflow using object-fit.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- QUICK SUMMARY -->
     <section class="card">
