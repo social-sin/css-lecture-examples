@@ -206,6 +206,178 @@ clamp(1.5rem, 4vw, 3rem);
 
     </section>
 
+    <!-- LAYOUT DEBUGGING -->
+<section class="card">
+
+  <h2>Layout Outlines & Spacing Visualization</h2>
+
+  <p>
+    Designers and developers often use temporary
+    outlines and spacing markers to debug layout issues.
+  </p>
+
+  <!-- OUTLINE COMPARISON -->
+
+  <div class="debug-grid">
+
+    <!-- NORMAL -->
+    <div class="debug-column">
+
+      <h3>
+        Normal Layout
+      </h3>
+
+      <div class="debug-layout normal-layout">
+
+        <div class="debug-box">
+          Header
+        </div>
+
+        <div class="debug-box">
+          Main Content
+        </div>
+
+        <div class="debug-box">
+          Sidebar
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- DEBUG -->
+    <div class="debug-column">
+
+      <h3>
+        Debug Layout
+      </h3>
+
+      <div class="debug-layout outlined-layout">
+
+        <div class="debug-box">
+          Header
+        </div>
+
+        <div class="debug-box">
+          Main Content
+        </div>
+
+        <div class="debug-box">
+          Sidebar
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <pre>
+/* Temporary debugging */
+
+* {
+  outline: 1px dashed red;
+}
+  </pre>
+
+  <!-- SPACING VISUALIZATION -->
+
+  <h3 class="spacing-heading">
+    Visualizing Spacing Systems
+  </h3>
+
+  <p>
+    Spacing markers help visualize rhythm,
+    padding, margins, and layout consistency.
+  </p>
+
+  <div class="spacing-visual-demo">
+
+    <div class="visual-card">
+
+      <div class="space-marker">
+        16px Gap
+      </div>
+
+      <div class="visual-box">
+        Card One
+      </div>
+
+      <div class="space-marker">
+        16px Gap
+      </div>
+
+      <div class="visual-box">
+        Card Two
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TOGGLE EXAMPLES -->
+
+  <div class="toggle-grid">
+
+    <div class="toggle-card">
+
+      <h3>
+        Without Spacing
+      </h3>
+
+      <div class="bad-spacing">
+
+        <div class="tiny-box">
+          A
+        </div>
+
+        <div class="tiny-box">
+          B
+        </div>
+
+        <div class="tiny-box">
+          C
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="toggle-card">
+
+      <h3>
+        With Consistent Gap
+      </h3>
+
+      <div class="good-spacing">
+
+        <div class="tiny-box">
+          A
+        </div>
+
+        <div class="tiny-box">
+          B
+        </div>
+
+        <div class="tiny-box">
+          C
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <pre>
+.container {
+  display: flex;
+  gap: 1rem;
+}
+  </pre>
+
+</section>
+    
     <!-- FLEXIBLE GRID -->
     <section class="card">
 
