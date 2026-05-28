@@ -1,155 +1,258 @@
-/* style.css */
-
-/* ================================= */
+/* ========================================= */
 /* RESET */
-/* ================================= */
+/* ========================================= */
 
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* BODY */
-/* ================================= */
-
-body {
-  background-color: #0f172a;
-  color: #e2e8f0;
-
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-
-  padding: 40px 30px;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ================================= */
-/* HERO */
-/* ================================= */
+/* ========================================= */
+/* VARIABLES */
+/* ========================================= */
 
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
+:root {
+
+  --bg: #0f172a;
+
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+
+  --border:
+    rgba(255, 255, 255, 0.08);
+
+  --max-width: 1200px;
+}
+
+/* ========================================= */
+/* BASE */
+/* ========================================= */
+
+body {
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  line-height: 1.7;
+}
+
+/* ========================================= */
+/* TYPOGRAPHY */
+/* ========================================= */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+  font-size:
+    clamp(2.75rem, 6vw, 5rem);
+
+  margin-bottom: 1.5rem;
+
   color: white;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ================================= */
-/* CARDS */
-/* ================================= */
-
-.card {
-  background-color: #1e293b;
-
-  padding: 35px;
-
-  border-radius: 16px;
-
-  margin-bottom: 40px;
-}
-
 h2 {
-  color: #38bdf8;
-  margin-bottom: 20px;
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
 }
 
 h3 {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  color: #facc15;
+  margin-top: 2rem;
+
+  margin-bottom: 1rem;
+
+  color: var(--accent);
 }
 
-p {
-  margin-bottom: 15px;
+p,
+td {
+  color: var(--muted);
 }
 
-/* ================================= */
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding:
+    5rem 0
+    4rem;
+}
+
+.hero p {
+  max-width: 750px;
+
+  font-size: 1.1rem;
+}
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding-bottom: 5rem;
+}
+
+/* ========================================= */
+/* CARDS */
+/* ========================================= */
+
+.card {
+  background-color:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background-color:
+    var(--surface-light);
+}
+
+/* ========================================= */
+/* CONTENT SPACING */
+/* ========================================= */
+
+.card p,
+.card pre,
+.card table {
+  margin-top: 1rem;
+}
+
+/* ========================================= */
 /* GRID CONTAINERS */
-/* ================================= */
+/* ========================================= */
 
 .grid-container {
   background-color: #334155;
 
-  border: 2px dashed #64748b;
+  border:
+    2px dashed #475569;
 
-  padding: 20px;
+  border-radius: 1rem;
 
-  border-radius: 12px;
+  padding: 1.5rem;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin:
+    1.5rem 0;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GRID ITEMS */
-/* ================================= */
+/* ========================================= */
 
 .grid-item {
   background-color: #0ea5e9;
+
   color: white;
 
-  padding: 30px;
+  padding: 1.5rem;
 
-  border-radius: 10px;
+  border-radius: 0.75rem;
 
   text-align: center;
 
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* ================================= */
+/* ========================================= */
 /* BASIC GRID */
-/* ================================= */
+/* ========================================= */
 
 .basic-grid {
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GRID TEMPLATE COLUMNS */
-/* ================================= */
+/* ========================================= */
 
 .column-grid {
   display: grid;
 
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns:
+    1fr 2fr 1fr;
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .wide-item {
   background-color: #8b5cf6;
 }
 
-/* ================================= */
+/* ========================================= */
 /* REPEAT */
-/* ================================= */
+/* ========================================= */
 
 .repeat-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* RESPONSIVE GRID */
-/* ================================= */
+/* ========================================= */
 
 .responsive-grid {
   display: grid;
@@ -157,21 +260,23 @@ p {
   grid-template-columns:
     repeat(auto-fit, minmax(200px, 1fr));
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* PLACING ITEMS */
-/* ================================= */
+/* ========================================= */
 
 .placement-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  grid-template-rows: repeat(3, 150px);
+  grid-template-rows:
+    repeat(3, 150px);
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .span-item {
@@ -186,22 +291,22 @@ p {
   background-color: #f97316;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GRID LINES + SPANNING */
-/* ================================= */
+/* ========================================= */
 
 .grid-line-labels {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, 1fr);
 
-  margin-top: 20px;
-
-  margin-bottom: 10px;
+  margin:
+    1.5rem 0 0.75rem;
 
   text-align: center;
 
-  font-weight: bold;
+  font-weight: 700;
 
   color: #facc15;
 }
@@ -209,11 +314,10 @@ p {
 .line-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 20px;
-
-  position: relative;
+  gap: 1.25rem;
 }
 
 .line-span-column {
@@ -222,18 +326,18 @@ p {
   background-color: #ef4444;
 }
 
-/* ================================= */
+/* ========================================= */
 /* ROW GRID LINES */
-/* ================================= */
+/* ========================================= */
 
 .row-label-layout {
   display: flex;
 
   align-items: stretch;
 
-  gap: 15px;
+  gap: 1rem;
 
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
 .row-line-labels {
@@ -243,22 +347,24 @@ p {
 
   justify-content: space-between;
 
-  font-weight: bold;
+  padding:
+    0.5rem 0;
+
+  font-weight: 700;
 
   color: #facc15;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .row-span-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:
+    repeat(2, 1fr);
 
-  grid-template-rows: repeat(3, 120px);
+  grid-template-rows:
+    repeat(3, 120px);
 
-  gap: 20px;
+  gap: 1.25rem;
 
   flex: 1;
 }
@@ -269,34 +375,38 @@ p {
   background-color: #f97316;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GRID NOTE */
-/* ================================= */
+/* ========================================= */
 
 .grid-note {
-  background-color: rgba(250, 204, 21, 0.12);
+  background-color:
+    rgba(250, 204, 21, 0.12);
 
-  border-left: 4px solid #facc15;
+  border-left:
+    4px solid #facc15;
 
-  padding: 15px;
+  border-radius: 0.75rem;
 
-  border-radius: 10px;
+  padding: 1rem;
 
-  margin-top: 25px;
+  margin-top: 1.5rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GRID AREA */
-/* ================================= */
+/* ========================================= */
 
 .area-grid {
   display: grid;
 
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns:
+    1fr 3fr;
 
-  grid-template-rows: auto 200px auto;
+  grid-template-rows:
+    auto 200px auto;
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .area-header {
@@ -323,21 +433,23 @@ p {
   background-color: #ef4444;
 }
 
-/* ================================= */
+/* ========================================= */
 /* ALIGNMENT */
-/* ================================= */
+/* ========================================= */
 
 .align-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
-
-  height: 300px;
+  grid-template-columns:
+    repeat(2, 1fr);
 
   justify-items: center;
+
   align-items: center;
 
-  gap: 20px;
+  gap: 1.25rem;
+
+  height: 300px;
 }
 
 .small-item {
@@ -345,13 +457,15 @@ p {
   height: 120px;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 }
 
-/* ================================= */
+/* ========================================= */
 /* GRID SHORTHAND */
-/* ================================= */
+/* ========================================= */
 
 .shorthand-grid {
   display: grid;
@@ -360,65 +474,79 @@ p {
     auto 1fr /
     200px 1fr 1fr;
 
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-/* ================================= */
-/* CODE BLOCK */
-/* ================================= */
+/* ========================================= */
+/* CODE BLOCKS */
+/* ========================================= */
 
 pre {
-  background-color: #020617;
-
-  color: #93c5fd;
-
-  padding: 20px;
-
-  border-radius: 10px;
-
   overflow-x: auto;
 
-  margin-top: 20px;
+  background-color: #020617;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  color: #cbd5e1;
 }
 
-/* ================================= */
+/* ========================================= */
 /* TABLE */
-/* ================================= */
+/* ========================================= */
 
 table {
   width: 100%;
 
   border-collapse: collapse;
 
-  margin-top: 20px;
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
 }
 
 th,
 td {
-  border: 1px solid #475569;
+  padding: 1rem;
 
-  padding: 15px;
+  border:
+    1px solid var(--border);
 
   text-align: left;
 }
 
 th {
-  background-color: #334155;
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
   color: white;
 }
 
-/* ================================= */
+/* ========================================= */
 /* RESPONSIVE */
-/* ================================= */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-  body {
-    padding: 20px;
+  .hero {
+    padding:
+      4rem 0
+      3rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  main {
+    padding-bottom: 4rem;
+  }
+
+  .card {
+    padding: 1.5rem;
   }
 
   .basic-grid,
@@ -429,6 +557,10 @@ th {
   .align-grid,
   .shorthand-grid {
     grid-template-columns: 1fr;
+  }
+
+  .row-label-layout {
+    flex-direction: column;
   }
 
 }
