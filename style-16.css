@@ -269,6 +269,42 @@ p {
     moveRight 2s infinite alternate;
 }
 
+/* timing functions */
+
+.linear {
+  animation-timing-function: linear;
+}
+
+.ease {
+  animation-timing-function: ease;
+}
+
+.ease-in {
+  animation-timing-function: ease-in;
+}
+
+.ease-out {
+  animation-timing-function: ease-out;
+}
+
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+/* animation */
+
+@keyframes moveRight {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(100vw - 220px));
+  }
+
+}
+
 /* ================================= */
 /* ROTATE SCALE */
 /* ================================= */
