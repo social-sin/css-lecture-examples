@@ -109,47 +109,6 @@ td {
   max-width: 750px;
 
   font-size: 1.1rem;
-
-  margin-bottom: 2rem;
-}
-
-/* ========================================= */
-/* HERO BUTTON */
-/* ========================================= */
-
-.hero-button {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding:
-    0.9rem 1.25rem;
-
-  border-radius: 0.75rem;
-
-  background-color:
-    var(--accent);
-
-  color: #0f172a;
-
-  text-decoration: none;
-
-  font-weight: 700;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.hero-button:hover,
-.hero-button:focus-visible {
-  background-color:
-    var(--accent-hover);
-
-  transform:
-    translateY(-2px);
 }
 
 /* ========================================= */
@@ -270,7 +229,7 @@ li {
 /* ========================================= */
 
 .tight-lines {
-  line-height: 1;
+  line-height: 1.1;
 
   background-color:
     rgba(255, 255, 255, 0.03);
@@ -281,7 +240,7 @@ li {
 }
 
 .loose-lines {
-  line-height: 2.8;
+  line-height: 2.2;
 
   background-color:
     rgba(56, 189, 248, 0.08);
@@ -388,32 +347,31 @@ pre {
 
   transition:
     transform 0.3s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.link-group a:hover {
-  transform:
-    translateY(-2px);
+/* LVHA ORDER */
 
-  background-color:
-    var(--surface-light);
-}
-
-/* LVHA */
-
-a:link {
+.link-group a:link {
   color: #38bdf8;
 }
 
-a:visited {
+.link-group a:visited {
   color: #c084fc;
 }
 
-a:hover {
+.link-group a:hover {
   color: #f87171;
+
+  background-color:
+    var(--surface-light);
+
+  transform:
+    translateY(-2px);
 }
 
-a:active {
+.link-group a:active {
   color: #4ade80;
 }
 
@@ -451,11 +409,13 @@ a:active {
 .image-card img {
   width: 100%;
 
-  height: 300px;
+  height: auto;
+
+  display: block;
 
   object-fit: cover;
 
-  opacity: 0.8;
+  opacity: 0.9;
 
   border-radius: 1rem;
 
@@ -463,26 +423,20 @@ a:active {
     1rem 0;
 }
 
-.responsive-image {
-  max-width: 100%;
-
-  height: auto;
-
-  display: block;
-}
-
 /* ========================================= */
 /* TABLE */
 /* ========================================= */
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
 
+  min-width: 700px;
+
   border-collapse: collapse;
-
-  overflow: hidden;
-
-  border-radius: 1rem;
 
   margin-top: 1.5rem;
 }
