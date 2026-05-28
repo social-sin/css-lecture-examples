@@ -1,3 +1,4 @@
+```css
 /* ========================================= */
 /* RESET */
 /* ========================================= */
@@ -83,13 +84,15 @@ h1 {
     clamp(3rem, 7vw, 5rem);
 
   font-weight: 800;
+
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size:
     clamp(2rem, 4vw, 2.5rem);
 
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -98,49 +101,13 @@ h3 {
   margin-bottom: 1rem;
 }
 
-p {
+h4 {
+  margin-bottom: 1rem;
+}
+
+p,
+li {
   color: var(--muted);
-}
-
-/* ========================================= */
-/* HEADER */
-/* ========================================= */
-
-header {
-  position: sticky;
-
-  top: 0;
-
-  z-index: 1000;
-
-  backdrop-filter: blur(14px);
-
-  background-color:
-    rgba(15, 23, 42, 0.85);
-
-  border-bottom:
-    1px solid var(--border);
-}
-
-nav {
-  width:
-    min(100% - 2rem, var(--max-width));
-
-  margin-inline: auto;
-
-  padding: 1rem 0;
-}
-
-.back-link {
-  color: var(--accent);
-
-  text-decoration: none;
-
-  font-weight: 600;
-}
-
-.back-link:hover {
-  color: var(--accent-hover);
 }
 
 /* ========================================= */
@@ -155,20 +122,6 @@ nav {
 
   padding:
     5rem 0 4rem;
-}
-
-.eyebrow {
-  color: var(--accent);
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.1em;
-
-  font-size: 0.85rem;
-
-  font-weight: 700;
-
-  margin-bottom: 1rem;
 }
 
 .hero-text {
@@ -197,26 +150,19 @@ main {
 /* ========================================= */
 
 .demo-section {
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 
-.section-heading {
-  margin-bottom: 2.5rem;
-}
-
-.section-heading p {
-  max-width: 700px;
+.demo-section h2 {
+  margin-bottom: 2rem;
 }
 
 /* ========================================= */
-/* GRID */
+/* CARD GRID */
 /* ========================================= */
 
-.card-grid {
+.demo-section {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(300px, 1fr));
 
   gap: 1.5rem;
 }
@@ -231,8 +177,6 @@ main {
 
   border:
     1px solid var(--border);
-
-  margin-bottom: 3rem;
 
   border-radius:
     var(--radius);
@@ -267,10 +211,6 @@ main {
 
 .card ul {
   padding-left: 1.25rem;
-}
-
-.card li {
-  color: var(--muted);
 }
 
 /* ========================================= */
@@ -320,15 +260,21 @@ pre {
   color: #fde68a;
 }
 
+/* DESCENDANT SELECTOR */
+
 article p {
   color: #4ade80;
 
   font-weight: 600;
 }
 
+/* CHILD SELECTOR */
+
 .child-demo ul > li {
   color: #f87171;
 }
+
+/* ADJACENT SIBLING */
 
 .adjacent-demo h4 + p {
   background-color:
@@ -338,6 +284,8 @@ article p {
 
   border-radius: 0.5rem;
 }
+
+/* GENERAL SIBLING */
 
 .general-demo h4 ~ p {
   color: #c084fc;
@@ -380,16 +328,20 @@ article p {
 
   transition:
     transform var(--transition),
-    background-color var(--transition);
+    background-color var(--transition),
+    color var(--transition);
 }
 
 .link-demo a:hover {
   transform:
     translateY(-2px);
+
+  background-color:
+    var(--surface-light);
 }
 
 /* ========================================= */
-/* LVHA */
+/* LVHA ORDER */
 /* ========================================= */
 
 .link-demo a:link {
