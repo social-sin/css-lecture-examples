@@ -227,7 +227,7 @@ transform 0.5s ease;
       <div class="rotate-demo">
 
         <div class="circle">
-          Rotate
+          <div class="orbit-dot"></div>
         </div>
 
       </div>
@@ -420,13 +420,33 @@ translateX(10vw);
     for accessibility.
   </p>
 
-  <div class="reduced-motion-demo">
+<div class="reduced-grid">
 
-    <div class="motion-box">
-      Motion Enabled
+  <div class="motion-example">
+
+    <h3>
+      Normal Motion
+    </h3>
+
+    <div class="motion-box motion-active">
+      Animated
     </div>
 
   </div>
+
+  <div class="motion-example">
+
+    <h3>
+      Reduced Motion
+    </h3>
+
+    <div class="motion-box motion-reduced">
+      Reduced
+    </div>
+
+  </div>
+
+</div>
 
   <pre>
 @media (prefers-reduced-motion: reduce) {
