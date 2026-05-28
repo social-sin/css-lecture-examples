@@ -275,6 +275,94 @@ p {
 }
 
 /* ================================= */
+/* CLAMP() TYPOGRAPHY */
+/* ================================= */
+
+.clamp-demo {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  background-color: #334155;
+
+  padding: 3rem;
+
+  border-radius: 1rem;
+}
+
+/* Modern responsive heading */
+
+.clamp-heading {
+  font-size: clamp(2rem, 5vw, 5rem);
+
+  color: #38bdf8;
+
+  line-height: 1.1;
+
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive paragraph */
+
+.clamp-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+
+  max-width: 700px;
+
+  color: #cbd5e1;
+}
+
+/* ================================= */
+/* COMPARISON */
+/* ================================= */
+
+.clamp-comparison {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.comparison-card {
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.old-method {
+  background-color: #7f1d1d;
+}
+
+.modern-method {
+  background-color: #14532d;
+}
+
+.vw-only-text {
+  font-size: 3vw;
+
+  color: #fca5a5;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  font-weight: bold;
+}
+
+.clamp-method-text {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+
+  color: #86efac;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  font-weight: bold;
+}
+
+/* ================================= */
 /* FLUID GRID */
 /* ================================= */
 
@@ -472,5 +560,9 @@ th {
   .vw-box {
     width: 100%;
   }
+
+  .clamp-comparison {
+  grid-template-columns: 1fr;
+}
 
 }
