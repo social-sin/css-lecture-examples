@@ -352,6 +352,12 @@ pre {
 
 .link-demo a:hover {
   color: #f87171;
+
+  background-color:
+    var(--surface-light);
+
+  transform:
+    translateY(-2px);
 }
 
 .link-demo a:active {
