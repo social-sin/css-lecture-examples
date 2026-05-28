@@ -249,6 +249,524 @@ th {
 }
 
 /* ========================================= */
+/* DEMO ROW */
+/* ========================================= */
+
+.demo-row {
+  display: flex;
+
+  gap: 2rem;
+
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+/* ========================================= */
+/* BASIC LINK */
+/* ========================================= */
+
+.basic-link {
+  color: var(--accent);
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+
+  display: inline-block;
+}
+
+.basic-link:hover {
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* SLIDING UNDERLINE */
+/* ========================================= */
+
+.slide-link {
+  position: relative;
+
+  display: inline-block;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.slide-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--accent);
+
+  transition: width 0.3s ease;
+}
+
+.slide-link:hover::after {
+  width: 100%;
+}
+
+/* ========================================= */
+/* CENTER UNDERLINE */
+/* ========================================= */
+
+.center-link {
+  position: relative;
+
+  display: inline-block;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.center-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--accent);
+
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+.center-link:hover::after {
+  width: 100%;
+
+  left: 0;
+}
+
+/* ========================================= */
+/* BUTTON LINKS */
+/* ========================================= */
+
+.button-group {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  flex-wrap: wrap;
+}
+
+.button-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding: 0.85rem 1.4rem;
+
+  border-radius: 999px;
+
+  background-color: var(--accent);
+
+  color: #0f172a;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.button-link:hover {
+  transform: translateY(-4px);
+
+  background-color: var(--accent-hover);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon-button:hover .icon {
+  transform: translateX(4px);
+}
+
+/* ========================================= */
+/* FOCUS STATES */
+/* ========================================= */
+
+.focus-link {
+  color: var(--accent);
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.focus-link:focus-visible {
+  outline: 3px solid #22c55e;
+
+  outline-offset: 4px;
+
+  border-radius: 4px;
+}
+
+/* ========================================= */
+/* CURSOR STYLES */
+/* ========================================= */
+
+.cursor-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.cursor-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.pointer-demo {
+  cursor: pointer;
+}
+
+.text-demo {
+  cursor: text;
+}
+
+.grab-demo {
+  cursor: grab;
+}
+
+.notallowed-demo {
+  cursor: not-allowed;
+}
+
+/* ========================================= */
+/* REDUCED MOTION */
+/* ========================================= */
+
+.motion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.motion-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.motion-link,
+.reduced-motion-link {
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.motion-link:hover {
+  transform:
+    translateY(-6px)
+    scale(1.05);
+
+  color: var(--accent);
+}
+
+.reduced-motion-link:hover {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .motion-link,
+  .reduced-motion-link,
+  .button-link,
+  .icon {
+    transition: none;
+  }
+
+}
+
+/* ========================================= */
+/* EXTERNAL LINK */
+/* ========================================= */
+
+.external-link {
+  color: var(--accent);
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.external-link::after {
+  content: " ↗";
+}
+
+/* ========================================= */
+/* COLOR TRANSITIONS */
+/* ========================================= */
+
+.color-transition-link {
+  display: inline-block;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 0.75rem;
+
+  background-color: #1e293b;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.color-transition-link:hover {
+  background-color: var(--accent);
+
+  color: #0f172a;
+
+  transform: translateY(-4px);
+}
+
+/* ========================================= */
+/* GLOW EFFECT */
+/* ========================================= */
+
+.glow-link {
+  color: #7dd3fc;
+
+  text-decoration: none;
+
+  font-size: 1.2rem;
+
+  font-weight: bold;
+
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.glow-link:hover {
+  color: white;
+
+  text-shadow:
+    0 0 10px rgba(56,189,248,0.9),
+    0 0 20px rgba(56,189,248,0.7);
+}
+
+/* ========================================= */
+/* COMBINED EFFECT */
+/* ========================================= */
+
+.combined-link {
+  position: relative;
+
+  display: inline-block;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.combined-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--accent);
+
+  transition: width 0.3s ease;
+}
+
+.combined-link:hover {
+  color: var(--accent);
+
+  transform: translateY(-3px);
+}
+
+.combined-link:hover::after {
+  width: 100%;
+}
+
+/* ========================================= */
+/* MOBILE NAV */
+/* ========================================= */
+
+.mobile-nav {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  flex-wrap: wrap;
+}
+
+.mobile-nav a {
+  display: inline-block;
+
+  padding: 1rem 1.25rem;
+
+  border-radius: 0.75rem;
+
+  background-color: #334155;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  background-color: var(--accent);
+
+  color: #0f172a;
+
+  transform: translateY(-3px);
+}
+
+/* ========================================= */
+/* CSS VARIABLES DEMO */
+/* ========================================= */
+
+.variable-link {
+  --link-color: #38bdf8;
+  --link-hover: #22c55e;
+
+  color: var(--link-color);
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition: color 0.3s ease;
+}
+
+.variable-link:hover {
+  color: var(--link-hover);
+}
+
+/* ========================================= */
+/* CTA */
+/* ========================================= */
+
+.cta-layout {
+  margin-top: 2rem;
+}
+
+.cta-card {
+  background-color: #1e293b;
+
+  padding: 3rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+
+  margin-top: 1.5rem;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 999px;
+
+  background-color: var(--accent);
+
+  color: #0f172a;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+
+  background-color: var(--accent-hover);
+}
+
+/* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
 
