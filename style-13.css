@@ -242,6 +242,485 @@ th {
 }
 
 /* ========================================= */
+/* MEDIA DEMO */
+/* ========================================= */
+
+.media-demo {
+  margin-top: 2rem;
+}
+
+.media-demo img {
+  width: 100%;
+
+  border-radius: 1rem;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+/* ========================================= */
+/* OBJECT FIT */
+/* ========================================= */
+
+.cover-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.cover-card {
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.cover-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.cover-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ========================================= */
+/* TYPOGRAPHY DEMO */
+/* ========================================= */
+
+.typography-demo {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  margin-top: 2rem;
+}
+
+.fluid-heading {
+  font-size:
+    clamp(2rem, 5vw, 5rem);
+
+  margin-bottom: 1rem;
+}
+
+.body-copy {
+  max-width: 65ch;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* ========================================= */
+/* CLAMP DEMO */
+/* ========================================= */
+
+.clamp-demo {
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #8b5cf6
+    );
+
+  padding:
+    clamp(2rem, 5vw, 5rem);
+
+  border-radius: 1rem;
+
+  margin-top: 2rem;
+
+  text-align: center;
+}
+
+.clamp-heading {
+  font-size:
+    clamp(1.5rem, 4vw, 4rem);
+
+  color: white;
+}
+
+/* ========================================= */
+/* SPACING LAYOUT */
+/* ========================================= */
+
+.spacing-layout {
+  display: flex;
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.spacing-card {
+  flex: 1;
+
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  font-weight: 700;
+}
+
+/* ========================================= */
+/* DEBUG GRID */
+/* ========================================= */
+
+.debug-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.debug-layout {
+  display: grid;
+
+  gap: 1rem;
+
+  background-color: #0f172a;
+
+  padding: 1rem;
+
+  border-radius: 1rem;
+}
+
+.debug-box {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 0.75rem;
+
+  text-align: center;
+}
+
+.outlined-layout * {
+  outline:
+    2px dashed #ef4444;
+}
+
+/* ========================================= */
+/* SPACING VISUALIZATION */
+/* ========================================= */
+
+.spacing-heading {
+  margin-top: 3rem;
+}
+
+.spacing-visual-demo {
+  margin-top: 2rem;
+}
+
+.visual-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.space-marker {
+  background-color: #0ea5e9;
+
+  color: white;
+
+  padding:
+    0.5rem 0.75rem;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+.visual-box {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 0.75rem;
+
+  min-width: 180px;
+
+  text-align: center;
+}
+
+/* ========================================= */
+/* TOGGLE GRID */
+/* ========================================= */
+
+.toggle-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.toggle-card {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.bad-spacing,
+.good-spacing {
+  display: flex;
+
+  margin-top: 1rem;
+}
+
+.bad-spacing {
+  gap: 0;
+}
+
+.good-spacing {
+  gap: 1rem;
+}
+
+.tiny-box {
+  background-color: #0ea5e9;
+
+  color: white;
+
+  padding: 1rem 1.25rem;
+
+  border-radius: 0.5rem;
+
+  font-weight: 700;
+}
+
+/* ========================================= */
+/* RESPONSIVE GRID */
+/* ========================================= */
+
+.responsive-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.article-card {
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  background-color: #1e293b;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition:
+    transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform:
+    translateY(-6px);
+}
+
+.article-card img {
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+/* ========================================= */
+/* MEDIA QUERY DEMO */
+/* ========================================= */
+
+.media-query-demo {
+  margin-top: 2rem;
+}
+
+.mq-box {
+  background:
+    linear-gradient(
+      135deg,
+      #0ea5e9,
+      #8b5cf6
+    );
+
+  padding: 4rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  color: white;
+
+  transition:
+    all 0.3s ease;
+}
+
+/* ========================================= */
+/* SVG DEMO */
+/* ========================================= */
+
+.svg-demo {
+  margin-top: 2rem;
+
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.responsive-svg {
+  width: min(300px, 100%);
+
+  height: auto;
+}
+
+.responsive-svg circle {
+  fill: #38bdf8;
+}
+
+/* ========================================= */
+/* FEATURE LIST */
+/* ========================================= */
+
+.feature-list {
+  margin-top: 1rem;
+
+  padding-left: 1.25rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* ========================================= */
+/* COMBO SECTION */
+/* ========================================= */
+
+.combo-section {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+
+  align-items: center;
+}
+
+.combo-image img {
+  border-radius: 1rem;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.combo-text {
+  background-color: #1e293b;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.combo-heading {
+  font-size:
+    clamp(2rem, 4vw, 4rem);
+
+  margin-bottom: 1rem;
+}
+
+.combo-text button {
+  margin-top: 1.5rem;
+
+  background-color: #38bdf8;
+
+  color: #0f172a;
+
+  border: none;
+
+  border-radius: 0.75rem;
+
+  padding:
+    1rem 1.5rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.combo-text button:hover {
+  transform:
+    translateY(-3px);
+}
+
+/* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
 
@@ -273,11 +752,17 @@ th {
   }
 
   .fluid-heading {
-    font-size: 8vw;
+    font-size: 10vw;
   }
 
   .mq-box {
+    padding: 2rem;
+
     font-size: 1.5rem;
+  }
+
+  .visual-card {
+    flex-direction: column;
   }
 
 }
