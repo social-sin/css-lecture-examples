@@ -327,10 +327,195 @@ srcset + sizes + loading="lazy"
 
     </section>
 
+    <!-- PERFORMANCE COMPARISON -->
+<section class="card">
+
+  <h2>8. Why Responsive Images Matter</h2>
+
+  <p>
+    Responsive images improve loading speed,
+    reduce bandwidth usage, and create better
+    mobile experiences.
+  </p>
+
+  <div class="performance-grid">
+
+    <!-- BAD EXAMPLE -->
+    <div class="performance-card bad-performance">
+
+      <h3>
+        Unoptimized Large Image
+      </h3>
+
+      <img
+        src="https://picsum.photos/id/1003/1200/700"
+        alt="Large unoptimized example"
+      >
+
+      <ul class="stats-list">
+
+        <li>
+          File Size: <strong>4.8 MB</strong>
+        </li>
+
+        <li>
+          Mobile Device Loads Full Desktop Image
+        </li>
+
+        <li>
+          Slower Page Speed
+        </li>
+
+        <li>
+          Higher Data Usage
+        </li>
+
+        <li>
+          Worse Core Web Vitals
+        </li>
+
+      </ul>
+
+      <div class="loading-bar slow-bar">
+
+        <div class="loading-fill">
+          Slow Load
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- GOOD EXAMPLE -->
+    <div class="performance-card good-performance">
+
+      <h3>
+        Responsive Optimized Image
+      </h3>
+
+      <img
+        src="https://picsum.photos/id/1003/800/500"
+        alt="Optimized responsive example"
+      >
+
+      <ul class="stats-list">
+
+        <li>
+          File Size: <strong>280 KB</strong>
+        </li>
+
+        <li>
+          Browser Selects Correct Size
+        </li>
+
+        <li>
+          Faster Mobile Performance
+        </li>
+
+        <li>
+          Lower Data Usage
+        </li>
+
+        <li>
+          Better SEO & UX
+        </li>
+
+      </ul>
+
+      <div class="loading-bar fast-bar">
+
+        <div class="loading-fill">
+          Fast Load
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FILE SIZE COMPARISON -->
+
+  <div class="format-comparison">
+
+    <h3>
+      Typical File Size Differences
+    </h3>
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>Format</th>
+          <th>Typical Size</th>
+          <th>Performance</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>PNG</td>
+          <td>3.5 MB</td>
+          <td>Large but lossless</td>
+        </tr>
+
+        <tr>
+          <td>JPEG</td>
+          <td>1.2 MB</td>
+          <td>Smaller with compression</td>
+        </tr>
+
+        <tr>
+          <td>WebP</td>
+          <td>450 KB</td>
+          <td>Modern optimized format</td>
+        </tr>
+
+        <tr>
+          <td>AVIF</td>
+          <td>280 KB</td>
+          <td>Excellent compression</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <pre>
+<!-- BAD -->
+&lt;img src="huge-image.jpg"&gt;
+
+<!-- BETTER -->
+&lt;img
+  srcset="
+    image-400.jpg 400w,
+    image-800.jpg 800w,
+    image-1200.jpg 1200w
+  "
+  sizes="
+    (max-width: 768px) 100vw,
+    50vw
+  "
+&gt;
+  </pre>
+
+  <p class="tip">
+    Most websites are image-heavy —
+    optimizing images can dramatically
+    improve page speed and mobile usability.
+  </p>
+
+</section>
+
     <!-- PERFORMANCE -->
     <section class="card">
 
-      <h2>8. Testing & Performance</h2>
+      <h2>9. Testing & Performance</h2>
 
       <div class="tool-grid">
 
