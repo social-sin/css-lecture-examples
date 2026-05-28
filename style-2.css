@@ -2,19 +2,17 @@
 /* RESET */
 /* ========================================= */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* ========================================= */
-/* VARIABLES */
+/* ROOT VARIABLES */
 /* ========================================= */
 
 :root {
@@ -28,17 +26,28 @@ html {
   --muted: #94a3b8;
 
   --accent: #38bdf8;
-  --accent-hover: #7dd3fc;
 
   --border:
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
+
+  --radius: 1rem;
+
+  --shadow:
+    0 10px 30px rgba(0,0,0,0.25);
 
   --max-width: 1200px;
+
+  --transition:
+    0.3s ease;
 }
 
 /* ========================================= */
-/* BASE */
+/* HTML + BODY */
 /* ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--bg);
@@ -51,6 +60,8 @@ body {
     sans-serif;
 
   line-height: 1.7;
+
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ========================================= */
@@ -60,20 +71,25 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
+
+  letter-spacing: -0.03em;
 }
 
 h1 {
   font-size:
-    clamp(2.75rem, 6vw, 5rem);
+    clamp(3rem, 7vw, 5rem);
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size:
+    clamp(2rem, 4vw, 2.5rem);
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   color: white;
 }
@@ -82,12 +98,22 @@ h3 {
   margin-bottom: 1rem;
 
   color: white;
+
+  font-size: 1.35rem;
 }
 
 p,
 li,
 td {
   color: var(--muted);
+}
+
+code {
+  color: var(--accent);
+
+  font-family:
+    Consolas,
+    monospace;
 }
 
 /* ========================================= */
@@ -101,14 +127,13 @@ td {
   margin-inline: auto;
 
   padding:
-    5rem 0
-    4rem;
+    5rem 0 4rem;
 }
 
 .hero p {
-  max-width: 750px;
+  max-width: 700px;
 
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 /* ========================================= */
@@ -135,16 +160,20 @@ main {
   border:
     1px solid var(--border);
 
-  border-radius: 1rem;
+  border-radius:
+    var(--radius);
 
   padding: 2rem;
 
   margin-bottom: 2rem;
 
+  box-shadow:
+    var(--shadow);
+
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
 }
 
 .card:hover {
@@ -152,7 +181,7 @@ main {
     translateY(-4px);
 
   border-color:
-    rgba(56, 189, 248, 0.35);
+    rgba(56,189,248,0.35);
 
   background-color:
     var(--surface-light);
@@ -185,7 +214,7 @@ li {
 
 .highlight {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.15);
 
   border-left:
     4px solid var(--accent);
@@ -195,6 +224,8 @@ li {
   border-radius: 0.5rem;
 
   color: #bae6fd;
+
+  font-weight: 600;
 }
 
 /* ========================================= */
@@ -205,7 +236,7 @@ li {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
+    repeat(auto-fit, minmax(300px, 1fr));
 
   gap: 1.5rem;
 
@@ -214,7 +245,7 @@ li {
 
 .type-card {
   background-color:
-    rgba(255, 255, 255, 0.03);
+    rgba(255,255,255,0.03);
 
   border:
     1px solid var(--border);
@@ -228,64 +259,98 @@ li {
 /* TYPOGRAPHY DEMOS */
 /* ========================================= */
 
+.tight-lines,
+.loose-lines,
+.normal-spacing,
+.wide-spacing,
+.tight-spacing,
+.normal-word-spacing,
+.wide-word-spacing {
+  padding: 1rem;
+
+  border-radius: 0.75rem;
+
+  margin-bottom: 1rem;
+}
+
+/* LINE HEIGHT */
+
 .tight-lines {
   line-height: 1.1;
 
   background-color:
-    rgba(255, 255, 255, 0.03);
+    rgba(248,113,113,0.12);
 
-  padding: 1rem;
-
-  border-radius: 0.5rem;
+  border-left:
+    4px solid #f87171;
 }
 
 .loose-lines {
   line-height: 2.2;
 
   background-color:
-    rgba(56, 189, 248, 0.08);
+    rgba(74,222,128,0.12);
 
-  padding: 1rem;
-
-  border-radius: 0.5rem;
+  border-left:
+    4px solid #4ade80;
 }
 
-.normal-spacing,
-.wide-spacing,
-.tight-spacing,
-.normal-word-spacing,
-.wide-word-spacing {
-  font-size: 1.2rem;
+/* LETTER SPACING */
+
+.normal-spacing {
+  background-color:
+    rgba(255,255,255,0.03);
 }
 
 .wide-spacing {
   letter-spacing: 10px;
 
   text-transform: uppercase;
+
+  background-color:
+    rgba(56,189,248,0.12);
+
+  border-left:
+    4px solid #38bdf8;
 }
 
 .tight-spacing {
   letter-spacing: -2px;
+
+  background-color:
+    rgba(192,132,252,0.12);
+
+  border-left:
+    4px solid #c084fc;
+}
+
+/* WORD SPACING */
+
+.normal-word-spacing {
+  background-color:
+    rgba(255,255,255,0.03);
 }
 
 .wide-word-spacing {
   word-spacing: 20px;
+
+  background-color:
+    rgba(250,204,21,0.12);
+
+  border-left:
+    4px solid #facc15;
 }
 
 /* ========================================= */
-/* CODE */
+/* PRE */
 /* ========================================= */
-
-code {
-  color: var(--accent);
-
-  font-family:
-    Consolas,
-    monospace;
-}
 
 pre {
   overflow-x: auto;
+
+  white-space: pre-wrap;
+
+  line-height: 1.5;
 
   background-color: #020617;
 
@@ -339,19 +404,19 @@ pre {
   border-radius: 999px;
 
   background-color:
-    rgba(255, 255, 255, 0.04);
+    rgba(255,255,255,0.04);
 
-  font-weight: 600;
+  font-weight: 700;
 
   text-decoration: none;
 
   transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease;
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition);
 }
 
-/* LVHA ORDER */
+/* LVHA */
 
 .link-group a:link {
   color: #38bdf8;
@@ -383,7 +448,7 @@ pre {
   margin-top: 1.5rem;
 
   background-color:
-    rgba(250, 204, 21, 0.08);
+    rgba(250,204,21,0.08);
 
   border-left:
     4px solid #facc15;
@@ -406,21 +471,41 @@ pre {
   gap: 2rem;
 }
 
+.image-card {
+  background-color:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 1rem;
+}
+
 .image-card img {
   width: 100%;
 
-  height: auto;
-
-  display: block;
+  height: 300px;
 
   object-fit: cover;
 
-  opacity: 0.9;
+  display: block;
 
   border-radius: 1rem;
 
   margin:
     1rem 0;
+
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.image-card img:hover {
+  transform: scale(1.02);
+
+  opacity: 0.9;
 }
 
 /* ========================================= */
@@ -453,7 +538,7 @@ td {
 
 th {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.12);
 
   color: white;
 }
@@ -466,12 +551,7 @@ th {
 
   .hero {
     padding:
-      4rem 0
-      3rem;
-  }
-
-  main {
-    padding-bottom: 4rem;
+      4rem 0 3rem;
   }
 
   .card {
