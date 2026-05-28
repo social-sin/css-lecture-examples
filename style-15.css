@@ -492,14 +492,17 @@ th {
 }
 
 .multi-box {
-  background-color: var(--purple);
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #7c3aed
+    );
 
-  padding: 2rem;
+  width: 220px;
+  height: 220px;
 
   border-radius: 50%;
-
-  width: 180px;
-  height: 180px;
 
   display: flex;
   justify-content: center;
@@ -507,13 +510,20 @@ th {
 
   text-align: center;
 
-  font-weight: bold;
+  padding: 2rem;
+
+  color: white;
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
 
   animation:
-    pulse 2s ease infinite,
-    rotate 6s linear infinite;
-}
+    rotatePulse 5s ease-in-out infinite;
 
+  box-shadow:
+    0 20px 40px rgba(139, 92, 246, 0.25);
+}
 /* ========================================= */
 /* TRANSFORM ORIGIN */
 /* ========================================= */
@@ -801,34 +811,39 @@ th {
 
 }
 
-@keyframes pulse {
+@keyframes rotatePulse {
 
   0% {
-    transform: scale(1);
+    transform:
+      rotate(0deg)
+      scale(1);
+  }
+
+  25% {
+    transform:
+      rotate(90deg)
+      scale(1.08);
   }
 
   50% {
-    transform: scale(1.08);
+    transform:
+      rotate(180deg)
+      scale(1);
+  }
+
+  75% {
+    transform:
+      rotate(270deg)
+      scale(1.08);
   }
 
   100% {
-    transform: scale(1);
+    transform:
+      rotate(360deg)
+      scale(1);
   }
 
 }
-
-@keyframes rotate {
-
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-
-}
-
 @keyframes rotateDemo {
 
   from {
