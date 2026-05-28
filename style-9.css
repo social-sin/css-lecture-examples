@@ -268,6 +268,204 @@ p {
 }
 
 /* ================================= */
+/* BAD VS GOOD DESIGN */
+/* ================================= */
+
+.comparison-layout {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+
+  margin-top: 25px;
+}
+
+.bad-design-card,
+.good-design-card {
+  border-radius: 16px;
+
+  padding: 25px;
+}
+
+/* ================================= */
+/* BAD DESIGN */
+/* ================================= */
+
+.bad-design-card {
+  background-color: #3f0d0d;
+
+  border: 4px dashed crimson;
+}
+
+.chaos-container {
+  position: relative;
+
+  height: 350px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #ff00ff,
+      #ff00ff 10px,
+      #00ffff 10px,
+      #00ffff 20px
+    );
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.chaos-box {
+  position: absolute;
+
+  padding: 10px;
+
+  color: black;
+
+  font-weight: bold;
+
+  border-radius: 6px;
+}
+
+.chaos-1 {
+  top: 10px;
+  left: 15px;
+
+  background-color: yellow;
+
+  transform: rotate(-8deg);
+}
+
+.chaos-2 {
+  top: 120px;
+  left: 180px;
+
+  background-color: lime;
+
+  font-size: 0.6rem;
+}
+
+.chaos-3 {
+  top: 220px;
+  left: 40px;
+
+  background-color: hotpink;
+
+  transform: rotate(12deg);
+}
+
+.chaos-4 {
+  top: 50px;
+  right: 20px;
+
+  background-color: orange;
+
+  box-shadow:
+    0 0 10px red,
+    0 0 20px yellow;
+}
+
+.chaos-5 {
+  bottom: 30px;
+  right: 60px;
+
+  background-color: cyan;
+}
+
+.problem-list li {
+  margin-bottom: 10px;
+
+  color: #fecaca;
+}
+
+/* ================================= */
+/* GOOD DESIGN */
+/* ================================= */
+
+.good-design-card {
+  background-color: #111827;
+
+  border: 2px solid #334155;
+}
+
+.organized-layout {
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+
+  gap: 20px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.organized-header {
+  grid-column: 1 / 3;
+
+  background-color: #0ea5e9;
+
+  color: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-weight: bold;
+}
+
+.organized-sidebar {
+  background-color: #334155;
+
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+.organized-main {
+  display: grid;
+
+  gap: 20px;
+}
+
+.organized-content {
+  background-color: #1e293b;
+
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+.success-list li {
+  margin-bottom: 10px;
+
+  color: #cbd5e1;
+}
+
+/* ================================= */
+/* RESPONSIVE ADDITIONS */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .comparison-layout,
+  .organized-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .organized-header {
+    grid-column: auto;
+  }
+
+}
+
+/* ================================= */
 /* CONSISTENCY */
 /* ================================= */
 
