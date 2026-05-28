@@ -262,9 +262,8 @@ pre {
 
 /* DESCENDANT SELECTOR */
 
-article p {
+.article-demo article p {
   color: #4ade80;
-
   font-weight: 600;
 }
 
