@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Advanced CSS Motion & Transforms
+  </title>
+
+  <link rel="stylesheet" href="style-18.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <h1>
+      Advanced CSS Motion & Transforms
+    </h1>
+
+    <p class="hero-text">
+      Learn how transitions, keyframes,
+      transforms, and 3D motion create
+      interactive and responsive interfaces
+      while maintaining accessibility.
+    </p>
+
+  </header>
+
+  <main>
+
+    <!-- TRANSITION -->
+    <section class="card">
+
+      <h2>
+        1. CSS Transitions
+      </h2>
+
+      <p>
+        Transitions animate property changes
+        between two states.
+      </p>
+
+      <div class="demo-row">
+
+        <div class="transition-card">
+          Hover Me
+        </div>
+
+      </div>
+
+      <pre>
+transition:
+transform 0.3s ease,
+opacity 0.2s linear;
+      </pre>
+
+    </section>
+
+    <!-- KEYFRAMES -->
+    <section class="card">
+
+      <h2>
+        2. CSS Keyframe Animations
+      </h2>
+
+      <p>
+        Keyframes define multi-step
+        animation sequences.
+      </p>
+
+      <div class="spinner-demo">
+
+        <div class="spinner">
+          Spin
+        </div>
+
+      </div>
+
+      <pre>
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+      </pre>
+
+    </section>
+
+    <!-- 2D TRANSFORMS -->
+    <section class="card">
+
+      <h2>
+        3. 2D Transform Functions
+      </h2>
+
+      <p>
+        Multiple transforms can be
+        combined in one declaration.
+      </p>
+
+      <div class="transform-grid">
+
+        <div class="transform-box translate">
+          translate()
+        </div>
+
+        <div class="transform-box rotate">
+          rotate()
+        </div>
+
+        <div class="transform-box scale">
+          scale()
+        </div>
+
+        <div class="transform-box skew">
+          skew()
+        </div>
+
+      </div>
+
+      <pre>
+transform:
+translateX(40px)
+rotate(8deg)
+scale(1.1);
+      </pre>
+
+    </section>
+
+    <!-- 3D -->
+    <section class="card">
+
+      <h2>
+        4. 3D Transforms
+      </h2>
+
+      <p>
+        perspective() creates depth
+        for realistic 3D movement.
+      </p>
+
+      <div class="scene">
+
+        <div class="three-card">
+          3D Card
+        </div>
+
+      </div>
+
+      <pre>
+perspective: 800px;
+
+transform:
+rotateY(25deg);
+      </pre>
+
+    </section>
+
+    <!-- FLIP CARD -->
+    <section class="card">
+
+      <h2>
+        5. 3D Flip Card
+      </h2>
+
+      <p>
+        transform-style and backface-visibility
+        create realistic card flipping.
+      </p>
+
+      <div class="flip-scene">
+
+        <div class="flip-card">
+
+          <div class="flip-face front">
+            FRONT
+          </div>
+
+          <div class="flip-face back">
+            BACK
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PARALLAX -->
+    <section class="card">
+
+      <h2>
+        6. Parallax Layer Depth
+      </h2>
+
+      <p>
+        Multiple layers moving at
+        different speeds create depth.
+      </p>
+
+      <div class="parallax-scene">
+
+        <div class="layer back-layer">
+          Background
+        </div>
+
+        <div class="layer middle-layer">
+          Midground
+        </div>
+
+        <div class="layer front-layer">
+          Foreground
+        </div>
+
+      </div>
+
+      <pre>
+transform:
+translateZ(-100px)
+scale(1.2);
+      </pre>
+
+    </section>
+
+    <!-- FILTER -->
+    <section class="card">
+
+      <h2>
+        7. Motion + Filters
+      </h2>
+
+      <p>
+        Combine transforms with filters
+        for cinematic hover effects.
+      </p>
+
+      <div class="filter-grid">
+
+        <div class="filter-card">
+
+          <img
+            src="https://picsum.photos/id/1015/800/500"
+            alt="Landscape example"
+          >
+
+        </div>
+
+        <div class="filter-card">
+
+          <img
+            src="https://picsum.photos/id/1025/800/500"
+            alt="Dog portrait example"
+          >
+
+        </div>
+
+      </div>
+
+      <pre>
+filter:
+brightness(120%)
+blur(1px);
+
+transform:
+scale(1.08);
+      </pre>
+
+    </section>
+
+    <!-- TIMING -->
+    <section class="card">
+
+      <h2>
+        8. Timing Functions
+      </h2>
+
+      <p>
+        Timing functions control
+        animation speed curves.
+      </p>
+
+      <div class="timing-stack">
+
+        <div class="timing-track">
+          <div class="timing-ball linear">
+            linear
+          </div>
+        </div>
+
+        <div class="timing-track">
+          <div class="timing-ball ease">
+            ease
+          </div>
+        </div>
+
+        <div class="timing-track">
+          <div class="timing-ball ease-in-out">
+            ease-in-out
+          </div>
+        </div>
+
+        <div class="timing-track">
+          <div class="timing-ball bezier">
+            cubic-bezier
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ORIGIN -->
+    <section class="card">
+
+      <h2>
+        9. transform-origin
+      </h2>
+
+      <p>
+        transform-origin changes the pivot
+        point for scaling or rotation.
+      </p>
+
+      <div class="origin-grid">
+
+        <div class="origin-demo center-origin">
+
+          <div class="origin-dot"></div>
+
+          <div class="origin-card">
+            Center
+          </div>
+
+        </div>
+
+        <div class="origin-demo corner-origin">
+
+          <div class="origin-dot corner-dot"></div>
+
+          <div class="origin-card">
+            Top Left
+          </div>
+
+        </div>
+
+      </div>
+
+      <pre>
+transform-origin:
+top left;
+      </pre>
+
+    </section>
+
+    <!-- ACCESSIBILITY -->
+    <section class="card">
+
+      <h2>
+        10. Motion Accessibility
+      </h2>
+
+      <p>
+        Respect user motion preferences
+        with prefers-reduced-motion.
+      </p>
+
+      <div class="accessibility-demo">
+
+        <div class="motion-box">
+          Reduced Motion Safe
+        </div>
+
+      </div>
+
+      <pre>
+@media
+(prefers-reduced-motion: reduce) {
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+      </pre>
+
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="card">
+
+      <h2>
+        11. Performance Tips
+      </h2>
+
+      <ul class="tips-list">
+
+        <li>
+          Prefer transform + opacity
+          for GPU acceleration
+        </li>
+
+        <li>
+          Avoid animating layout-heavy
+          properties like width
+        </li>
+
+        <li>
+          Use subtle 3D transforms
+          for realism
+        </li>
+
+        <li>
+          Avoid distracting infinite loops
+        </li>
+
+        <li>
+          Always support reduced motion
+        </li>
+
+      </ul>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>
+        Quick Summary
+      </h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Concept</th>
+            <th>Purpose</th>
+            <th>Example</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>transition</td>
+            <td>Smooth state changes</td>
+            <td>Hover effects</td>
+          </tr>
+
+          <tr>
+            <td>@keyframes</td>
+            <td>Multi-step motion</td>
+            <td>Spin animation</td>
+          </tr>
+
+          <tr>
+            <td>transform</td>
+            <td>Movement & scale</td>
+            <td>rotate(), scale()</td>
+          </tr>
+
+          <tr>
+            <td>perspective</td>
+            <td>3D depth</td>
+            <td>rotateY()</td>
+          </tr>
+
+          <tr>
+            <td>prefers-reduced-motion</td>
+            <td>Accessibility</td>
+            <td>Disable animation</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
