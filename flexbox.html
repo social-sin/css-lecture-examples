@@ -160,6 +160,120 @@ flex-wrap: wrap;
 
     </section>
 
+    <!-- GAP -->
+<section class="card">
+
+  <h2>gap</h2>
+
+  <p>
+    The <code>gap</code> property creates consistent spacing
+    between flex items without using margins.
+  </p>
+
+  <h3>No gap</h3>
+
+  <div class="demo-container no-gap-demo">
+
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+
+  </div>
+
+  <h3>gap: 20px</h3>
+
+  <div class="demo-container gap-demo">
+
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+
+  </div>
+
+  <pre>
+.container {
+  display: flex;
+  gap: 20px;
+}
+  </pre>
+
+</section>
+
+    <!-- EQUAL HEIGHT CARDS -->
+<section class="card">
+
+  <h2>Equal-Height Cards</h2>
+
+  <p>
+    Flexbox automatically stretches items
+    to equal heights by default.
+  </p>
+
+  <div class="equal-height-layout">
+
+    <article class="equal-card">
+
+      <h3>Short Content</h3>
+
+      <p>
+        Small amount of content.
+      </p>
+
+      <button>
+        Learn More
+      </button>
+
+    </article>
+
+    <article class="equal-card">
+
+      <h3>Medium Content</h3>
+
+      <p>
+        This card contains more content to demonstrate
+        how Flexbox keeps all cards equal height
+        automatically across the row.
+      </p>
+
+      <button>
+        Learn More
+      </button>
+
+    </article>
+
+    <article class="equal-card">
+
+      <h3>Large Content</h3>
+
+      <p>
+        This example contains a much larger amount of
+        content than the other cards. Even though the
+        text lengths differ significantly, Flexbox
+        stretches the cards to maintain equal heights
+        automatically for cleaner layouts.
+      </p>
+
+      <button>
+        Learn More
+      </button>
+
+    </article>
+
+  </div>
+
+  <pre>
+.equal-height-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.equal-card {
+  flex: 1;
+}
+  </pre>
+
+</section>
+
     <!-- FLEX GROW -->
     <section class="card">
 
