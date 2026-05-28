@@ -238,6 +238,173 @@ video {
 }
 
 /* ================================= */
+/* LAYOUT DEBUGGING */
+/* ================================= */
+
+.debug-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.debug-column {
+  background-color: #334155;
+
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+}
+
+.debug-layout {
+  display: grid;
+
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+.debug-box {
+  background-color: #0ea5e9;
+
+  color: white;
+
+  padding: 2rem;
+
+  border-radius: 0.75rem;
+
+  text-align: center;
+
+  font-weight: bold;
+}
+
+/* Debug outlines */
+
+.outlined-layout * {
+  outline: 2px dashed #ef4444;
+}
+
+/* ================================= */
+/* SPACING VISUALIZATION */
+/* ================================= */
+
+.spacing-heading {
+  margin-top: 3rem;
+}
+
+.spacing-visual-demo {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.visual-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.visual-box {
+  background-color: #8b5cf6;
+
+  color: white;
+
+  padding: 2rem;
+
+  border-radius: 0.75rem;
+
+  min-width: 180px;
+
+  text-align: center;
+
+  font-weight: bold;
+}
+
+.space-marker {
+  background-color: #facc15;
+
+  color: black;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  font-weight: bold;
+}
+
+/* ================================= */
+/* GAP COMPARISON */
+/* ================================= */
+
+.toggle-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.toggle-card {
+  background-color: #334155;
+
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+}
+
+/* Bad spacing */
+
+.bad-spacing {
+  display: flex;
+
+  margin-top: 1.5rem;
+}
+
+/* Good spacing */
+
+.good-spacing {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+.tiny-box {
+  background-color: #38bdf8;
+
+  color: #0f172a;
+
+  padding: 1.5rem;
+
+  border-radius: 0.75rem;
+
+  font-weight: bold;
+
+  flex: 1;
+
+  text-align: center;
+}
+
+/* ================================= */
 /* RESPONSIVE GRID */
 /* ================================= */
 
