@@ -726,7 +726,7 @@ th {
   z-index: 1;
 }
 
-.figure-ground .overlay-card {
+.figure-ground-example {
   position: relative;
 
   z-index: 2;
