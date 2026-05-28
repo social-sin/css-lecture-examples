@@ -168,15 +168,23 @@ main {
 /* COLOR GRID */
 /* ========================================= */
 
+.color-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
 .color-box {
   min-height: 200px;
 
   padding: 2rem;
 
   border-radius: 1rem;
-
-  /* changed */
-  color: #fff7ed;
 
   display: flex;
 
@@ -188,28 +196,25 @@ main {
     transform var(--transition);
 }
 
-/* improve heading readability */
+.color-box:hover {
+  transform:
+    translateY(-4px);
+}
 
-.color-box h3 {
+/* FORCE readable text */
+
+.color-box h3,
+.color-box p,
+.color-box .format-label {
   color: #ffffff;
-
-  text-shadow:
-    0 1px 2px rgba(0,0,0,0.25);
 }
 
-/* improve smaller text readability */
+/* softer secondary label */
 
-.color-box p {
-  color: rgba(255,255,255,0.92);
-}
+.color-box .format-label {
+  opacity: 0.9;
 
-.format-label {
   font-size: 0.85rem;
-
-  /* changed */
-  opacity: 1;
-
-  color: rgba(255,255,255,0.82);
 
   margin-bottom: 1rem;
 }
@@ -282,24 +287,30 @@ main {
   border-radius: 1rem;
 }
 
+/* GOOD */
+
 .good-contrast {
   background-color: #020617;
 
   color: white;
 }
 
+.good-contrast h3,
+.good-contrast p {
+  color: white;
+}
+
+/* BAD */
+
 .bad-contrast {
   background-color: #94a3b8;
 
-  /* slightly more readable */
-  color: #bcc7d8;
+  color: #cfd8e3;
 }
 
-.good-contrast p,
-.good-contrast h3,
-.bad-contrast p,
-.bad-contrast h3 {
-  color: inherit;
+.bad-contrast h3,
+.bad-contrast p {
+  color: #cfd8e3;
 }
 
 /* ========================================= */
