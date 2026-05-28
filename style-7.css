@@ -1,8 +1,12 @@
+/* style-7.css */
+
 /* ========================================= */
 /* RESET */
 /* ========================================= */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 
@@ -28,12 +32,16 @@ html {
   --muted: #94a3b8;
 
   --accent: #38bdf8;
-  --accent-hover: #7dd3fc;
 
   --border:
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
 
   --max-width: 1200px;
+
+  --radius: 1rem;
+
+  --transition:
+    0.3s ease;
 }
 
 /* ========================================= */
@@ -60,24 +68,21 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 h1 {
   font-size:
-    clamp(2.75rem, 6vw, 5rem);
+    clamp(3rem, 7vw, 5rem);
 
-  margin-bottom: 1.5rem;
-
-  color: white;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size:
+    clamp(2rem, 4vw, 2.5rem);
 
   margin-bottom: 1.5rem;
-
-  color: white;
 }
 
 h3 {
@@ -104,8 +109,7 @@ td {
   margin-inline: auto;
 
   padding:
-    5rem 0
-    4rem;
+    5rem 0 4rem;
 }
 
 .hero p {
@@ -138,16 +142,17 @@ main {
   border:
     1px solid var(--border);
 
-  border-radius: 1rem;
+  border-radius:
+    var(--radius);
 
   padding: 2rem;
 
   margin-bottom: 2rem;
 
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
 }
 
 .card:hover {
@@ -155,20 +160,10 @@ main {
     translateY(-4px);
 
   border-color:
-    rgba(56, 189, 248, 0.35);
+    rgba(56,189,248,0.35);
 
   background-color:
     var(--surface-light);
-}
-
-/* ========================================= */
-/* CONTENT SPACING */
-/* ========================================= */
-
-.card p,
-.card pre,
-.card table {
-  margin-top: 1rem;
 }
 
 /* ========================================= */
@@ -176,6 +171,8 @@ main {
 /* ========================================= */
 
 .grid-container {
+  position: relative;
+
   background-color: #334155;
 
   border:
@@ -187,6 +184,21 @@ main {
 
   margin:
     1.5rem 0;
+}
+
+.grid-container::before {
+  content:
+    "Grid Container";
+
+  position: absolute;
+
+  top: 10px;
+  right: 12px;
+
+  font-size: 0.75rem;
+
+  color:
+    rgba(255,255,255,0.45);
 }
 
 /* ========================================= */
@@ -221,8 +233,27 @@ main {
 }
 
 /* ========================================= */
-/* GRID TEMPLATE COLUMNS */
+/* TEMPLATE COLUMNS */
 /* ========================================= */
+
+.column-labels {
+  display: grid;
+
+  grid-template-columns:
+    1fr 2fr 1fr;
+
+  gap: 1.25rem;
+
+  margin-top: 1.5rem;
+
+  margin-bottom: 0.5rem;
+
+  color: #facc15;
+
+  font-weight: 700;
+
+  text-align: center;
+}
 
 .column-grid {
   display: grid;
@@ -254,6 +285,14 @@ main {
 /* RESPONSIVE GRID */
 /* ========================================= */
 
+.resize-note {
+  margin-top: 1rem;
+
+  color: #facc15;
+
+  font-size: 0.95rem;
+}
+
 .responsive-grid {
   display: grid;
 
@@ -264,7 +303,7 @@ main {
 }
 
 /* ========================================= */
-/* PLACING ITEMS */
+/* PLACEMENT */
 /* ========================================= */
 
 .placement-grid {
@@ -274,7 +313,7 @@ main {
     repeat(3, 1fr);
 
   grid-template-rows:
-    repeat(3, 150px);
+    repeat(3, 140px);
 
   gap: 1.25rem;
 }
@@ -292,7 +331,7 @@ main {
 }
 
 /* ========================================= */
-/* GRID LINES + SPANNING */
+/* GRID LINES */
 /* ========================================= */
 
 .grid-line-labels {
@@ -327,7 +366,7 @@ main {
 }
 
 /* ========================================= */
-/* ROW GRID LINES */
+/* ROW LINES */
 /* ========================================= */
 
 .row-label-layout {
@@ -381,7 +420,7 @@ main {
 
 .grid-note {
   background-color:
-    rgba(250, 204, 21, 0.12);
+    rgba(250,204,21,0.12);
 
   border-left:
     4px solid #facc15;
@@ -437,6 +476,20 @@ main {
 /* ALIGNMENT */
 /* ========================================= */
 
+.alignment-note {
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  margin-top: 1rem;
+
+  color: #facc15;
+
+  font-weight: 700;
+}
+
 .align-grid {
   display: grid;
 
@@ -449,7 +502,10 @@ main {
 
   gap: 1.25rem;
 
-  height: 300px;
+  height: 320px;
+
+  border:
+    3px dashed rgba(56,189,248,0.4);
 }
 
 .small-item {
@@ -458,9 +514,8 @@ main {
 
   display: flex;
 
-  justify-content: center;
-
   align-items: center;
+  justify-content: center;
 }
 
 /* ========================================= */
@@ -478,7 +533,7 @@ main {
 }
 
 /* ========================================= */
-/* CODE BLOCKS */
+/* CODE */
 /* ========================================= */
 
 pre {
@@ -494,6 +549,8 @@ pre {
   padding: 1rem;
 
   color: #cbd5e1;
+
+  margin-top: 1rem;
 }
 
 /* ========================================= */
@@ -524,7 +581,7 @@ td {
 
 th {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.12);
 
   color: white;
 }
@@ -537,12 +594,7 @@ th {
 
   .hero {
     padding:
-      4rem 0
-      3rem;
-  }
-
-  main {
-    padding-bottom: 4rem;
+      4rem 0 3rem;
   }
 
   .card {
@@ -553,14 +605,24 @@ th {
   .column-grid,
   .repeat-grid,
   .placement-grid,
+  .line-grid,
   .area-grid,
   .align-grid,
   .shorthand-grid {
     grid-template-columns: 1fr;
   }
 
+  .column-labels {
+    grid-template-columns: 1fr;
+  }
+
   .row-label-layout {
     flex-direction: column;
+  }
+
+  .placement-grid,
+  .row-span-grid {
+    grid-template-rows: auto;
   }
 
 }
