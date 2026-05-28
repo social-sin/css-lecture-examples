@@ -278,6 +278,11 @@ sizes="
 loading="lazy"
       </pre>
 
+      <p class="tip">
+  These images would normally appear farther down the page.
+  Lazy loading delays downloading them until needed.
+</p>
+
     </section>
 
     <!-- COMBINED TECHNIQUES -->
@@ -557,6 +562,45 @@ srcset + sizes + loading="lazy"
       </p>
 
     </section>
+
+    <section class="card">
+
+  <h2>Object Fit</h2>
+
+  <p>
+    object-fit controls how images scale
+    inside fixed-size containers.
+  </p>
+
+  <div class="fit-grid">
+
+    <div class="fit-card">
+
+      <h3>object-fit: cover</h3>
+
+      <img
+        class="cover-fit"
+        src="https://picsum.photos/id/1065/800/500"
+        alt=""
+      >
+
+    </div>
+
+    <div class="fit-card">
+
+      <h3>object-fit: contain</h3>
+
+      <img
+        class="contain-fit"
+        src="https://picsum.photos/id/1065/800/500"
+        alt=""
+      >
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- SUMMARY -->
     <section class="card">
