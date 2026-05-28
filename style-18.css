@@ -548,7 +548,7 @@ th {
 }
 
 .timing-track {
-  height: 80px;
+  height: 90px;
 
   background-color: #334155;
 
@@ -557,11 +557,13 @@ th {
   position: relative;
 
   overflow: hidden;
+
+  padding: 0 1rem;
 }
 
 .timing-ball {
-  width: 120px;
-  height: 50px;
+  width: 140px;
+  height: 56px;
 
   border-radius: 999px;
 
@@ -569,16 +571,24 @@ th {
 
   position: absolute;
 
-  top: 15px;
+  top: 50%;
   left: 0;
+
+  transform: translateY(-50%);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  color: white;
+
+  font-weight: 700;
+
   animation:
-    move 2.5s infinite alternate;
+    move 5s infinite alternate;
 }
+
+/* TIMING FUNCTIONS */
 
 .linear {
   animation-timing-function: linear;
@@ -597,6 +607,19 @@ th {
     cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
+/* ANIMATION */
+
+@keyframes move {
+
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - 140px);
+  }
+
+}
 @keyframes move {
 
   from {
@@ -783,6 +806,25 @@ th {
     to {
       transform:
         translateX(calc(100vw - 220px));
+    }
+
+  }
+
+    .timing-ball {
+    width: 100px;
+    height: 50px;
+
+    font-size: 0.75rem;
+  }
+
+  @keyframes move {
+
+    from {
+      left: 0;
+    }
+
+    to {
+      left: calc(100% - 100px);
     }
 
   }
