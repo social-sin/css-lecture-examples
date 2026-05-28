@@ -1,96 +1,229 @@
-/* style.css */
-
-/* ================================= */
-/* VARIABLES */
-/* ================================= */
-
-:root {
-
-  --bg: #0f172a;
-  --card: #1e293b;
-
-  --primary: #38bdf8;
-  --secondary: #2ecc71;
-
-  --text: #e2e8f0;
-
-  --bounce-duration: 1s;
-}
-
-/* ================================= */
+/* ========================================= */
 /* RESET */
-/* ================================= */
+/* ========================================= */
 
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* BODY */
-/* ================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================= */
+/* VARIABLES */
+/* ========================================= */
+
+:root {
+
+  --bg: #0f172a;
+
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+
+  --secondary: #2ecc71;
+  --purple: var(--purple);
+  --orange: var(--orange);
+
+  --border:
+    rgba(255,255,255,0.08);
+
+  --max-width: 1200px;
+
+  --bounce-duration: 1s;
+
+  --transition:
+    0.3s ease;
+}
+
+/* ========================================= */
+/* BASE */
+/* ========================================= */
 
 body {
   background-color: var(--bg);
 
   color: var(--text);
 
-  font-family: Arial, sans-serif;
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
 
   line-height: 1.7;
 }
 
-/* ================================= */
-/* HERO */
-/* ================================= */
+/* ========================================= */
+/* TYPOGRAPHY */
+/* ========================================= */
 
-.hero {
-  min-height: 75vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  padding: 2rem;
-
-  background:
-    linear-gradient(
-      rgba(15, 23, 42, 0.75),
-      rgba(15, 23, 42, 0.75)
-    ),
-    url("https://picsum.photos/id/1005/1600/900");
-
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-overlay {
-  max-width: 850px;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-
-  letter-spacing: 3px;
-
-  color: var(--primary);
-
-  margin-bottom: 1rem;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 4rem;
-
-  color: white;
+  font-size:
+    clamp(2.75rem, 6vw, 5rem);
 
   margin-bottom: 1.5rem;
+
+  color: white;
 }
 
-.hero-text {
-  font-size: 1.2rem;
+h2 {
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
+}
+
+p,
+td {
+  color: var(--muted);
+}
+
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding:
+    5rem 0
+    4rem;
+}
+
+.hero p {
+  max-width: 760px;
+
+  font-size: 1.1rem;
+}
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding-bottom: 5rem;
+}
+
+/* ========================================= */
+/* CARDS */
+/* ========================================= */
+
+.card {
+  background-color:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(56,189,248,0.35);
+
+  background-color:
+    var(--surface-light);
+}
+
+/* ========================================= */
+/* CONTENT SPACING */
+/* ========================================= */
+
+.card p,
+.card pre,
+.card table {
+  margin-top: 1rem;
+}
+
+/* ========================================= */
+/* CODE BLOCKS */
+/* ========================================= */
+
+pre {
+  overflow-x: auto;
+
+  background-color: #020617;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  color: #cbd5e1;
+
+  margin-top: 1.5rem;
+}
+
+/* ========================================= */
+/* TABLE */
+/* ========================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+th,
+td {
+  padding: 1rem;
+
+  border:
+    1px solid var(--border);
+
+  text-align: left;
+}
+
+th {
+  background-color:
+    rgba(56,189,248,0.12);
+
+  color: white;
 }
 
 /* ================================= */
@@ -116,7 +249,7 @@ main {
 }
 
 h2 {
-  color: var(--primary);
+  color: var(--accent);
 
   margin-bottom: 1.5rem;
 }
@@ -180,7 +313,7 @@ p {
 
   padding: 2rem;
 
-  background-color: var(--primary);
+  background-color: var(--accent);
 
   border-radius: 1rem;
 
@@ -232,7 +365,7 @@ p {
 .timing-label {
   font-weight: bold;
 
-  color: var(--primary);
+  color: var(--accent);
 
   margin-bottom: 0.25rem;
 }
@@ -245,11 +378,17 @@ p {
 
   background-color: #334155;
 
+  border:
+    1px solid var(--border);
+
   border-radius: 1rem;
 
   overflow: hidden;
 
   padding: 1rem;
+
+  display: flex;
+  align-items: center;
 }
 
 .timing-item {
@@ -257,13 +396,15 @@ p {
 
   padding: 1rem;
 
-  background-color: var(--primary);
+  background-color: var(--accent);
 
   border-radius: 0.75rem;
 
   text-align: center;
 
   color: white;
+
+  will-change: transform;
 
   animation:
     moveRight 2s infinite alternate;
@@ -299,9 +440,11 @@ p {
     transform: translateX(0);
   }
 
-  to {
-    transform: translateX(calc(100vw - 220px));
-  }
+to {
+  transform: translateX(
+    min(700px, calc(100vw - 260px))
+  );
+}
 
 }
 
@@ -323,7 +466,7 @@ p {
 
   border-radius: 50%;
 
-  background-color: #8b5cf6;
+  background-color: var(--purple);
 
   display: flex;
   justify-content: center;
@@ -365,7 +508,7 @@ p {
 }
 
 .stagger-item {
-  background-color: var(--primary);
+  background-color: var(--accent);
 
   padding: 2rem;
 
@@ -424,7 +567,7 @@ p {
 
   border-radius: 50%;
 
-  background-color: #f97316;
+  background-color: var(--orange);
 
   display: flex;
   justify-content: center;
@@ -458,13 +601,17 @@ p {
 
   background-color: #334155;
 
+  border:
+    1px solid var(--border);
+
   border-radius: 1rem;
 
   text-align: center;
 
   transition:
     transform 0.5s,
-    opacity 0.3s;
+    opacity 0.3s,
+    background-color 0.3s ease;
 }
 
 .multi-transition-card:hover {
@@ -599,7 +746,7 @@ p {
   width: 220px;
   height: 120px;
 
-  background-color: #f97316;
+  background-color: var(--orange);
 
   border-radius: 1rem;
 
@@ -724,12 +871,21 @@ p {
 
   inset: 0;
 
-  background-color:
-    rgba(15, 23, 42, 0.7);
+  background:
+    linear-gradient(
+      rgba(15,23,42,0.2),
+      rgba(15,23,42,0.8)
+    );
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: white;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
 
   opacity: 0;
 
@@ -802,27 +958,76 @@ th {
   color: white;
 }
 
-/* ================================= */
+/* ========================================= */
+/* ACCESSIBILITY */
+/* ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+
+}
+/* ========================================= */
 /* RESPONSIVE */
-/* ================================= */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-  h1 {
-    font-size: 2.5rem;
+  .hero {
+    padding:
+      4rem 0
+      3rem;
   }
 
   main {
-    padding: 2rem 1rem;
+    padding-bottom: 4rem;
   }
 
-.stagger-grid,
-.gallery-grid {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .stagger-grid,
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
   .demo-row {
     flex-direction: column;
+  }
+
+  .timing-item {
+    width: 100px;
+
+    font-size: 0.8rem;
+  }
+
+  .perspective-card {
+    width: 180px;
+    height: 240px;
+  }
+
+  .gallery-card img {
+    height: 260px;
+  }
+
+  .tea-party {
+    max-width: 100%;
   }
 
 }
