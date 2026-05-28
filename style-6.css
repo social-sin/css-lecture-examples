@@ -184,6 +184,78 @@ p {
 }
 
 /* ================================= */
+/* GAP */
+/* ================================= */
+
+.no-gap-demo {
+  display: flex;
+}
+
+.gap-demo {
+  display: flex;
+
+  gap: 20px;
+}
+
+/* ================================= */
+/* EQUAL HEIGHT CARDS */
+/* ================================= */
+
+.equal-height-layout {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: stretch;
+
+  margin-top: 25px;
+
+  flex-wrap: wrap;
+}
+
+.equal-card {
+  flex: 1 1 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background-color: #334155;
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  border: 2px solid #475569;
+}
+
+.equal-card h3 {
+  margin-top: 0;
+}
+
+.equal-card p {
+  flex-grow: 1;
+}
+
+.equal-card button {
+  margin-top: 20px;
+
+  background-color: #38bdf8;
+
+  color: #0f172a;
+
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* ================================= */
 /* FLEX GROW */
 /* ================================= */
 
