@@ -222,6 +222,164 @@ repeat(auto-fit, minmax(200px, 1fr));
 
     </section>
 
+    <!-- MASONRY STYLE -->
+<section class="card">
+
+  <h2>7. Masonry-Style Layout</h2>
+
+  <p>
+    Grid can simulate masonry-style layouts by allowing
+    items to span multiple rows or columns.
+  </p>
+
+  <div class="masonry-grid">
+
+    <div class="masonry-item tall-card">
+      Tall Content
+    </div>
+
+    <div class="masonry-item">
+      Card 2
+    </div>
+
+    <div class="masonry-item wide-card">
+      Wide Feature
+    </div>
+
+    <div class="masonry-item">
+      Card 4
+    </div>
+
+    <div class="masonry-item tall-card">
+      Gallery Item
+    </div>
+
+    <div class="masonry-item">
+      Card 6
+    </div>
+
+  </div>
+
+  <pre>
+grid-auto-rows: 120px;
+
+.tall-card {
+  grid-row: span 2;
+}
+
+.wide-card {
+  grid-column: span 2;
+}
+  </pre>
+
+  <p class="tip">
+    Common use cases:
+    Pinterest-style galleries, portfolios, and image feeds.
+  </p>
+
+</section>
+
+<!-- DASHBOARD LAYOUT -->
+<section class="card">
+
+  <h2>8. Dashboard Layout</h2>
+
+  <p>
+    CSS Grid is commonly used for admin dashboards
+    and analytics interfaces.
+  </p>
+
+  <div class="dashboard-grid">
+
+    <header class="dashboard-header">
+      Dashboard Header
+    </header>
+
+    <aside class="dashboard-sidebar">
+      Sidebar Navigation
+    </aside>
+
+    <section class="dashboard-stat">
+      Analytics
+    </section>
+
+    <section class="dashboard-stat">
+      Revenue
+    </section>
+
+    <section class="dashboard-stat large-stat">
+      Large Chart Area
+    </section>
+
+    <section class="dashboard-stat">
+      Activity Feed
+    </section>
+
+  </div>
+
+  <pre>
+grid-template-columns:
+240px 1fr 1fr;
+
+grid-template-areas:
+"sidebar header header";
+  </pre>
+
+  <p class="tip">
+    Real-world examples:
+    analytics dashboards, CMS interfaces, project management tools.
+  </p>
+
+</section>
+
+<!-- MAGAZINE LAYOUT -->
+<section class="card">
+
+  <h2>9. Magazine Layout</h2>
+
+  <p>
+    Grid excels at editorial and magazine-style layouts
+    with featured content areas.
+  </p>
+
+  <div class="magazine-grid">
+
+    <article class="mag-feature">
+      Featured Story
+    </article>
+
+    <article class="mag-card">
+      Article 2
+    </article>
+
+    <article class="mag-card">
+      Article 3
+    </article>
+
+    <article class="mag-card">
+      Article 4
+    </article>
+
+    <article class="mag-wide">
+      Wide Editorial Section
+    </article>
+
+  </div>
+
+  <pre>
+.feature {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+  </pre>
+
+  <p class="tip">
+    Real-world examples:
+    news websites, digital magazines, and blog homepages.
+  </p>
+
+</section>
+
     <!-- EMPTY SPACES -->
     <section class="card">
 
