@@ -1,88 +1,133 @@
-<!-- index.html -->
+<!-- display-position.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <title>CSS Display & Position Demo</title>
 
-  <link rel="stylesheet" href="style-4.css">
+  <link rel="stylesheet" href="style-4.css" />
 </head>
 
 <body>
 
   <!-- FIXED HEADER -->
   <header class="fixed-header">
-    Fixed Header
+    position: fixed;
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>CSS Display & Position</h1>
+
+    <h1>
+      CSS Display & Position
+    </h1>
 
     <p>
       Learn how CSS controls layout behavior,
-      positioning, and stacking order.
+      positioning, overflow, and stacking order.
     </p>
+
   </section>
 
   <main>
 
+    <!-- ================================= -->
     <!-- DISPLAY -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>Display Property</h2>
+      <h2>
+        Display Property
+      </h2>
 
       <p>
         The display property controls how elements
-        behave inside the document flow.
+        behave inside document flow.
       </p>
 
       <!-- BLOCK -->
-      <h3>display: block;</h3>
 
-      <div class="block-demo">
-        Block Element 1
-      </div>
+      <h3>
+        display: block;
+      </h3>
 
-      <div class="block-demo">
-        Block Element 2
+      <div class="display-row">
+
+        <div class="display-label">
+          Stacks vertically
+        </div>
+
+        <div class="block-demo">
+          Block Element 1
+        </div>
+
+        <div class="block-demo">
+          Block Element 2
+        </div>
+
       </div>
 
       <!-- INLINE -->
-      <h3>display: inline;</h3>
 
-      <span class="inline-demo">
-        Inline Span 1
-      </span>
+      <h3>
+        display: inline;
+      </h3>
 
-      <span class="inline-demo">
-        Inline Span 2
-      </span>
+      <div class="inline-wrapper">
 
-      <span class="inline-demo">
-        Inline Span 3
-      </span>
+        <span class="inline-demo">
+          Inline Span 1
+        </span>
+
+        <span class="inline-demo">
+          Inline Span 2
+        </span>
+
+        <span class="inline-demo">
+          Inline Span 3
+        </span>
+
+      </div>
 
       <!-- INLINE BLOCK -->
-      <h3>display: inline-block;</h3>
 
-      <div class="inline-block-demo">
-        Box 1
-      </div>
+      <h3>
+        display: inline-block;
+      </h3>
 
-      <div class="inline-block-demo">
-        Box 2
-      </div>
+      <div class="display-row">
 
-      <div class="inline-block-demo">
-        Box 3
+        <div class="display-label">
+          Width + height allowed
+        </div>
+
+        <div class="inline-block-demo">
+          Box 1
+        </div>
+
+        <div class="inline-block-demo">
+          Box 2
+        </div>
+
+        <div class="inline-block-demo">
+          Box 3
+        </div>
+
       </div>
 
       <!-- NONE -->
-      <h3>display: none;</h3>
+
+      <h3>
+        display: none;
+      </h3>
 
       <p>
         The hidden box below is removed from layout flow.
@@ -93,7 +138,10 @@
       </div>
 
       <!-- FLEX -->
-      <h3>display: flex;</h3>
+
+      <h3>
+        display: flex;
+      </h3>
 
       <div class="flex-container">
 
@@ -104,7 +152,10 @@
       </div>
 
       <!-- GRID -->
-      <h3>display: grid;</h3>
+
+      <h3>
+        display: grid;
+      </h3>
 
       <div class="grid-container">
 
@@ -117,10 +168,15 @@
 
     </section>
 
+    <!-- ================================= -->
     <!-- POSITION -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>Position Property</h2>
+      <h2>
+        Position Property
+      </h2>
 
       <p>
         The position property changes how elements
@@ -128,21 +184,38 @@
       </p>
 
       <!-- STATIC -->
-      <h3>position: static;</h3>
+
+      <h3>
+        position: static;
+      </h3>
 
       <div class="position-box static-box">
         Static Position
       </div>
 
       <!-- RELATIVE -->
-      <h3>position: relative;</h3>
 
-      <div class="position-box relative-box">
-        Relative Position
+      <h3>
+        position: relative;
+      </h3>
+
+      <div class="relative-wrapper">
+
+        <div class="ghost-box">
+          Original Position
+        </div>
+
+        <div class="position-box relative-box">
+          Relative Position
+        </div>
+
       </div>
 
       <!-- ABSOLUTE -->
-      <h3>position: absolute;</h3>
+
+      <h3>
+        position: absolute;
+      </h3>
 
       <div class="absolute-parent">
 
@@ -155,36 +228,47 @@
       </div>
 
       <!-- FIXED -->
-      <h3>position: fixed;</h3>
+
+      <h3>
+        position: fixed;
+      </h3>
 
       <p>
-        Scroll the page to see the fixed header remain visible.
+        Scroll the page to see the fixed header
+        remain visible.
       </p>
 
       <!-- STICKY -->
-      <h3>position: sticky;</h3>
+
+      <h3>
+        position: sticky;
+      </h3>
 
       <div class="sticky-demo">
         Sticky Navigation
       </div>
 
       <div class="sticky-content">
+
         <p>
-          Scroll through this section to watch the sticky element
-          stay attached to the top.
+          Scroll through this section to watch
+          the sticky element remain attached
+          to the top.
         </p>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
         </p>
 
         <p>
-          Vestibulum commodo, lorem sed luctus suscipit,
-          ipsum lacus efficitur purus, non pulvinar erat purus id nisl.
+          Vestibulum commodo, lorem sed luctus
+          suscipit, ipsum lacus efficitur purus.
         </p>
 
         <p>
-          Donec tincidunt tristique neque, sed volutpat lorem luctus sed.
+          Donec tincidunt tristique neque,
+          sed volutpat lorem luctus sed.
         </p>
 
         <p>
@@ -195,99 +279,135 @@
 
     </section>
 
+    <!-- ================================= -->
     <!-- OVERFLOW -->
+    <!-- ================================= -->
 
-<section class="overflow-section">
+    <section class="overflow-section">
 
-  <h2>Overflow</h2>
-
-  <p>
-    The overflow property controls what happens
-    when content exceeds the size of its container.
-  </p>
-
-  <div class="overflow-grid">
-
-    <!-- VISIBLE -->
-    <div class="overflow-card">
-
-      <h3>overflow: visible;</h3>
-
-      <div class="overflow-box overflow-visible">
-
-        This content extends outside the container
-        because overflow is visible. This is the
-        default behavior in CSS.
-
-      </div>
-
-    </div>
-
-    <!-- HIDDEN -->
-    <div class="overflow-card">
-
-      <h3>overflow: hidden;</h3>
-
-      <div class="overflow-box overflow-hidden">
-
-        This content is clipped because overflow
-        is hidden. Extra content becomes invisible
-        outside the container.
-
-      </div>
-
-    </div>
-
-    <!-- SCROLL -->
-    <div class="overflow-card">
-
-      <h3>overflow: scroll;</h3>
-
-      <div class="overflow-box overflow-scroll">
-
-        This container always shows scrollbars,
-        even when they may not be needed.
-        Scroll to reveal additional hidden content.
-
-      </div>
-
-    </div>
-
-    <!-- AUTO -->
-    <div class="overflow-card">
-
-      <h3>overflow: auto;</h3>
-
-      <div class="overflow-box overflow-auto">
-
-        Scrollbars only appear when needed.
-        This is commonly used for scrollable
-        panels and interface components.
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-    
-    <!-- Z INDEX -->
-    <section class="card">
-
-      <h2>z-index (Stacking Order)</h2>
+      <h2>
+        Overflow
+      </h2>
 
       <p>
-        Higher z-index values appear in front of lower values.
+        The overflow property controls what happens
+        when content exceeds the size of its container.
+      </p>
+
+      <div class="overflow-grid">
+
+        <!-- VISIBLE -->
+
+        <div class="overflow-card">
+
+          <h3>
+            overflow: visible;
+          </h3>
+
+          <div
+            class="overflow-box overflow-visible"
+            data-overflow="overflow: visible;"
+          >
+
+            This content extends outside the container
+            because overflow is visible.
+
+          </div>
+
+        </div>
+
+        <!-- HIDDEN -->
+
+        <div class="overflow-card">
+
+          <h3>
+            overflow: hidden;
+          </h3>
+
+          <div
+            class="overflow-box overflow-hidden"
+            data-overflow="overflow: hidden;"
+          >
+
+            This content is clipped because overflow
+            is hidden.
+
+          </div>
+
+        </div>
+
+        <!-- SCROLL -->
+
+        <div class="overflow-card">
+
+          <h3>
+            overflow: scroll;
+          </h3>
+
+          <div
+            class="overflow-box overflow-scroll"
+            data-overflow="overflow: scroll;"
+          >
+
+            Scrollbars always appear even when
+            not needed.
+
+          </div>
+
+        </div>
+
+        <!-- AUTO -->
+
+        <div class="overflow-card">
+
+          <h3>
+            overflow: auto;
+          </h3>
+
+          <div
+            class="overflow-box overflow-auto"
+            data-overflow="overflow: auto;"
+          >
+
+            Scrollbars only appear when content
+            exceeds the container size.
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Z INDEX -->
+    <!-- ================================= -->
+
+    <section class="card">
+
+      <h2>
+        z-index (Stacking Order)
+      </h2>
+
+      <p>
+        Higher z-index values appear in front
+        of lower values.
       </p>
 
       <div class="z-container">
 
-        <div class="z-box z1">
+        <div
+          class="z-box z1"
+          data-layer="Behind"
+        >
           z-index: 1
         </div>
 
-        <div class="z-box z2">
+        <div
+          class="z-box z2"
+          data-layer="Front"
+        >
           z-index: 5
         </div>
 
@@ -295,19 +415,26 @@
 
     </section>
 
+    <!-- ================================= -->
     <!-- QUICK REFERENCE -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>Quick Reference</h2>
+      <h2>
+        Quick Reference
+      </h2>
 
       <table>
 
         <thead>
+
           <tr>
             <th>Property</th>
             <th>Purpose</th>
             <th>Example</th>
           </tr>
+
         </thead>
 
         <tbody>
