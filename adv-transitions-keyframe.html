@@ -215,10 +215,122 @@ rotate 4s linear infinite;
 
     </section>
 
+    <!-- TRANSFORM ORIGIN -->
+<section class="card">
+
+  <h2>7. transform-origin Visualization</h2>
+
+  <p>
+    transform-origin changes the pivot point
+    where transformations rotate or scale from.
+  </p>
+
+  <div class="origin-grid">
+
+    <!-- CENTER -->
+    <div class="origin-card">
+
+      <h3>
+        Center Origin
+      </h3>
+
+      <div class="origin-demo center-origin">
+
+        <div class="pivot-dot"></div>
+
+        <div class="origin-box">
+          rotate()
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TOP LEFT -->
+    <div class="origin-card">
+
+      <h3>
+        Top Left Origin
+      </h3>
+
+      <div class="origin-demo top-left-origin">
+
+        <div class="pivot-dot top-left-dot"></div>
+
+        <div class="origin-box">
+          rotate()
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <pre>
+transform-origin: center;
+
+transform-origin: top left;
+  </pre>
+
+</section>
+
+<!-- ANIMATION FILL MODE -->
+<section class="card">
+
+  <h2>8. animation-fill-mode</h2>
+
+  <p>
+    animation-fill-mode controls whether
+    animated styles persist before or after
+    the animation finishes.
+  </p>
+
+  <div class="fillmode-grid">
+
+    <!-- NONE -->
+    <div class="fillmode-card">
+
+      <h3>
+        Default (none)
+      </h3>
+
+      <div class="fill-box default-fill">
+        Snaps Back
+      </div>
+
+    </div>
+
+    <!-- FORWARDS -->
+    <div class="fillmode-card">
+
+      <h3>
+        forwards
+      </h3>
+
+      <div class="fill-box forwards-fill">
+        Stays Final
+      </div>
+
+    </div>
+
+  </div>
+
+  <pre>
+animation-fill-mode: forwards;
+  </pre>
+
+  <p>
+    Without <code>forwards</code>,
+    elements return to their original state.
+  </p>
+
+</section>
+
     <!-- HOVER + KEYFRAME -->
     <section class="card">
 
-      <h2>7. Hover Triggered Keyframes</h2>
+      <h2>9. Hover Triggered Keyframes</h2>
 
       <p>
         Hover interactions can trigger
@@ -244,7 +356,7 @@ rotate 4s linear infinite;
     <!-- CSS VARIABLES -->
     <section class="card">
 
-      <h2>8. CSS Variables for Animation Systems</h2>
+      <h2>10. CSS Variables for Animation Systems</h2>
 
       <p>
         CSS variables improve consistency
@@ -270,7 +382,7 @@ rotate 4s linear infinite;
     <!-- RESPONSIVE -->
     <section class="card">
 
-      <h2>9. Responsive Motion</h2>
+      <h2>11. Responsive Motion</h2>
 
       <p>
         Viewport units create movement
@@ -295,7 +407,7 @@ translateX(10vw);
     <!-- GALLERY -->
     <section class="card">
 
-      <h2>10. Interactive Gallery Pattern</h2>
+      <h2>12. Interactive Gallery Pattern</h2>
 
       <p>
         Combine hover transforms,
