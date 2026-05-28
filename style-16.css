@@ -227,38 +227,6 @@ th {
 }
 
 /* ================================= */
-/* MAIN */
-/* ================================= */
-
-main {
-  padding: 4rem 2rem;
-}
-
-/* ================================= */
-/* CARDS */
-/* ================================= */
-
-.card {
-  background-color: var(--card);
-
-  padding: 2rem;
-
-  border-radius: 1rem;
-
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: var(--accent);
-
-  margin-bottom: 1.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* ================================= */
 /* ROW */
 /* ================================= */
 
@@ -440,11 +408,11 @@ p {
     transform: translateX(0);
   }
 
-to {
-  transform: translateX(
-    min(700px, calc(100vw - 260px))
-  );
-}
+  to {
+    transform: translateX(
+      calc(100% - 140px)
+    );
+  }
 
 }
 
@@ -519,7 +487,9 @@ to {
   opacity: 0;
 
   transform: translateY(20px);
+}
 
+.stagger-grid:hover .stagger-item {
   animation:
     fadeUp 0.5s forwards;
 }
@@ -573,9 +543,9 @@ to {
   justify-content: center;
   align-items: center;
 
-  animation:
-    bounce var(--bounce-duration)
-    infinite alternate;
+animation:
+bounce var(--bounce-duration)
+ease-in-out infinite alternate;
 }
 
 @keyframes bounce {
@@ -725,7 +695,7 @@ to {
   }
 
   to {
-    transform: translateX(10vw);
+    translateX(clamp(40px, 10vw, 140px))
   }
 
 }
@@ -758,20 +728,6 @@ to {
 
   animation:
     responsiveMove 2s infinite alternate;
-}
-
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-
-  * {
-    animation: none !important;
-
-    transition: none !important;
-
-    scroll-behavior: auto !important;
-  }
-
 }
 
 /* ================================= */
@@ -822,6 +778,8 @@ to {
   stroke-linecap: round;
 
   stroke-linejoin: round;
+
+  vector-effect: non-scaling-stroke;
 }
 
 @keyframes draw {
@@ -1020,10 +978,12 @@ th {
   .perspective-card {
     width: 180px;
     height: 240px;
+    will-change: transform;
   }
 
   .gallery-card img {
     height: 260px;
+    will-change: transform;
   }
 
   .tea-party {
