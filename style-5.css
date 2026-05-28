@@ -303,6 +303,111 @@ th {
 }
 
 /* ================================= */
+/* FILTER EFFECTS */
+/* ================================= */
+
+.filter-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.filter-card {
+  background-color: #334155;
+
+  padding: 25px;
+
+  border-radius: 14px;
+}
+
+.filter-image {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Blur */
+
+.blur-filter {
+  filter: blur(6px);
+}
+
+/* Grayscale */
+
+.grayscale-filter {
+  filter: grayscale(100%);
+}
+
+/* Brightness */
+
+.brightness-filter {
+  filter: brightness(160%);
+}
+
+/* ================================= */
+/* COLOR CONTRAST */
+/* ================================= */
+
+.contrast-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.contrast-card {
+  padding: 30px;
+
+  border-radius: 14px;
+
+  min-height: 220px;
+}
+
+/* Good Contrast */
+
+.good-contrast {
+  background-color: #0f172a;
+
+  color: white;
+}
+
+/* Bad Contrast */
+
+.bad-contrast {
+  background-color: #94a3b8;
+
+  color: #cbd5e1;
+}
+
+.contrast-tip {
+  background-color: rgba(250, 204, 21, 0.12);
+
+  border-left: 4px solid #facc15;
+
+  padding: 20px;
+
+  margin-top: 30px;
+
+  border-radius: 10px;
+}
+
+/* ================================= */
 /* RESPONSIVE */
 /* ================================= */
 
