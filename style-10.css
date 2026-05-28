@@ -745,6 +745,14 @@ th {
   border-radius: 1rem;
 }
 
+.figure-ground-example h3{
+  color: #e2e8f0;
+}
+
+.figure-ground-example p{
+  color: #2b2b2b;
+}
+
 /* ========================================= */
 /* CLOSURE */
 /* ========================================= */
