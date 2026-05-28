@@ -143,7 +143,7 @@ main {
 
   padding: 2rem;
 
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   transition:
     transform 0.3s ease,
@@ -209,7 +209,10 @@ table {
 
 th,
 td {
-  padding: 1rem;
+  padding:
+    1rem 1.25rem;
+
+  font-size: 0.95rem;
 
   border:
     1px solid var(--border);
@@ -630,32 +633,58 @@ th {
 .contrast-text {
   background-color: white;
 
-  color: black;
+  color: #111827;
 
-  padding: 3rem;
+  padding: 5rem 2rem;
 
   border-radius: 1rem;
 
   text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.contrast-text h3 {
+  color: #38bdf8;
+
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
 }
 
 .cta-btn {
-  margin-top: 1.5rem;
-
   background-color: black;
 
   color: white;
 
   border: none;
 
-  border-radius: 0.75rem;
+  border-radius: 999px;
 
   padding:
-    1rem 1.5rem;
+    1rem 2rem;
+
+  font-size: 1.1rem;
 
   font-weight: 700;
 
   cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+
+  background-color: #111827;
 }
 
 /* ========================================= */
@@ -663,22 +692,57 @@ th {
 /* ========================================= */
 
 .figure-ground {
+  position: relative;
+
   background-image:
-    linear-gradient(
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-    ),
     url("https://picsum.photos/1200/600");
 
   background-size: cover;
 
   background-position: center;
 
-  padding: 4rem;
+  padding: 5rem 2rem;
 
   border-radius: 1rem;
 
   margin-top: 2rem;
+
+  overflow: hidden;
+}
+
+.figure-ground::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    );
+
+  z-index: 1;
+}
+
+.figure-ground .overlay-card {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 600px;
+
+  margin-inline: auto;
+
+  background-color:
+    rgba(15,23,42,0.72);
+
+  backdrop-filter: blur(8px);
+
+  padding: 2rem;
+
+  border-radius: 1rem;
 }
 
 /* ========================================= */
@@ -693,18 +757,41 @@ th {
   margin-top: 2rem;
 }
 
-.incomplete-circle {
-  width: 180px;
-  height: 180px;
+.closure-shape {
+  position: relative;
 
-  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+}
 
-  border:
-    12px solid #38bdf8;
+.segment {
+  position: absolute;
 
-  border-top-color: transparent;
+  background-color: #38bdf8;
+}
 
-  border-right-color: transparent;
+.top {
+  top: 0;
+  left: 0;
+
+  width: 220px;
+  height: 14px;
+}
+
+.right {
+  top: 0;
+  right: 0;
+
+  width: 14px;
+  height: 220px;
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
+
+  width: 160px;
+  height: 14px;
 }
 
 /* ========================================= */
@@ -728,6 +815,22 @@ th {
   padding: 2rem;
 
   border-radius: 1rem;
+
+  border-top: 4px solid #38bdf8;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.system-box:hover {
+  transform: translateY(-4px);
+
+  background-color: #475569;
+}
+
+.system-box:last-child {
+  border-top-color: #8b5cf6;
 }
 
 /* ========================================= */
@@ -763,5 +866,25 @@ th {
   .similarity-demo {
     flex-direction: column;
   }
+
+  .spacing-scale {
+  justify-content: center;
+}
+
+.proximity-demo {
+  align-items: center;
+}
+
+.group.spaced {
+  gap: 24px;
+}
+
+.figure-ground {
+  padding: 3rem 1.5rem;
+}
+
+.contrast-text {
+  padding: 3rem 1.5rem;
+}
 
 }
