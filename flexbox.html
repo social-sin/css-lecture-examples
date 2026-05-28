@@ -1,14 +1,18 @@
-<!-- index.html -->
+<!-- flexbox.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <title>CSS Flexbox Demo</title>
 
-  <link rel="stylesheet" href="style-6.css">
+  <link rel="stylesheet" href="style-6.css" />
 </head>
 
 <body>
@@ -16,21 +20,29 @@
   <!-- HERO -->
   <header class="hero">
 
-    <h1>CSS Flexbox</h1>
+    <h1>
+      CSS Flexbox
+    </h1>
 
     <p>
-      Flexbox is a 1D layout system used to align,
-      distribute, and control spacing between elements.
+      Flexbox is a one-dimensional layout system
+      used to align, distribute, and control
+      spacing between elements.
     </p>
 
   </header>
 
   <main>
 
+    <!-- ================================= -->
     <!-- FLEX CONTAINER -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>Flex Container</h2>
+      <h2>
+        Flex Container
+      </h2>
 
       <p>
         Apply <code>display: flex;</code>
@@ -45,20 +57,31 @@
 
       </div>
 
-      <pre>
+<pre>
 .container {
   display: flex;
 }
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- FLEX DIRECTION -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>flex-direction</h2>
+      <h2>
+        flex-direction
+      </h2>
 
-      <h3>Row (Default)</h3>
+      <h3>
+        Row (Default)
+      </h3>
+
+      <div class="axis-label">
+        Main Axis →
+      </div>
 
       <div class="demo-container row-demo">
 
@@ -68,7 +91,13 @@
 
       </div>
 
-      <h3>Column</h3>
+      <h3>
+        Column
+      </h3>
+
+      <div class="axis-label">
+        Main Axis ↓
+      </div>
 
       <div class="demo-container column-demo">
 
@@ -78,21 +107,38 @@
 
       </div>
 
-      <pre>
+<pre>
 flex-direction: row;
 flex-direction: column;
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- JUSTIFY CONTENT -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>justify-content</h2>
+      <h2>
+        justify-content
+      </h2>
 
-      <h3>space-between</h3>
+      <p>
+        Controls alignment along the main axis.
+      </p>
 
-      <div class="demo-container justify-between">
+      <div class="axis-label">
+        Main Axis →
+      </div>
+
+      <!-- FLEX START -->
+
+      <h3>
+        flex-start
+      </h3>
+
+      <div class="demo-container justify-start">
 
         <div class="item">1</div>
         <div class="item">2</div>
@@ -100,7 +146,11 @@ flex-direction: column;
 
       </div>
 
-      <h3>center</h3>
+      <!-- CENTER -->
+
+      <h3>
+        center
+      </h3>
 
       <div class="demo-container justify-center">
 
@@ -110,38 +160,94 @@ flex-direction: column;
 
       </div>
 
-      <pre>
-justify-content: space-between;
-justify-content: center;
-      </pre>
+      <!-- SPACE BETWEEN -->
 
-    </section>
+      <h3>
+        space-between
+      </h3>
 
-    <!-- ALIGN ITEMS -->
-    <section class="card">
+      <div class="demo-container justify-between">
 
-      <h2>align-items</h2>
-
-      <div class="demo-container align-demo">
-
-        <div class="item small">Small</div>
-
-        <div class="item medium">Medium</div>
-
-        <div class="item tall">Tall</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
 
       </div>
 
-      <pre>
-align-items: center;
-      </pre>
+      <!-- SPACE EVENLY -->
+
+      <h3>
+        space-evenly
+      </h3>
+
+      <div class="demo-container justify-evenly">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+      </div>
+
+<pre>
+justify-content: center;
+justify-content: space-between;
+</pre>
 
     </section>
 
-    <!-- FLEX WRAP -->
+    <!-- ================================= -->
+    <!-- ALIGN ITEMS -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>flex-wrap</h2>
+      <h2>
+        align-items
+      </h2>
+
+      <p>
+        Controls alignment along the cross axis.
+      </p>
+
+      <div class="axis-label">
+        Cross Axis ↓
+      </div>
+
+      <div class="demo-container align-demo">
+
+        <div class="item small">
+          Small
+        </div>
+
+        <div class="item medium">
+          Medium
+        </div>
+
+        <div class="item tall">
+          Tall
+        </div>
+
+      </div>
+
+<pre>
+align-items: center;
+</pre>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- FLEX WRAP -->
+    <!-- ================================= -->
+
+    <section class="card">
+
+      <h2>
+        flex-wrap
+      </h2>
+
+      <p>
+        Allows items to wrap onto multiple lines.
+      </p>
 
       <div class="demo-container wrap-demo">
 
@@ -154,130 +260,149 @@ align-items: center;
 
       </div>
 
-      <pre>
+<pre>
 flex-wrap: wrap;
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- GAP -->
-<section class="card">
+    <!-- ================================= -->
 
-  <h2>gap</h2>
-
-  <p>
-    The <code>gap</code> property creates consistent spacing
-    between flex items without using margins.
-  </p>
-
-  <h3>No gap</h3>
-
-  <div class="demo-container no-gap-demo">
-
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-
-  </div>
-
-  <h3>gap: 20px</h3>
-
-  <div class="demo-container gap-demo">
-
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-
-  </div>
-
-  <pre>
-.container {
-  display: flex;
-  gap: 20px;
-}
-  </pre>
-
-</section>
-
-    <!-- EQUAL HEIGHT CARDS -->
-<section class="card">
-
-  <h2>Equal-Height Cards</h2>
-
-  <p>
-    Flexbox automatically stretches items
-    to equal heights by default.
-  </p>
-
-  <div class="equal-height-layout">
-
-    <article class="equal-card">
-
-      <h3>Short Content</h3>
-
-      <p>
-        Small amount of content.
-      </p>
-
-      <button>
-        Learn More
-      </button>
-
-    </article>
-
-    <article class="equal-card">
-
-      <h3>Medium Content</h3>
-
-      <p>
-        This card contains more content to demonstrate
-        how Flexbox keeps all cards equal height
-        automatically across the row.
-      </p>
-
-      <button>
-        Learn More
-      </button>
-
-    </article>
-
-    <article class="equal-card">
-
-      <h3>Large Content</h3>
-
-      <p>
-        This example contains a much larger amount of
-        content than the other cards. Even though the
-        text lengths differ significantly, Flexbox
-        stretches the cards to maintain equal heights
-        automatically for cleaner layouts.
-      </p>
-
-      <button>
-        Learn More
-      </button>
-
-    </article>
-
-  </div>
-
-  <pre>
-.equal-height-layout {
-  display: flex;
-  gap: 20px;
-}
-
-.equal-card {
-  flex: 1;
-}
-  </pre>
-
-</section>
-
-    <!-- FLEX GROW -->
     <section class="card">
 
-      <h2>flex-grow</h2>
+      <h2>
+        gap
+      </h2>
+
+      <p>
+        Creates spacing between flex items.
+      </p>
+
+      <h3>
+        No Gap
+      </h3>
+
+      <div class="demo-container no-gap-demo">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+      </div>
+
+      <h3>
+        gap: 20px
+      </h3>
+
+      <div class="demo-container gap-demo">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+
+      </div>
+
+<pre>
+.container {
+  gap: 20px;
+}
+</pre>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- EQUAL HEIGHT CARDS -->
+    <!-- ================================= -->
+
+    <section class="card">
+
+      <h2>
+        Equal Height Cards
+      </h2>
+
+      <p>
+        Flexbox stretches items to equal heights automatically.
+      </p>
+
+      <div class="equal-height-layout">
+
+        <article class="equal-card">
+
+          <h3>
+            Short Content
+          </h3>
+
+          <p>
+            Small amount of content.
+          </p>
+
+          <button>
+            Learn More
+          </button>
+
+        </article>
+
+        <article class="equal-card">
+
+          <h3>
+            Medium Content
+          </h3>
+
+          <p>
+            This card contains more content to demonstrate
+            equal-height stretching.
+          </p>
+
+          <button>
+            Learn More
+          </button>
+
+        </article>
+
+        <article class="equal-card">
+
+          <h3>
+            Large Content
+          </h3>
+
+          <p>
+            This card contains a much larger amount
+            of content than the others, but Flexbox
+            still keeps every card the same height.
+          </p>
+
+          <button>
+            Learn More
+          </button>
+
+        </article>
+
+      </div>
+
+<pre>
+.equal-layout {
+  display: flex;
+  align-items: stretch;
+}
+</pre>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- FLEX GROW -->
+    <!-- ================================= -->
+
+    <section class="card">
+
+      <h2>
+        flex-grow
+      </h2>
+
+      <p>
+        Controls how much items expand.
+      </p>
 
       <div class="demo-container grow-demo">
 
@@ -295,18 +420,27 @@ flex-wrap: wrap;
 
       </div>
 
-      <pre>
+<pre>
 .item {
   flex-grow: 2;
 }
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- FLEX SHRINK -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>flex-shrink</h2>
+      <h2>
+        flex-shrink
+      </h2>
+
+      <p>
+        Controls how items shrink when space becomes limited.
+      </p>
 
       <div class="demo-container shrink-demo">
 
@@ -324,16 +458,25 @@ flex-wrap: wrap;
 
       </div>
 
-      <pre>
+<pre>
 flex-shrink: 0;
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- FLEX BASIS -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>flex-basis</h2>
+      <h2>
+        flex-basis
+      </h2>
+
+      <p>
+        Sets the starting size of flex items.
+      </p>
 
       <div class="demo-container basis-demo">
 
@@ -351,16 +494,25 @@ flex-shrink: 0;
 
       </div>
 
-      <pre>
+<pre>
 flex-basis: 200px;
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- ORDER -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>order</h2>
+      <h2>
+        order
+      </h2>
+
+      <p>
+        Changes visual order without changing HTML order.
+      </p>
 
       <div class="demo-container order-demo">
 
@@ -378,18 +530,27 @@ flex-basis: 200px;
 
       </div>
 
-      <pre>
+<pre>
 .item {
   order: 2;
 }
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- ALIGN SELF -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>align-self</h2>
+      <h2>
+        align-self
+      </h2>
+
+      <p>
+        Overrides alignment for individual items.
+      </p>
 
       <div class="demo-container self-demo">
 
@@ -407,25 +568,32 @@ flex-basis: 200px;
 
       </div>
 
-      <pre>
+<pre>
 align-self: flex-end;
-      </pre>
+</pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- QUICK REFERENCE -->
+    <!-- ================================= -->
+
     <section class="card">
 
-      <h2>Quick Reference</h2>
+      <h2>
+        Quick Reference
+      </h2>
 
       <table>
 
         <thead>
+
           <tr>
             <th>Property</th>
             <th>Purpose</th>
             <th>Example</th>
           </tr>
+
         </thead>
 
         <tbody>
