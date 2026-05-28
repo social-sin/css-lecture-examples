@@ -370,7 +370,9 @@ th {
 }
 
 .vw-box {
-  width: 50vw;
+  min-width: 200px;
+
+  transition: width 0.3s ease;
 
   background-color: #0ea5e9;
 
@@ -383,11 +385,30 @@ th {
   font-weight: 700;
 }
 
+.vw-box span {
+  display: block;
+
+  margin-top: 0.5rem;
+
+  font-size: 0.85rem;
+
+  opacity: 0.8;
+}
+
 /* ========================================= */
 /* RESPONSIVE TYPOGRAPHY */
 /* ========================================= */
 
-.responsive-text-demo {
+.text-comparison {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+  
   background-color: #334155;
 
   border-radius: 1rem;
@@ -399,8 +420,28 @@ th {
   text-align: center;
 }
 
+.text-comparison {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+
+.static-heading {
+  font-size: 48px;
+
+  color: white;
+}
+
 .responsive-heading {
   font-size: 3vw;
+
+  font-weight: 800;
+
+  line-height: 1.1;
 
   color: white;
 }
@@ -410,7 +451,18 @@ th {
 /* ========================================= */
 
 .clamp-demo {
-  background-color: #334155;
+  background:
+    linear-gradient(
+      135deg,
+      #334155,
+      #475569
+    );
+
+  border:
+    2px solid rgba(56,189,248,0.25);
+
+  box-shadow:
+    0 0 30px rgba(56,189,248,0.08);
 
   padding: 3rem;
 
@@ -572,10 +624,40 @@ th {
   padding: 2rem;
 }
 
+  .full-screen-box h3 {
+  font-size:
+    clamp(2rem, 6vw, 5rem);
+
+  margin-bottom: 1rem;
+
+  color: white;
+}
+
+.full-screen-box p {
+  font-size:
+    clamp(1rem, 2vw, 1.4rem);
+
+  max-width: 600px;
+}
+
+  .mq-card {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
 /* ========================================= */ /* LABELS */ /* ========================================= */ .resize-note { display: inline-block; background-color: rgba(250, 204, 21, 0.12); border: 1px solid #facc15; color: #facc15; padding: 0.5rem 0.75rem; border-radius: 999px; font-size: 0.9rem; margin-top: 1rem; } .breakpoint-label { margin-top: 1rem; color: #facc15; font-weight: 700; }
 
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
 
-@media (max-width: 768px) { .hero { padding: 4rem 0 3rem; } main { padding-bottom: 4rem; } .card { padding: 1.5rem; } .comparison-grid, .typography-demo, .text-comparison, .fluid-grid, .clamp-comparison { grid-template-columns: 1fr; } .media-query-layout { flex-direction: column; } .mq-card { background-color: #0ea5e9; } .responsive-heading { font-size: 8vw; } .vw-box { width: 100%; } .overflow-bad { width: 100%; } }
+@media (max-width: 768px) { .hero { padding: 4rem 0 3rem; } main { padding-bottom: 4rem; } .card { padding: 1.5rem; } .comparison-grid, .typography-demo, .text-comparison, .fluid-grid, .clamp-comparison { grid-template-columns: 1fr; } .media-query-layout { flex-direction: column; } .mq-card { background-color: #0ea5e9; } .responsive-heading { font-size: 8vw; } .vw-box { width: 100%; } .overflow-demo {
+  overflow-x: auto;
+} .media-query-layout {
+  flex-direction: column;
+} .mq-card {
+  width: 100%;
+}   .mq-card {
+    transform: scale(0.98);
+  }}
