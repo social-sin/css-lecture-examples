@@ -107,10 +107,10 @@ header {
 }
 
 /* ========================================= */
-/* HERO CONTENT */
+/* HERO */
 /* ========================================= */
 
-#header {
+.hero {
   width:
     min(100% - 4rem, var(--max-width));
 
@@ -118,11 +118,11 @@ header {
 
   padding:
     5rem 0
-    3rem;
+    4rem;
 }
 
-#header p {
-  max-width: 700px;
+.hero p {
+  max-width: 750px;
 
   font-size: 1.1rem;
 }
