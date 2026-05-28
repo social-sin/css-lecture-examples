@@ -1,151 +1,311 @@
-/* style.css */
-
-/* ================================= */
-/* GLOBAL RESET */
-/* ================================= */
+/* ========================================= */
+/* RESET */
+/* ========================================= */
 
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* BODY */
-/* ================================= */
-
-body {
-  background-color: #0f172a;
-  color: #e2e8f0;
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-  padding: 40px;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ================================= */
-/* HERO */
-/* ================================= */
+/* ========================================= */
+/* VARIABLES */
+/* ========================================= */
 
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
+:root {
+
+  --bg: #0f172a;
+
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+
+  --border:
+    rgba(255, 255, 255, 0.08);
+
+  --max-width: 1200px;
+}
+
+/* ========================================= */
+/* BASE */
+/* ========================================= */
+
+body {
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  line-height: 1.7;
+}
+
+/* ========================================= */
+/* TYPOGRAPHY */
+/* ========================================= */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  color: white;
-}
+  font-size:
+    clamp(2.75rem, 6vw, 5rem);
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ================================= */
-/* SECTIONS */
-/* ================================= */
-
-.section-card {
-  background-color: #1e293b;
-  padding: 35px;
-  border-radius: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  margin-bottom: 25px;
-  color: #38bdf8;
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
 }
 
 h3 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+
+  color: white;
 }
 
-p {
-  margin-top: 15px;
+p,
+td {
+  color: var(--muted);
 }
 
-/* ================================= */
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding:
+    5rem 0
+    4rem;
+}
+
+.hero p {
+  max-width: 750px;
+
+  font-size: 1.1rem;
+}
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding-bottom: 5rem;
+}
+
+/* ========================================= */
+/* SECTION CARDS */
+/* ========================================= */
+
+.section-card {
+  background-color:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.section-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background-color:
+    var(--surface-light);
+}
+
+/* ========================================= */
+/* CONTENT SPACING */
+/* ========================================= */
+
+.section-card p,
+.section-card pre,
+.section-card table {
+  margin-top: 1rem;
+}
+
+.section-card ul,
+.section-card ol {
+  padding-left: 1.5rem;
+
+  margin-top: 1rem;
+}
+
+/* ========================================= */
 /* BOX MODEL VISUAL */
-/* ================================= */
+/* ========================================= */
 
 .margin-box {
   background-color: #f59e0b;
-  padding: 50px;
-  position: relative;
+
+  padding: 4rem;
+
+  border-radius: 1rem;
 }
 
 .border-box {
   background-color: #ef4444;
-  padding: 40px;
+
+  padding: 3rem;
+
+  border-radius: 0.75rem;
 }
 
 .padding-box {
   background-color: #10b981;
-  padding: 35px;
+
+  padding: 2.5rem;
+
+  border-radius: 0.5rem;
 }
 
 .content-box {
   background-color: #3b82f6;
+
   color: white;
+
   text-align: center;
-  padding: 50px;
-  font-size: 1.4rem;
-  font-weight: bold;
+
+  padding: 3rem;
+
+  border-radius: 0.5rem;
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
 }
 
-/* ================================= */
+/* ========================================= */
 /* LABELS */
-/* ================================= */
+/* ========================================= */
 
 .label {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 5px 10px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color:
+    rgba(255, 255, 255, 0.18);
+
+  padding:
+    0.4rem 0.75rem;
+
+  border-radius: 999px;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  color: white;
 }
 
-/* ================================= */
+/* ========================================= */
 /* EXAMPLE BOXES */
-/* ================================= */
+/* ========================================= */
 
 .example-box {
   background-color: #334155;
-  border: 4px solid #38bdf8;
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+  border:
+    4px solid var(--accent);
+
+  border-radius: 0.75rem;
+
+  margin:
+    1.5rem 0;
 }
 
 /* Content Example */
+
 .content-example {
   width: 300px;
+
   height: 150px;
+
   padding: 20px;
 }
 
 /* Padding Example */
+
 .padding-example {
   padding: 40px;
 }
 
-/* ================================= */
-/* PADDING GRID */
-/* ================================= */
+/* ========================================= */
+/* GRID LAYOUTS */
+/* ========================================= */
 
-.padding-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+.padding-grid,
+.border-grid,
+.sizing-layout {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 1.5rem;
+
+  margin-top: 1.5rem;
 }
+
+/* ========================================= */
+/* PADDING DEMOS */
+/* ========================================= */
 
 .pad-demo {
   background-color: #475569;
-  border: 2px solid white;
-  width: 220px;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 0.75rem;
 }
 
 .pad-1 {
@@ -160,21 +320,17 @@ p {
   padding: 10px 15px 20px 5px;
 }
 
-/* ================================= */
-/* BORDER EXAMPLES */
-/* ================================= */
-
-.border-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
+/* ========================================= */
+/* BORDER DEMOS */
+/* ========================================= */
 
 .border-demo {
-  padding: 30px;
   background-color: #334155;
-  width: 220px;
+
+  border-radius: 0.75rem;
+
+  padding: 2rem;
+
   text-align: center;
 }
 
@@ -190,129 +346,130 @@ p {
   border: 4px dotted #f472b6;
 }
 
-/* ================================= */
-/* MARGIN */
-/* ================================= */
+/* ========================================= */
+/* MARGIN DEMO */
+/* ========================================= */
 
 .margin-demo {
   background-color: #475569;
-  border: 3px solid white;
-  padding: 20px;
-  margin: 30px;
+
+  border:
+    3px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 0.75rem;
+
+  padding: 1.5rem;
+
+  margin: 2rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* BOX SIZING */
-/* ================================= */
-
-.sizing-layout {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+/* ========================================= */
 
 .size-card {
-  width: 300px;
-  padding: 40px;
-  border: 10px solid #38bdf8;
   background-color: #334155;
+
+  border:
+    10px solid var(--accent);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  width: 100%;
 }
 
-/* Default */
 .content-sizing {
   box-sizing: content-box;
 }
 
-/* Recommended */
 .border-sizing {
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* DEVTOOLS SECTION */
-/* ================================= */
-
-ol {
-  margin: 20px 0 20px 25px;
-}
-
-ol li {
-  margin-bottom: 10px;
-}
-
-/* ================================= */
-/* DEVTOOLS DEMO */
-/* ================================= */
-
-.devtools-demo {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  background-color: #0f172a;
-
-  padding: 60px;
-
-  border-radius: 16px;
-
-  margin-top: 30px;
-}
-
-/* ================================= */
-/* CODE BLOCKS */
-/* ================================= */
+/* ========================================= */
+/* CODE */
+/* ========================================= */
 
 pre {
-  background-color: #020617;
-  padding: 20px;
-  border-radius: 10px;
   overflow-x: auto;
-  margin-top: 20px;
-  color: #93c5fd;
+
+  background-color: #020617;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  color: #cbd5e1;
 }
 
-/* ================================= */
+/* ========================================= */
 /* TABLE */
-/* ================================= */
+/* ========================================= */
 
 table {
   width: 100%;
+
   border-collapse: collapse;
-  margin-top: 20px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
 }
 
 th,
 td {
-  border: 1px solid #475569;
-  padding: 15px;
+  padding: 1rem;
+
+  border:
+    1px solid var(--border);
+
   text-align: left;
 }
 
 th {
-  background-color: #334155;
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
   color: white;
 }
 
-/* ================================= */
+/* ========================================= */
 /* RESPONSIVE */
-/* ================================= */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-  body {
-    padding: 20px;
+  .hero {
+    padding:
+      4rem 0
+      3rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  main {
+    padding-bottom: 4rem;
   }
 
-  .padding-grid,
-  .border-grid,
-  .sizing-layout {
-    flex-direction: column;
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .margin-box {
+    padding: 2rem;
+  }
+
+  .border-box {
+    padding: 1.5rem;
+  }
+
+  .padding-box {
+    padding: 1rem;
   }
 
 }
