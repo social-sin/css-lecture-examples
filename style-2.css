@@ -1,359 +1,527 @@
-/* style.css */
-
-/* ================================= */
-/* UNIVERSAL RESET */
-/* ================================= */
+/* ========================================= */
+/* RESET */
+/* ========================================= */
 
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
-/* ================================= */
-/* PAGE LEVEL STYLES */
-/* ================================= */
-
 html {
-  background-image:
-    linear-gradient(rgba(15, 14, 23, 0.9),
-    rgba(15, 14, 23, 0.9)),
-    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-
-  font-family: Tahoma, sans-serif;
-  font-size: 16px;
-  color: #a7a9be;
+  scroll-behavior: smooth;
 }
 
-/* ================================= */
-/* BODY */
-/* ================================= */
+/* ========================================= */
+/* VARIABLES */
+/* ========================================= */
+
+:root {
+
+  --bg: #0f172a;
+
+  --surface: #111827;
+  --surface-light: #1e293b;
+
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+
+  --border:
+    rgba(255, 255, 255, 0.08);
+
+  --max-width: 1200px;
+}
+
+/* ========================================= */
+/* BASE */
+/* ========================================= */
 
 body {
-  padding: 40px;
+  background-color: var(--bg);
+
+  color: var(--text);
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
   line-height: 1.7;
 }
 
-/* ================================= */
-/* HERO */
-/* ================================= */
+/* ========================================= */
+/* TYPOGRAPHY */
+/* ========================================= */
 
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 3.5rem;
-  color: #fffffe;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+  font-size:
+    clamp(2.75rem, 6vw, 5rem);
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto 25px;
+  margin-bottom: 1.5rem;
 }
-
-.hero-button {
-  display: inline-block;
-  background-color: #f25f4c;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ================================= */
-/* HEADINGS */
-/* ================================= */
 
 h2 {
-  font-size: 1.8rem;
-  color: #fffffe;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #f25f4c;
-  padding-bottom: 10px;
+  font-size: 2rem;
+
+  margin-bottom: 1.5rem;
+
+  color: white;
 }
 
 h3 {
-  margin-bottom: 10px;
-  color: #ff8906;
+  margin-bottom: 1rem;
+
+  color: white;
 }
 
-/* ================================= */
+p,
+li,
+td {
+  color: var(--muted);
+}
+
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding:
+    5rem 0
+    4rem;
+}
+
+.hero p {
+  max-width: 750px;
+
+  font-size: 1.1rem;
+
+  margin-bottom: 2rem;
+}
+
+/* ========================================= */
+/* HERO BUTTON */
+/* ========================================= */
+
+.hero-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    0.9rem 1.25rem;
+
+  border-radius: 0.75rem;
+
+  background-color:
+    var(--accent);
+
+  color: #0f172a;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  background-color:
+    var(--accent-hover);
+
+  transform:
+    translateY(-2px);
+}
+
+/* ========================================= */
+/* MAIN */
+/* ========================================= */
+
+main {
+  width:
+    min(100% - 4rem, var(--max-width));
+
+  margin-inline: auto;
+
+  padding-bottom: 5rem;
+}
+
+/* ========================================= */
 /* CARDS */
-/* ================================= */
+/* ========================================= */
 
 .card {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 14px;
-  margin-bottom: 35px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  margin-bottom: 2rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
-/* ================================= */
-/* PARAGRAPHS */
-/* ================================= */
+.card:hover {
+  transform:
+    translateY(-4px);
 
-p {
-  margin-bottom: 15px;
+  border-color:
+    rgba(56, 189, 248, 0.35);
+
+  background-color:
+    var(--surface-light);
 }
 
-/* ================================= */
-/* TYPOGRAPHY SPACING */
-/* ================================= */
+/* ========================================= */
+/* CONTENT SPACING */
+/* ========================================= */
+
+.card p,
+.card ul,
+.card ol,
+.card pre,
+.card table {
+  margin-bottom: 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ========================================= */
+/* HIGHLIGHT */
+/* ========================================= */
+
+.highlight {
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
+  border-left:
+    4px solid var(--accent);
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  color: #bae6fd;
+}
+
+/* ========================================= */
+/* TYPOGRAPHY GRID */
+/* ========================================= */
 
 .type-grid {
-  display: flex;
+  display: grid;
 
-  gap: 30px;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
 
-  flex-wrap: wrap;
+  gap: 1.5rem;
 
-  margin-top: 25px;
+  margin-top: 2rem;
 }
 
 .type-card {
-  flex: 1 1 300px;
+  background-color:
+    rgba(255, 255, 255, 0.03);
 
-  background-color: rgba(255, 255, 255, 0.04);
+  border:
+    1px solid var(--border);
 
-  padding: 25px;
+  border-radius: 1rem;
 
-  border-radius: 12px;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
 }
 
-/* ================================= */
-/* LINE HEIGHT */
-/* ================================= */
+/* ========================================= */
+/* TYPOGRAPHY DEMOS */
+/* ========================================= */
 
 .tight-lines {
-  line-height: 0.9;
+  line-height: 1;
 
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color:
+    rgba(255, 255, 255, 0.03);
 
-  padding: 15px;
+  padding: 1rem;
 
-  border-radius: 8px;
-
-  margin-bottom: 20px;
+  border-radius: 0.5rem;
 }
 
 .loose-lines {
-  line-height: 3;
+  line-height: 2.8;
 
-  background-color: rgba(242, 95, 76, 0.1);
+  background-color:
+    rgba(56, 189, 248, 0.08);
 
-  padding: 15px;
+  padding: 1rem;
 
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
-/* ================================= */
-/* LETTER SPACING */
-/* ================================= */
-
-.normal-spacing {
-  letter-spacing: 0;
-
-  font-size: 1.4rem;
+.normal-spacing,
+.wide-spacing,
+.tight-spacing,
+.normal-word-spacing,
+.wide-word-spacing {
+  font-size: 1.2rem;
 }
 
 .wide-spacing {
-  letter-spacing: 12px;
+  letter-spacing: 10px;
 
   text-transform: uppercase;
-
-  font-size: 1.4rem;
-
-  margin-top: 20px;
 }
 
 .tight-spacing {
-  letter-spacing: -3px;
-
-  font-size: 1.4rem;
-
-  margin-top: 20px;
-}
-
-/* ================================= */
-/* WORD SPACING */
-/* ================================= */
-
-.normal-word-spacing {
-  word-spacing: 0;
-
-  font-size: 1.3rem;
+  letter-spacing: -2px;
 }
 
 .wide-word-spacing {
-  word-spacing: 30px;
-
-  font-size: 1.3rem;
-
-  margin-top: 20px;
+  word-spacing: 20px;
 }
 
-/* ================================= */
-/* HIGHLIGHT CLASS */
-/* ================================= */
+/* ========================================= */
+/* CODE */
+/* ========================================= */
 
-.highlight {
-  background-color: rgba(242, 95, 76, 0.2);
-  border-left: 5px solid #f25f4c;
-  padding: 15px;
+code {
+  color: var(--accent);
+
+  font-family:
+    Consolas,
+    monospace;
 }
 
-/* ================================= */
-/* LISTS */
-/* ================================= */
+pre {
+  overflow-x: auto;
 
-li {
-  line-height: 2.5;
+  background-color: #020617;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 0.75rem;
+
+  padding: 1rem;
+
+  color: #cbd5e1;
 }
 
-ul li {
-  list-style-type: square;
-  margin-left: 20px;
-}
-
-ol li {
-  list-style-type: upper-roman;
-  margin-left: 25px;
-}
+/* ========================================= */
+/* LIST LAYOUT */
+/* ========================================= */
 
 .list-layout {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 2rem;
 }
 
-/* ================================= */
-/* LINKS - LVHA ORDER */
-/* ================================= */
-
-/* Link */
-a:link {
-  color: #fffffe;
-  text-decoration: none;
-}
-
-/* Visited */
-a:visited {
-  color: #f25f4c;
-}
-
-/* Hover */
-a:hover {
-  color: #ff8906;
-  text-decoration: underline;
-}
-
-/* Active */
-a:active {
-  color: #e53170;
-}
+/* ========================================= */
+/* LINKS */
+/* ========================================= */
 
 .link-group {
-  margin-top: 20px;
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 1.5rem;
 }
 
 .link-group a {
-  display: inline-block;
-  margin-right: 25px;
-  font-weight: bold;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    0.8rem 1rem;
+
+  border-radius: 999px;
+
+  background-color:
+    rgba(255, 255, 255, 0.04);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
-/* ================================= */
+.link-group a:hover {
+  transform:
+    translateY(-2px);
+
+  background-color:
+    var(--surface-light);
+}
+
+/* LVHA */
+
+a:link {
+  color: #38bdf8;
+}
+
+a:visited {
+  color: #c084fc;
+}
+
+a:hover {
+  color: #f87171;
+}
+
+a:active {
+  color: #4ade80;
+}
+
+/* ========================================= */
 /* NOTE */
-/* ================================= */
+/* ========================================= */
 
 .note {
-  margin-top: 20px;
-  background-color: rgba(255, 137, 6, 0.15);
-  padding: 12px;
-  border-left: 4px solid #ff8906;
+  margin-top: 1.5rem;
+
+  background-color:
+    rgba(250, 204, 21, 0.08);
+
+  border-left:
+    4px solid #facc15;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
 }
 
-/* ================================= */
+/* ========================================= */
 /* IMAGES */
-/* ================================= */
+/* ========================================= */
 
-img {
-  opacity: 0.7;
-  height: 300px;
-  width: auto;
-  border-radius: 12px;
-  margin-top: 15px;
+.image-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
 }
 
-/* Responsive Image Example */
+.image-card img {
+  width: 100%;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  opacity: 0.8;
+
+  border-radius: 1rem;
+
+  margin:
+    1rem 0;
+}
+
 .responsive-image {
   max-width: 100%;
+
   height: auto;
+
   display: block;
 }
 
-/* ================================= */
-/* IMAGE GRID */
-/* ================================= */
-
-.image-grid {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.image-card {
-  flex: 1 1 400px;
-}
-
-/* ================================= */
+/* ========================================= */
 /* TABLE */
-/* ================================= */
+/* ========================================= */
 
 table {
   width: 100%;
+
   border-collapse: collapse;
-  margin-top: 20px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
 }
 
 th,
 td {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 15px;
+  padding: 1rem;
+
+  border:
+    1px solid var(--border);
+
   text-align: left;
 }
 
 th {
-  background-color: rgba(242, 95, 76, 0.2);
-  color: #fffffe;
+  background-color:
+    rgba(56, 189, 248, 0.12);
+
+  color: white;
 }
 
-/* ================================= */
-/* RESPONSIVE DESIGN */
-/* ================================= */
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
 
 @media (max-width: 768px) {
 
-  body {
-    padding: 20px;
+  .hero {
+    padding:
+      4rem 0
+      3rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  main {
+    padding-bottom: 4rem;
   }
 
-  .list-layout,
-  .image-grid {
-    flex-direction: column;
+  .card {
+    padding: 1.5rem;
   }
 
 }
