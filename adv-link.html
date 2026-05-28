@@ -182,6 +182,104 @@ a:focus-visible {
 
     </section>
 
+    <!-- CURSOR STYLES -->
+<section class="card">
+
+  <h2>Cursor Styles</h2>
+
+  <p>
+    Cursor styles communicate interaction behavior
+    and improve user feedback.
+  </p>
+
+  <div class="cursor-grid">
+
+    <div class="cursor-card pointer-demo">
+      cursor: pointer;
+    </div>
+
+    <div class="cursor-card text-demo">
+      cursor: text;
+    </div>
+
+    <div class="cursor-card grab-demo">
+      cursor: grab;
+    </div>
+
+    <div class="cursor-card notallowed-demo">
+      cursor: not-allowed;
+    </div>
+
+  </div>
+
+  <pre>
+button {
+  cursor: pointer;
+}
+  </pre>
+
+</section>
+
+<!-- REDUCED MOTION -->
+<section class="card">
+
+  <h2>Reduced Motion Accessibility</h2>
+
+  <p>
+    Some users experience motion sensitivity.
+    Modern websites should respect reduced-motion
+    accessibility preferences.
+  </p>
+
+  <div class="motion-grid">
+
+    <!-- FULL MOTION -->
+    <div class="motion-card">
+
+      <h3>
+        Standard Animation
+      </h3>
+
+      <a href="#" class="motion-link">
+        Hover Me
+      </a>
+
+    </div>
+
+    <!-- REDUCED MOTION -->
+    <div class="motion-card">
+
+      <h3>
+        Reduced Motion
+      </h3>
+
+      <a href="#" class="reduced-motion-link">
+        Minimal Motion
+      </a>
+
+    </div>
+
+  </div>
+
+  <pre>
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    animation: none;
+    transition: none;
+  }
+
+}
+  </pre>
+
+  <p class="motion-tip">
+    Accessibility is not optional —
+    excessive motion can trigger dizziness,
+    migraines, or vestibular disorders.
+  </p>
+
+</section>
+
     <!-- EXTERNAL LINKS -->
     <section class="card">
 
