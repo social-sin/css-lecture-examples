@@ -181,6 +181,10 @@ p {
 
       <h2>Viewport Units (vh / vw)</h2>
 
+            <p class="resize-note">
+  Resize the browser window to test responsiveness.
+</p>
+
       <div class="viewport-demo">
 
         <div class="vh-box">
@@ -200,29 +204,7 @@ width: 100vw;
 
     </section>
 
-    <!-- RESPONSIVE TYPOGRAPHY -->
-    <section class="card">
-
-      <h2>Responsive Typography</h2>
-
-      <p>
-        Typography can scale dynamically
-        using viewport units.
-      </p>
-
-      <div class="responsive-text-demo">
-
-        <h1 class="responsive-heading">
-          Resize the Browser Window
-        </h1>
-
-      </div>
-
-      <pre>
-font-size: 3vw;
-      </pre>
-
-    </section>
+<!-- RESPONSIVE TYPOGRAPHY --> <section class="card"> <h2>Responsive Typography</h2> <p> Typography can scale dynamically using viewport units. </p> <p class="resize-note"> Resize the browser window to compare fixed vs responsive text. </p> <div class="text-comparison"> <div class="static-text-box"> <h2 class="static-heading"> Fixed 48px Text </h2> <p> This text always stays the same size. </p> </div> <div class="responsive-text-box"> <h2 class="responsive-heading"> Responsive 3vw Text </h2> <p> This text scales with the viewport width. </p> </div> </div> <pre> font-size: 48px; font-size: 3vw; </pre> </section>
 
     <!-- CLAMP() TYPOGRAPHY -->
 <section class="card">
@@ -355,6 +337,8 @@ img {
 
     </section>
 
+    <!-- OVERFLOW PROBLEMS --> <section class="card"> <h2>Overflow Problems</h2> <p> Fixed-width layouts can overflow smaller screens. </p> <div class="overflow-demo"> <div class="overflow-bad"> width: 900px </div> <div class="overflow-good"> max-width: 100% </div> </div> <pre> width: 900px; max-width: 100%; </pre> <p class="tip"> max-width helps content stay responsive on smaller screens. </p> </section>
+
     <!-- MEDIA QUERIES -->
     <section class="card">
 
@@ -364,6 +348,8 @@ img {
         Media queries apply styles
         at different screen sizes.
       </p>
+
+      <p class="breakpoint-label"> Breakpoint activates below 768px </p>
 
       <div class="media-query-layout">
 
@@ -390,6 +376,8 @@ img {
       </pre>
 
     </section>
+
+    <!-- MOBILE FIRST --> <section class="card"> <h2>Mobile-First Design</h2> <p> Modern responsive workflows typically design for smaller screens first, then expand layouts for larger devices. </p> <pre> /* Mobile First */ .container { display: flex; flex-direction: column; } @media (min-width: 768px) { .container { flex-direction: row; } } </pre> <p class="tip"> Mobile-first CSS improves scalability and simplifies responsive workflows. </p> </section>
 
     <!-- FULL VIEWPORT HERO -->
     <section class="card">
