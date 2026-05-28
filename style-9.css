@@ -202,7 +202,16 @@ main {
 }
 
 .css-box {
-  background-color: #0ea5e9;
+  background-color: #0284c7;
+  color: white;
+}
+
+.css-box p,
+.css-box li {
+  color: #e0f2fe;
+}
+
+.css-box h3 {
   color: white;
 }
 
