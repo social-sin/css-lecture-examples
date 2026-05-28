@@ -1,18 +1,18 @@
-<!-- index.html -->
+<!-- box-model.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  >
+  />
 
   <title>CSS Box Model Demo</title>
 
-  <link rel="stylesheet" href="style-3.css">
+  <link rel="stylesheet" href="style-3.css" />
 </head>
 
 <body>
@@ -33,7 +33,10 @@
 
   <main>
 
-    <!-- BOX MODEL VISUAL -->
+    <!-- ================================= -->
+    <!-- STRUCTURE OVERVIEW -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
@@ -43,23 +46,23 @@
       <div class="margin-box">
 
         <span class="label">
-          Margin
+          Margin (40px)
         </span>
 
         <div class="border-box">
 
           <span class="label">
-            Border
+            Border (12px)
           </span>
 
           <div class="padding-box">
 
             <span class="label">
-              Padding
+              Padding (40px)
             </span>
 
             <div class="content-box">
-              Content
+              Content Area
             </div>
 
           </div>
@@ -70,7 +73,10 @@
 
     </section>
 
+    <!-- ================================= -->
     <!-- CONTENT -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
@@ -78,7 +84,7 @@
       </h2>
 
       <div class="example-box content-example">
-        This is the content area.
+        Content Area
       </div>
 
       <p>
@@ -92,7 +98,10 @@ height: 150px;
 
     </section>
 
+    <!-- ================================= -->
     <!-- PADDING -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
@@ -110,22 +119,37 @@ padding: 20px;
       <div class="padding-grid">
 
         <div class="pad-demo pad-1">
-          padding: 20px;
+
+          <span class="demo-tag">
+            padding: 20px;
+          </span>
+
         </div>
 
         <div class="pad-demo pad-2">
-          padding: 10px 20px;
+
+          <span class="demo-tag">
+            padding: 10px 20px;
+          </span>
+
         </div>
 
         <div class="pad-demo pad-3">
-          padding: 10px 15px 20px 5px;
+
+          <span class="demo-tag">
+            padding: 10px 15px 20px 5px;
+          </span>
+
         </div>
 
       </div>
 
     </section>
 
+    <!-- ================================= -->
     <!-- BORDER -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
@@ -149,24 +173,31 @@ padding: 20px;
       </div>
 
 <pre>
-border: 2px solid black;
+border: 4px solid #38bdf8;
 </pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- MARGIN -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
         4. Margin
       </h2>
 
-      <div class="margin-demo">
-        First Box
-      </div>
+      <div class="margin-wrapper">
 
-      <div class="margin-demo">
-        Second Box
+        <div class="margin-demo">
+          First Box
+        </div>
+
+        <div class="margin-demo">
+          Second Box
+        </div>
+
       </div>
 
       <p>
@@ -174,40 +205,66 @@ border: 2px solid black;
       </p>
 
 <pre>
-margin: 20px;
+margin: 2rem;
 </pre>
 
     </section>
 
+    <!-- ================================= -->
     <!-- BOX SIZING -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
         Box Sizing
       </h2>
 
+      <p>
+        Compare how total element size changes
+        between content-box and border-box.
+      </p>
+
       <div class="sizing-layout">
 
         <div class="size-card content-sizing">
+
+          <span class="demo-tag">
+            box-sizing: content-box
+          </span>
 
           <h3>
             content-box
           </h3>
 
+          <p class="dimension-label">
+            Declared width: 260px
+          </p>
+
           <p>
-            Padding and border increase the total size.
+            Padding and border are ADDED
+            to the declared width.
           </p>
 
         </div>
 
         <div class="size-card border-sizing">
 
+          <span class="demo-tag">
+            box-sizing: border-box
+          </span>
+
           <h3>
             border-box
           </h3>
 
+          <p class="dimension-label">
+            Declared width: 260px
+          </p>
+
           <p>
-            Width stays fixed and predictable.
+            Padding and border are INCLUDED
+            inside the declared width.
           </p>
 
         </div>
@@ -220,7 +277,10 @@ box-sizing: border-box;
 
     </section>
 
+    <!-- ================================= -->
     <!-- QUICK REFERENCE -->
+    <!-- ================================= -->
+
     <section class="section-card">
 
       <h2>
