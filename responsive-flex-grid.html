@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Responsive CSS Flex & Grid Layouts
+  </title>
+
+  <link rel="stylesheet" href="style-17.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <h1>
+      Responsive CSS Flex & Grid Layouts
+    </h1>
+
+    <p class="hero-text">
+      Learn how Flexbox and CSS Grid create
+      responsive layouts that adapt smoothly
+      across mobile, tablet, and desktop screens.
+    </p>
+
+  </header>
+
+  <main>
+
+    <!-- FLEXBOX INTRO -->
+    <section class="card">
+
+      <h2>
+        1. Responsive Flexbox Layout
+      </h2>
+
+      <p>
+        Flexbox is ideal for one-dimensional layouts
+        like rows, navigation bars, and card groups.
+      </p>
+
+      <div class="flex-demo">
+
+        <div class="flex-card">
+          Card One
+        </div>
+
+        <div class="flex-card">
+          Card Two
+        </div>
+
+        <div class="flex-card">
+          Card Three
+        </div>
+
+      </div>
+
+      <pre>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+      </pre>
+
+    </section>
+
+    <!-- JUSTIFY CONTENT -->
+    <section class="card">
+
+      <h2>
+        2. justify-content
+      </h2>
+
+      <p>
+        justify-content controls alignment
+        along the main axis.
+      </p>
+
+      <div class="justify-grid">
+
+        <div class="justify-demo start">
+          <div class="mini-box"></div>
+          <div class="mini-box"></div>
+        </div>
+
+        <div class="justify-demo center">
+          <div class="mini-box"></div>
+          <div class="mini-box"></div>
+        </div>
+
+        <div class="justify-demo between">
+          <div class="mini-box"></div>
+          <div class="mini-box"></div>
+        </div>
+
+      </div>
+
+      <pre>
+justify-content:
+space-between;
+      </pre>
+
+    </section>
+
+    <!-- ALIGN ITEMS -->
+    <section class="card">
+
+      <h2>
+        3. align-items
+      </h2>
+
+      <p>
+        align-items controls alignment
+        along the cross axis.
+      </p>
+
+      <div class="align-demo">
+
+        <div class="align-box small">
+          Small
+        </div>
+
+        <div class="align-box tall">
+          Tall
+        </div>
+
+        <div class="align-box medium">
+          Medium
+        </div>
+
+      </div>
+
+      <pre>
+align-items: center;
+      </pre>
+
+    </section>
+
+    <!-- FLEX WRAP -->
+    <section class="card">
+
+      <h2>
+        4. flex-wrap
+      </h2>
+
+      <p>
+        flex-wrap allows items to move
+        onto new rows when space runs out.
+      </p>
+
+      <div class="wrap-demo">
+
+        <div class="wrap-card">1</div>
+        <div class="wrap-card">2</div>
+        <div class="wrap-card">3</div>
+        <div class="wrap-card">4</div>
+        <div class="wrap-card">5</div>
+
+      </div>
+
+      <pre>
+flex-wrap: wrap;
+      </pre>
+
+    </section>
+
+    <!-- FLEX GROW -->
+    <section class="card">
+
+      <h2>
+        5. flex-grow
+      </h2>
+
+      <p>
+        flex-grow determines how much
+        items expand to fill remaining space.
+      </p>
+
+      <div class="grow-demo">
+
+        <div class="grow-item grow-1">
+          1
+        </div>
+
+        <div class="grow-item grow-2">
+          2
+        </div>
+
+        <div class="grow-item grow-1">
+          1
+        </div>
+
+      </div>
+
+      <pre>
+.item-two {
+  flex-grow: 2;
+}
+      </pre>
+
+    </section>
+
+    <!-- GRID INTRO -->
+    <section class="card">
+
+      <h2>
+        6. Responsive CSS Grid
+      </h2>
+
+      <p>
+        CSS Grid is ideal for two-dimensional
+        layouts using rows and columns.
+      </p>
+
+      <div class="grid-demo">
+
+        <div class="grid-card">
+          Grid Item
+        </div>
+
+        <div class="grid-card">
+          Grid Item
+        </div>
+
+        <div class="grid-card">
+          Grid Item
+        </div>
+
+        <div class="grid-card">
+          Grid Item
+        </div>
+
+      </div>
+
+      <pre>
+grid-template-columns:
+repeat(auto-fit, minmax(200px, 1fr));
+      </pre>
+
+    </section>
+
+    <!-- GRID SPAN -->
+    <section class="card">
+
+      <h2>
+        7. Grid Item Spanning
+      </h2>
+
+      <p>
+        Grid items can span multiple
+        columns or rows.
+      </p>
+
+      <div class="span-grid">
+
+        <div class="span-card featured">
+          Featured Content
+        </div>
+
+        <div class="span-card">
+          Sidebar
+        </div>
+
+        <div class="span-card">
+          Gallery
+        </div>
+
+        <div class="span-card">
+          Footer
+        </div>
+
+      </div>
+
+      <pre>
+grid-column: 1 / 3;
+      </pre>
+
+    </section>
+
+    <!-- AUTO FIT -->
+    <section class="card">
+
+      <h2>
+        8. auto-fit + minmax()
+      </h2>
+
+      <p>
+        Grid automatically creates
+        responsive columns.
+      </p>
+
+      <div class="auto-grid">
+
+        <div class="auto-card">200px Min</div>
+        <div class="auto-card">Flexible</div>
+        <div class="auto-card">Responsive</div>
+        <div class="auto-card">Adaptive</div>
+        <div class="auto-card">Fluid</div>
+
+      </div>
+
+      <pre>
+repeat(auto-fit, minmax(200px, 1fr))
+      </pre>
+
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="card">
+
+      <h2>
+        9. Responsive Dashboard Layout
+      </h2>
+
+      <p>
+        Real layouts often combine
+        Flexbox and Grid together.
+      </p>
+
+      <div class="dashboard-layout">
+
+        <aside class="sidebar">
+          Sidebar
+        </aside>
+
+        <section class="dashboard-main">
+
+          <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+              Analytics
+            </div>
+
+            <div class="dashboard-card">
+              Reports
+            </div>
+
+            <div class="dashboard-card">
+              Users
+            </div>
+
+            <div class="dashboard-card">
+              Traffic
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+    <!-- RESPONSIVE IMAGES -->
+    <section class="card">
+
+      <h2>
+        10. Responsive Media
+      </h2>
+
+      <p>
+        Images should scale fluidly
+        inside responsive layouts.
+      </p>
+
+      <div class="image-layout">
+
+        <img
+          src="https://picsum.photos/id/1015/1200/700"
+          alt="Responsive landscape example"
+        >
+
+      </div>
+
+      <pre>
+img {
+  max-width: 100%;
+  height: auto;
+}
+      </pre>
+
+    </section>
+
+    <!-- BREAKPOINTS -->
+    <section class="card">
+
+      <h2>
+        11. Common Responsive Breakpoints
+      </h2>
+
+      <div class="breakpoint-grid">
+
+        <div class="breakpoint-card">
+          <h3>Mobile</h3>
+          <p>320px+</p>
+        </div>
+
+        <div class="breakpoint-card">
+          <h3>Tablet</h3>
+          <p>768px+</p>
+        </div>
+
+        <div class="breakpoint-card">
+          <h3>Desktop</h3>
+          <p>1024px+</p>
+        </div>
+
+        <div class="breakpoint-card">
+          <h3>Large Screens</h3>
+          <p>1440px+</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="card">
+
+      <h2>
+        Quick Summary
+      </h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Concept</th>
+            <th>Purpose</th>
+            <th>Best Use</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Flexbox</td>
+            <td>1D Layout</td>
+            <td>Rows & Columns</td>
+          </tr>
+
+          <tr>
+            <td>Grid</td>
+            <td>2D Layout</td>
+            <td>Complex Layouts</td>
+          </tr>
+
+          <tr>
+            <td>auto-fit</td>
+            <td>Responsive Columns</td>
+            <td>Adaptive Grids</td>
+          </tr>
+
+          <tr>
+            <td>Media Queries</td>
+            <td>Responsive Breakpoints</td>
+            <td>Device Adaptation</td>
+          </tr>
+
+          <tr>
+            <td>Relative Units</td>
+            <td>Flexible Sizing</td>
+            <td>Fluid Layouts</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
