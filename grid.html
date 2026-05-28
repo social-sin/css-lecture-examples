@@ -164,6 +164,97 @@ repeat(auto-fit, minmax(200px, 1fr));
 
     </section>
 
+    <!-- GRID LINES + SPANNING -->
+<section class="card">
+
+  <h2>Grid Lines & Spanning</h2>
+
+  <p>
+    Grid layouts are controlled using numbered grid lines.
+    Items can span across multiple columns or rows.
+  </p>
+
+  <!-- COLUMN LINES -->
+
+  <h3>Column Grid Lines</h3>
+
+  <div class="grid-line-labels">
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+
+  </div>
+
+  <div class="grid-container line-grid">
+
+    <div class="grid-item line-span-column">
+      grid-column: 1 / 3
+    </div>
+
+    <div class="grid-item">
+      Item 2
+    </div>
+
+    <div class="grid-item">
+      Item 3
+    </div>
+
+    <div class="grid-item">
+      Item 4
+    </div>
+
+  </div>
+
+  <pre>
+grid-column: 1 / 3;
+  </pre>
+
+  <!-- ROW LINES -->
+
+  <h3>Row Grid Lines</h3>
+
+  <div class="row-label-layout">
+
+    <div class="row-line-labels">
+
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+
+    </div>
+
+    <div class="grid-container row-span-grid">
+
+      <div class="grid-item row-span-item">
+        grid-row: 1 / 3
+      </div>
+
+      <div class="grid-item">2</div>
+
+      <div class="grid-item">3</div>
+
+      <div class="grid-item">4</div>
+
+      <div class="grid-item">5</div>
+
+    </div>
+
+  </div>
+
+  <pre>
+grid-row: 1 / 3;
+  </pre>
+
+  <p class="grid-note">
+    Grid line numbers represent the boundaries between columns and rows —
+    not the cells themselves.
+  </p>
+
+</section>
+
     <!-- GRID AREA -->
     <section class="card">
 
