@@ -1,16 +1,16 @@
+/* style-5.css */
+
 /* ========================================= */
 /* RESET */
 /* ========================================= */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* ========================================= */
@@ -28,10 +28,17 @@ html {
   --muted: #94a3b8;
 
   --accent: #38bdf8;
-  --accent-hover: #7dd3fc;
 
   --border:
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
+
+  --radius: 1rem;
+
+  --shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+  --transition:
+    0.3s ease;
 
   --max-width: 1200px;
 }
@@ -39,6 +46,10 @@ html {
 /* ========================================= */
 /* BASE */
 /* ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--bg);
@@ -60,24 +71,21 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 h1 {
   font-size:
-    clamp(2.75rem, 6vw, 5rem);
+    clamp(3rem, 7vw, 5rem);
 
-  margin-bottom: 1.5rem;
-
-  color: white;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size:
+    clamp(2rem, 4vw, 2.5rem);
 
   margin-bottom: 1.5rem;
-
-  color: white;
 }
 
 h3 {
@@ -102,14 +110,7 @@ td {
   margin-inline: auto;
 
   padding:
-    5rem 0
-    4rem;
-}
-
-.hero p {
-  max-width: 750px;
-
-  font-size: 1.1rem;
+    5rem 0 4rem;
 }
 
 /* ========================================= */
@@ -126,7 +127,7 @@ main {
 }
 
 /* ========================================= */
-/* CARDS */
+/* CARD */
 /* ========================================= */
 
 .card {
@@ -136,16 +137,20 @@ main {
   border:
     1px solid var(--border);
 
-  border-radius: 1rem;
+  border-radius:
+    var(--radius);
 
   padding: 2rem;
 
   margin-bottom: 2rem;
 
+  box-shadow:
+    var(--shadow);
+
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
 }
 
 .card:hover {
@@ -153,20 +158,10 @@ main {
     translateY(-4px);
 
   border-color:
-    rgba(56, 189, 248, 0.35);
+    rgba(56,189,248,0.35);
 
   background-color:
     var(--surface-light);
-}
-
-/* ========================================= */
-/* CONTENT SPACING */
-/* ========================================= */
-
-.card p,
-.card pre,
-.card table {
-  margin-top: 1rem;
 }
 
 /* ========================================= */
@@ -185,7 +180,7 @@ main {
 }
 
 .color-box {
-  min-height: 180px;
+  min-height: 200px;
 
   padding: 2rem;
 
@@ -200,7 +195,7 @@ main {
   justify-content: flex-end;
 
   transition:
-    transform 0.3s ease;
+    transform var(--transition);
 }
 
 .color-box:hover {
@@ -208,9 +203,15 @@ main {
     translateY(-4px);
 }
 
-/* ========================================= */
+.format-label {
+  font-size: 0.85rem;
+
+  opacity: 0.85;
+
+  margin-bottom: 1rem;
+}
+
 /* COLOR FORMATS */
-/* ========================================= */
 
 .hex-box {
   background-color: #ff6600;
@@ -218,32 +219,32 @@ main {
 
 .rgb-box {
   background-color:
-    rgb(255, 102, 0);
+    rgb(255,102,0);
 }
 
 .rgba-box {
   background-color:
-    rgba(255, 102, 0, 0.8);
+    rgba(255,102,0,0.8);
 }
 
 .hsl-box {
   background-color:
-    hsl(24, 100%, 50%);
+    hsl(24,100%,50%);
 }
 
 .hsla-box {
   background-color:
-    hsla(24, 100%, 50%, 0.7);
+    hsla(24,100%,50%,0.7);
 }
 
 /* ========================================= */
-/* TIP BOXES */
+/* TIPS */
 /* ========================================= */
 
 .tip,
 .contrast-tip {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.12);
 
   border-left:
     4px solid var(--accent);
@@ -256,43 +257,119 @@ main {
 }
 
 /* ========================================= */
+/* ACCESSIBILITY */
+/* ========================================= */
+
+.contrast-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.contrast-card {
+  min-height: 220px;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.good-contrast {
+  background-color: #020617;
+
+  color: white;
+}
+
+.bad-contrast {
+  background-color: #94a3b8;
+
+  color: #a8b4c7;
+}
+
+/* ========================================= */
 /* TYPOGRAPHY */
 /* ========================================= */
 
-.type-demo {
-  margin:
-    2rem 0;
+.type-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.type-card {
+  background-color:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 1rem;
+
+  padding: 1.5rem;
+}
+
+/* FONT STYLE */
+
+.normal-text {
+  font-style: normal;
 }
 
 .italic-text {
-  font-family:
-    Helvetica,
-    Arial,
-    sans-serif;
-
   font-style: italic;
+}
 
-  line-height: 1.9;
+/* FONT WEIGHT */
+
+.light-text {
+  font-weight: 300;
 }
 
 .bold-text {
-  font-size: 1.15rem;
-
   font-weight: 700;
 
   color: #facc15;
 }
 
+/* LINE HEIGHT */
+
+.tight-height {
+  line-height: 1.1;
+}
+
+.loose-height {
+  line-height: 2;
+}
+
+/* FONT SIZE */
+
 .small-text {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.large-text {
+  font-size: 2rem;
 }
 
 /* ========================================= */
-/* CODE BLOCKS */
+/* CODE */
 /* ========================================= */
 
 pre {
   overflow-x: auto;
+
+  white-space: pre-wrap;
+
+  line-height: 1.5;
 
   background-color: #020617;
 
@@ -304,10 +381,12 @@ pre {
   padding: 1rem;
 
   color: #cbd5e1;
+
+  margin-top: 1rem;
 }
 
 /* ========================================= */
-/* BACKGROUND IMAGE DEMOS */
+/* BACKGROUND IMAGES */
 /* ========================================= */
 
 .bg-demo {
@@ -341,6 +420,26 @@ pre {
   background-size: cover;
 }
 
+.cover-demo::after {
+  content:
+    "Image crops to fill container";
+
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+
+  font-size: 0.8rem;
+
+  background-color:
+    rgba(0,0,0,0.6);
+
+  padding:
+    0.5rem 0.75rem;
+
+  border-radius: 999px;
+}
+
 /* CONTAIN */
 
 .contain-demo {
@@ -349,12 +448,17 @@ pre {
 
   background-size: contain;
 
-  background-color: #111827;
+  background-color: #020617;
+
+  border:
+    2px dashed rgba(255,255,255,0.2);
 }
 
 /* FIXED */
 
 .fixed-demo {
+  min-height: 500px;
+
   background-image:
     url("https://picsum.photos/id/1039/1200/800");
 
@@ -363,13 +467,11 @@ pre {
   background-attachment: fixed;
 }
 
-/* ========================================= */
-/* BACKGROUND OVERLAY */
-/* ========================================= */
+/* OVERLAY */
 
 .bg-overlay {
   background-color:
-    rgba(0, 0, 0, 0.55);
+    rgba(0,0,0,0.55);
 
   color: white;
 
@@ -384,14 +486,14 @@ pre {
 }
 
 /* ========================================= */
-/* FILTER EFFECTS */
+/* FILTERS */
 /* ========================================= */
 
 .filter-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
+    repeat(auto-fit, minmax(300px, 1fr));
 
   gap: 1.5rem;
 
@@ -406,6 +508,18 @@ pre {
   padding: 1.5rem;
 }
 
+.filter-comparison {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1rem;
+
+  margin:
+    1.5rem 0;
+}
+
+.original-image,
 .filter-image {
   width: 100%;
 
@@ -414,75 +528,25 @@ pre {
   object-fit: cover;
 
   border-radius: 0.75rem;
-
-  margin:
-    1.5rem 0;
 }
 
-/* Blur */
+/* FILTER EFFECTS */
 
 .blur-filter {
   filter: blur(6px);
 }
 
-/* Grayscale */
-
 .grayscale-filter {
   filter: grayscale(100%);
 }
-
-/* Brightness */
 
 .brightness-filter {
   filter: brightness(160%);
 }
 
 /* ========================================= */
-/* CONTRAST SECTION */
-/* ========================================= */
-
-.contrast-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 1.5rem;
-
-  margin-top: 2rem;
-}
-
-.contrast-card {
-  min-height: 220px;
-
-  padding: 2rem;
-
-  border-radius: 1rem;
-}
-
-/* GOOD */
-
-.good-contrast {
-  background-color: #020617;
-
-  color: white;
-}
-
-/* BAD */
-
-.bad-contrast {
-  background-color: #94a3b8;
-
-  color: #cbd5e1;
-}
-
-/* ========================================= */
 /* TABLE */
 /* ========================================= */
-
-.font-table-wrapper {
-  overflow-x: auto;
-}
 
 table {
   width: 100%;
@@ -508,7 +572,7 @@ td {
 
 th {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.12);
 
   color: white;
 }
@@ -521,20 +585,23 @@ th {
 
   .hero {
     padding:
-      4rem 0
-      3rem;
-  }
-
-  main {
-    padding-bottom: 4rem;
+      4rem 0 3rem;
   }
 
   .card {
     padding: 1.5rem;
   }
 
+  .filter-comparison {
+    grid-template-columns: 1fr;
+  }
+
   .bg-demo {
     height: 220px;
+  }
+
+  .fixed-demo {
+    min-height: 320px;
   }
 
 }
