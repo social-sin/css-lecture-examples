@@ -147,14 +147,6 @@ main {
   background-color: #0ea5e9;
 }
 
-/* ================================= */
-/* MAIN */
-/* ================================= */
-
-main {
-  padding: 60px 30px;
-}
-
 /* ================================= */ /* CONTENT SPACING */ /* ================================= */ .card > * + * { margin-top: 1.25rem; }
 
 /* ========================================= */
@@ -557,7 +549,20 @@ main {
   margin-top: 25px;
 }
 
-.high-contrast, .low-contrast { position: relative; }
+.high-contrast,
+.low-contrast {
+  position: relative;
+
+  flex: 1;
+
+  padding: 40px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  font-weight: bold;
+}
 
 .high-contrast::after, .low-contrast::after { position: absolute; bottom: 10px; right: 10px; font-size: 0.7rem; padding: 0.3rem 0.6rem; border-radius: 999px; } .high-contrast::after { content: "Readable"; background-color: black; color: white; } .low-contrast::after { content: "Poor Contrast"; background-color: white; color: black; }
 
@@ -658,7 +663,13 @@ main {
   color: #0f172a;
 }
 
-.nav-links { flex-wrap: wrap; }
+.nav-links {
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
 
 .nav-links a {
   color: #38bdf8;
@@ -759,7 +770,7 @@ pre {
 
 @media (max-width: 768px) {
 
-  #header {
+  .hero {
     padding:
       4rem 0
       2rem;
