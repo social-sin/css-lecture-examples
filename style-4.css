@@ -1,16 +1,16 @@
+/* style-4.css */
+
 /* ========================================= */
 /* RESET */
 /* ========================================= */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* ========================================= */
@@ -30,7 +30,15 @@ html {
   --accent: #38bdf8;
 
   --border:
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
+
+  --radius: 1rem;
+
+  --shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+  --transition:
+    0.3s ease;
 
   --max-width: 1200px;
 }
@@ -38,6 +46,10 @@ html {
 /* ========================================= */
 /* BASE */
 /* ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--bg);
@@ -61,22 +73,23 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 h1 {
   font-size:
-    clamp(2.75rem, 6vw, 5rem);
+    clamp(3rem, 7vw, 5rem);
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size:
+    clamp(2rem, 4vw, 2.5rem);
 
   margin-bottom: 1.5rem;
-
-  color: white;
 }
 
 h3 {
@@ -109,7 +122,7 @@ td {
   text-align: center;
 
   background-color:
-    rgba(15, 23, 42, 0.9);
+    rgba(15,23,42,0.9);
 
   backdrop-filter: blur(12px);
 
@@ -135,12 +148,6 @@ td {
     4rem 0;
 }
 
-.hero p {
-  max-width: 750px;
-
-  font-size: 1.1rem;
-}
-
 /* ========================================= */
 /* MAIN */
 /* ========================================= */
@@ -155,7 +162,7 @@ main {
 }
 
 /* ========================================= */
-/* CARDS */
+/* CARD */
 /* ========================================= */
 
 .card,
@@ -166,16 +173,20 @@ main {
   border:
     1px solid var(--border);
 
-  border-radius: 1rem;
+  border-radius:
+    var(--radius);
 
   padding: 2rem;
 
   margin-bottom: 2rem;
 
+  box-shadow:
+    var(--shadow);
+
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
 }
 
 .card:hover,
@@ -184,26 +195,31 @@ main {
     translateY(-4px);
 
   border-color:
-    rgba(56, 189, 248, 0.35);
+    rgba(56,189,248,0.35);
 
   background-color:
     var(--surface-light);
 }
 
 /* ========================================= */
-/* CONTENT SPACING */
+/* DISPLAY */
 /* ========================================= */
 
-.card p,
-.card pre,
-.card table,
-.overflow-section p {
-  margin-top: 1rem;
+.display-row {
+  margin-bottom: 1rem;
 }
 
-/* ========================================= */
-/* DISPLAY DEMOS */
-/* ========================================= */
+.display-label {
+  margin-bottom: 1rem;
+
+  font-size: 0.9rem;
+
+  color: #7dd3fc;
+
+  font-weight: 700;
+}
+
+/* BLOCK */
 
 .block-demo {
   display: block;
@@ -220,9 +236,16 @@ main {
   margin-bottom: 1rem;
 }
 
-/* ========================================= */
 /* INLINE */
-/* ========================================= */
+
+.inline-wrapper {
+  border:
+    2px dashed rgba(255,255,255,0.15);
+
+  padding: 1rem;
+
+  border-radius: 1rem;
+}
 
 .inline-demo {
   display: inline;
@@ -234,9 +257,7 @@ main {
   padding: 0.5rem;
 }
 
-/* ========================================= */
 /* INLINE BLOCK */
-/* ========================================= */
 
 .inline-block-demo {
   display: inline-block;
@@ -256,28 +277,26 @@ main {
 
   margin:
     0 0.75rem 0.75rem 0;
+
+  font-weight: 700;
 }
 
-/* ========================================= */
 /* DISPLAY NONE */
-/* ========================================= */
 
 .hidden-box {
   display: none;
 }
 
-/* ========================================= */
 /* FLEX */
-/* ========================================= */
 
 .flex-container {
   display: flex;
 
   gap: 1.5rem;
 
-  margin-top: 1.5rem;
-
   flex-wrap: wrap;
+
+  margin-top: 1.5rem;
 }
 
 .flex-item {
@@ -298,9 +317,7 @@ main {
   font-weight: 700;
 }
 
-/* ========================================= */
 /* GRID */
-/* ========================================= */
 
 .grid-container {
   display: grid;
@@ -339,22 +356,49 @@ main {
   padding: 1.25rem;
 
   border:
-    3px solid rgba(255, 255, 255, 0.2);
+    3px solid rgba(255,255,255,0.2);
 
   border-radius: 0.75rem;
 
   background-color: #334155;
-
-  margin-bottom: 2rem;
 }
 
 /* STATIC */
 
 .static-box {
   position: static;
+
+  margin-bottom: 2rem;
 }
 
 /* RELATIVE */
+
+.relative-wrapper {
+  position: relative;
+
+  height: 180px;
+
+  margin-bottom: 2rem;
+}
+
+.ghost-box {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 220px;
+
+  padding: 1.25rem;
+
+  border:
+    2px dashed rgba(255,255,255,0.25);
+
+  border-radius: 0.75rem;
+
+  color:
+    rgba(255,255,255,0.45);
+}
 
 .relative-box {
   position: relative;
@@ -365,9 +409,7 @@ main {
   background-color: #7c3aed;
 }
 
-/* ========================================= */
 /* ABSOLUTE */
-/* ========================================= */
 
 .absolute-parent {
   position: relative;
@@ -375,6 +417,9 @@ main {
   height: 250px;
 
   background-color: #334155;
+
+  border:
+    3px dashed rgba(255,255,255,0.25);
 
   border-radius: 1rem;
 
@@ -396,11 +441,24 @@ main {
   padding: 1rem;
 
   border-radius: 0.75rem;
+
+  font-weight: 700;
 }
 
-/* ========================================= */
+.absolute-child::before {
+  content:
+    "top: 20px | right: 20px";
+
+  display: block;
+
+  font-size: 0.75rem;
+
+  margin-bottom: 0.5rem;
+
+  opacity: 0.75;
+}
+
 /* STICKY */
-/* ========================================= */
 
 .sticky-demo {
   position: sticky;
@@ -423,7 +481,7 @@ main {
 }
 
 .sticky-content {
-  height: 500px;
+  min-height: 900px;
 
   padding-top: 1.5rem;
 }
@@ -470,6 +528,21 @@ main {
   margin-top: 1rem;
 }
 
+.overflow-box::before {
+  content:
+    attr(data-overflow);
+
+  display: block;
+
+  margin-bottom: 0.75rem;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  color: #38bdf8;
+}
+
 .overflow-visible {
   overflow: visible;
 }
@@ -509,13 +582,25 @@ main {
   align-items: center;
   justify-content: center;
 
-  color: white;
-
   border-radius: 1rem;
 
-  font-weight: 700;
+  color: white;
 
-  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.z-box::after {
+  content:
+    attr(data-layer);
+
+  position: absolute;
+
+  bottom: 10px;
+  right: 10px;
+
+  font-size: 0.75rem;
+
+  opacity: 0.75;
 }
 
 .z1 {
@@ -534,25 +619,6 @@ main {
   left: 120px;
 
   z-index: 5;
-}
-
-/* ========================================= */
-/* CODE */
-/* ========================================= */
-
-pre {
-  overflow-x: auto;
-
-  background-color: #020617;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 0.75rem;
-
-  padding: 1rem;
-
-  color: #cbd5e1;
 }
 
 /* ========================================= */
@@ -583,7 +649,7 @@ td {
 
 th {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.12);
 
   color: white;
 }
@@ -603,10 +669,6 @@ th {
       3rem 0;
   }
 
-  main {
-    padding-bottom: 4rem;
-  }
-
   .card,
   .overflow-section {
     padding: 1.5rem;
@@ -621,8 +683,6 @@ th {
   .z-box {
     width: 160px;
     height: 160px;
-
-    font-size: 1rem;
   }
 
 }
