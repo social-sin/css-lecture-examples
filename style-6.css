@@ -1,16 +1,16 @@
+/* style-6.css */
+
 /* ========================================= */
 /* RESET */
 /* ========================================= */
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* ========================================= */
@@ -31,14 +31,23 @@ html {
   --accent-hover: #7dd3fc;
 
   --border:
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
 
   --max-width: 1200px;
+
+  --radius: 1rem;
+
+  --transition:
+    0.3s ease;
 }
 
 /* ========================================= */
 /* BASE */
 /* ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--bg);
@@ -60,24 +69,21 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 h1 {
   font-size:
-    clamp(2.75rem, 6vw, 5rem);
+    clamp(3rem, 7vw, 5rem);
 
-  margin-bottom: 1.5rem;
-
-  color: white;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size:
+    clamp(2rem, 4vw, 2.5rem);
 
   margin-bottom: 1.5rem;
-
-  color: white;
 }
 
 h3 {
@@ -104,14 +110,7 @@ td {
   margin-inline: auto;
 
   padding:
-    5rem 0
-    4rem;
-}
-
-.hero p {
-  max-width: 750px;
-
-  font-size: 1.1rem;
+    5rem 0 4rem;
 }
 
 /* ========================================= */
@@ -138,16 +137,17 @@ main {
   border:
     1px solid var(--border);
 
-  border-radius: 1rem;
+  border-radius:
+    var(--radius);
 
   padding: 2rem;
 
   margin-bottom: 2rem;
 
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.3s ease;
+    transform var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
 }
 
 .card:hover {
@@ -155,20 +155,24 @@ main {
     translateY(-4px);
 
   border-color:
-    rgba(56, 189, 248, 0.35);
+    rgba(56,189,248,0.35);
 
   background-color:
     var(--surface-light);
 }
 
 /* ========================================= */
-/* CONTENT SPACING */
+/* AXIS LABELS */
 /* ========================================= */
 
-.card p,
-.card pre,
-.card table {
-  margin-top: 1rem;
+.axis-label {
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  color: #38bdf8;
+
+  margin-bottom: 0.75rem;
 }
 
 /* ========================================= */
@@ -176,6 +180,8 @@ main {
 /* ========================================= */
 
 .demo-container {
+  position: relative;
+
   background-color: #334155;
 
   border:
@@ -189,6 +195,21 @@ main {
     1.5rem 0;
 
   min-height: 180px;
+}
+
+.demo-container::before {
+  content:
+    "Flex Container";
+
+  position: absolute;
+
+  top: 10px;
+  right: 12px;
+
+  font-size: 0.75rem;
+
+  color:
+    rgba(255,255,255,0.45);
 }
 
 /* ========================================= */
@@ -245,22 +266,33 @@ main {
 /* JUSTIFY CONTENT */
 /* ========================================= */
 
-.justify-between {
+.justify-start,
+.justify-center,
+.justify-between,
+.justify-evenly {
   display: flex;
-
-  justify-content: space-between;
 
   align-items: center;
 }
 
-.justify-center {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
+.justify-start {
+  justify-content: flex-start;
 
   gap: 1.25rem;
+}
+
+.justify-center {
+  justify-content: center;
+
+  gap: 1.25rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 /* ========================================= */
@@ -275,6 +307,9 @@ main {
   gap: 1.25rem;
 
   height: 300px;
+
+  border:
+    3px dashed #38bdf8;
 }
 
 .small {
@@ -302,25 +337,24 @@ main {
 }
 
 .wrap-demo .item {
-  width: 180px;
+  width: 240px;
 }
 
 /* ========================================= */
 /* GAP */
 /* ========================================= */
 
-.no-gap-demo {
+.no-gap-demo,
+.gap-demo {
   display: flex;
 }
 
 .gap-demo {
-  display: flex;
-
   gap: 20px;
 }
 
 /* ========================================= */
-/* EQUAL HEIGHT CARDS */
+/* EQUAL HEIGHT */
 /* ========================================= */
 
 .equal-height-layout {
@@ -345,7 +379,7 @@ main {
   background-color: #334155;
 
   border:
-    1px solid rgba(255, 255, 255, 0.08);
+    1px solid rgba(255,255,255,0.08);
 
   border-radius: 1rem;
 
@@ -377,17 +411,6 @@ main {
   font-weight: 700;
 
   cursor: pointer;
-
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.equal-card button:hover {
-  background-color: var(--accent-hover);
-
-  transform:
-    translateY(-2px);
 }
 
 /* ========================================= */
@@ -408,6 +431,16 @@ main {
   flex-grow: 2;
 }
 
+.grow-1::after {
+  content:
+    " • 1x";
+}
+
+.grow-2::after {
+  content:
+    " • 2x";
+}
+
 /* ========================================= */
 /* FLEX SHRINK */
 /* ========================================= */
@@ -416,6 +449,10 @@ main {
   display: flex;
 
   gap: 1.25rem;
+
+  max-width: 600px;
+
+  overflow: hidden;
 }
 
 .shrink-demo .item {
@@ -440,10 +477,16 @@ main {
 
 .basis-100 {
   flex-basis: 100px;
+
+  border-bottom:
+    4px solid #38bdf8;
 }
 
 .basis-200 {
   flex-basis: 200px;
+
+  border-bottom:
+    4px solid #f97316;
 }
 
 .basis-auto {
@@ -484,6 +527,9 @@ main {
   gap: 1.25rem;
 
   height: 250px;
+
+  border:
+    3px dashed rgba(56,189,248,0.4);
 }
 
 .self-end {
@@ -493,7 +539,7 @@ main {
 }
 
 /* ========================================= */
-/* CODE BLOCKS */
+/* CODE */
 /* ========================================= */
 
 pre {
@@ -509,6 +555,8 @@ pre {
   padding: 1rem;
 
   color: #cbd5e1;
+
+  margin-top: 1rem;
 }
 
 /* ========================================= */
@@ -539,7 +587,7 @@ td {
 
 th {
   background-color:
-    rgba(56, 189, 248, 0.12);
+    rgba(56,189,248,0.12);
 
   color: white;
 }
@@ -552,12 +600,7 @@ th {
 
   .hero {
     padding:
-      4rem 0
-      3rem;
-  }
-
-  main {
-    padding-bottom: 4rem;
+      4rem 0 3rem;
   }
 
   .card {
@@ -566,8 +609,10 @@ th {
 
   .basic-flex,
   .row-demo,
-  .justify-between,
+  .justify-start,
   .justify-center,
+  .justify-between,
+  .justify-evenly,
   .align-demo,
   .grow-demo,
   .shrink-demo,
