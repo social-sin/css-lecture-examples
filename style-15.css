@@ -420,6 +420,192 @@ p {
 }
 
 /* ================================= */
+/* TRANSFORM ORIGIN */
+/* ================================= */
+
+.origin-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.origin-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+.origin-demo {
+  position: relative;
+
+  width: 220px;
+  height: 220px;
+
+  margin: 2rem auto;
+
+  border:
+    2px dashed rgba(255,255,255,0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pivot point visualization */
+
+.pivot-dot {
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background-color: #ef4444;
+
+  z-index: 10;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* Top left pivot */
+
+.top-left-dot {
+  top: 0;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+}
+
+/* Rotating element */
+
+.origin-box {
+  width: 120px;
+  height: 120px;
+
+  background-color: var(--primary);
+
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+
+  color: white;
+
+  animation:
+    originSpin 3s ease-in-out infinite alternate;
+}
+
+/* Center pivot */
+
+.center-origin .origin-box {
+  transform-origin: center;
+}
+
+/* Top left pivot */
+
+.top-left-origin .origin-box {
+  transform-origin: top left;
+}
+
+@keyframes originSpin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(45deg);
+  }
+
+}
+
+/* ================================= */
+/* ANIMATION FILL MODE */
+/* ================================= */
+
+.fillmode-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.fillmode-card {
+  background-color: #334155;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+.fill-box {
+  width: 180px;
+  height: 180px;
+
+  margin: 2rem auto 0;
+
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+
+  color: white;
+}
+
+/* No fill mode */
+
+.default-fill {
+  background-color: #f97316;
+
+  animation:
+    slideAcross 2s ease;
+}
+
+/* Keeps final state */
+
+.forwards-fill {
+  background-color: #2ecc71;
+
+  animation:
+    slideAcross 2s ease forwards;
+}
+
+@keyframes slideAcross {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(80px);
+  }
+
+}
+
+/* ================================= */
 /* HOVER PULSE */
 /* ================================= */
 
@@ -656,7 +842,9 @@ th {
   }
 
   .stagger-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .origin-grid,
+  .fillmode-grid {
     grid-template-columns: 1fr;
   }
 
