@@ -314,54 +314,129 @@ main {
 }
 
 /* ========================================= */
-/* PADDING DEMOS */
+/* PADDING DIAGRAM */
 /* ========================================= */
 
-.pad-demo {
+.padding-diagram {
+  position: relative;
+
   background-color: #475569;
 
   border:
-    2px solid rgba(255,255,255,0.2);
+    4px solid var(--accent);
 
-  border-radius: 0.75rem;
+  border-radius: 1rem;
 
-  height: 220px;
+  padding: 80px;
+
+  min-height: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 2rem 0;
 }
 
-/* Content area */
-
-.inner-content {
+.padding-content {
   background-color:
     rgba(255,255,255,0.15);
 
   border:
     2px dashed rgba(255,255,255,0.35);
 
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
 
-  color: white;
+  padding: 2rem;
+
+  min-width: 250px;
+
+  text-align: center;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+}
+
+.side-label {
+  position: absolute;
+
+  background-color:
+    rgba(255,255,255,0.15);
+
+  padding:
+    0.35rem 0.75rem;
+
+  border-radius: 999px;
 
   font-weight: 700;
 
+  font-size: 0.85rem;
+}
+
+.top-label {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-label {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left-label {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-label {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ========================================= */
+/* PADDING REFERENCE */
+/* ========================================= */
+
+.padding-reference {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+.reference-item {
+  background-color: #334155;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 0.75rem;
+
   padding: 1rem;
-
-  text-align: center;
 }
 
-/* Different padding values */
+.reference-item strong {
+  display: block;
 
-.pad-1 {
-  padding: 20px;
+  margin-bottom: 0.5rem;
+
+  color: white;
 }
 
-.pad-2 {
-  padding: 10px 20px;
+.reference-item span {
+  color: var(--muted);
 }
-
-.pad-3 {
-  padding: 10px 15px 20px 5px;
-}
-
 /* ========================================= */
 /* BORDER DEMOS */
 /* ========================================= */
