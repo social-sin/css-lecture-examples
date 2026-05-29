@@ -603,7 +603,7 @@ th {
 
 .bezier {
   animation-timing-function:
-    cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes timingMove {
@@ -685,8 +685,8 @@ th {
 }
 
 .corner-dot {
-  top: 50px;
-  left: 50px;
+  top: 25px;
+  left: 200px;
 }
 
 /* ========================================= */
