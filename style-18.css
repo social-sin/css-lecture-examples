@@ -548,7 +548,7 @@ th {
 }
 
 .timing-track {
-  height: 90px;
+  height: 70px;
 
   background-color: #334155;
 
@@ -560,8 +560,8 @@ th {
 }
 
 .timing-ball {
-  width: 140px;
-  height: 56px;
+  width: 120px;
+  height: 44px;
 
   border-radius: 999px;
 
@@ -609,11 +609,11 @@ th {
 @keyframes timingMove {
 
   from {
-    left: 16px;
+    left: 12px;
   }
 
   to {
-    left: calc(100% - 156px);
+    left: calc(100% - 132px);
   }
 
 }
