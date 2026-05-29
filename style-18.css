@@ -557,8 +557,6 @@ th {
   position: relative;
 
   overflow: hidden;
-
-  padding: 0 1rem;
 }
 
 .timing-ball {
@@ -571,21 +569,22 @@ th {
 
   position: absolute;
 
+  left: 16px;
   top: 50%;
-  left: 0;
 
   transform: translateY(-50%);
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   color: white;
-
   font-weight: 700;
 
-  animation:
-    move 5s infinite alternate;
+  animation-name: timingMove;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 /* TIMING FUNCTIONS */
@@ -607,28 +606,14 @@ th {
     cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-/* ANIMATION */
-
-@keyframes move {
+@keyframes timingMove {
 
   from {
-    left: 0;
+    left: 16px;
   }
 
   to {
-    left: calc(100% - 140px);
-  }
-
-}
-@keyframes move {
-
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform:
-      translateX(calc(100vw - 320px));
+    left: calc(100% - 156px);
   }
 
 }
